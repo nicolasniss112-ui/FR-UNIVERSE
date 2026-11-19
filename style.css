@@ -40,3 +40,11 @@
 @media(max-width:1000px){.mc-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:700px){.mc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mc-info strong{font-size:25px}.mc-art{min-height:125px}.mc-initial{font-size:75px}.mc-dialog{padding:18px}.mc-profile-avatar{min-width:75px;height:90px;font-size:45px}}
 @media(max-width:420px){.mc-grid{gap:9px}.mc-info{padding:12px}.mc-info strong{font-size:23px}.mc-summary span{flex:1;padding:10px}.mc-select{max-width:100%;flex:1}.mc-profile-meta{grid-template-columns:1fr}}
+
+/* Avatares ilustrativos do elenco: arte conceitual, nao retratos reais */
+.mc-art{overflow:hidden}
+.mc-portrait{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:center 26%;transition:transform .25s ease}
+.mc-card:hover .mc-portrait{transform:scale(1.06)}
+.mc-art-note{z-index:1;text-shadow:0 1px 6px #000,0 1px 3px #000;background:rgba(0,0,0,.4);padding:3px 5px;border-radius:2px}
+.mc-profile-avatar{overflow:hidden;padding:0}
+.mc-profile-avatar img{width:100%;height:100%;object-fit:cover;object-position:center 26%}
