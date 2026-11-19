@@ -1,0 +1,2603 @@
+{
+  "projeto": "FR Universe 2027",
+  "versao": "cadastro-inicial-v1",
+  "observacao": "Cadastro baseado no prompt mestre do Presidente; sem resultados de 2027.",
+  "participantes": [
+    {
+      "posicao": 1,
+      "nome": "Acuca",
+      "uf": "PE",
+      "categoria": "Under com carinha de mainstream",
+      "descricao": "Entrega de rima e presença de palco. Homem; não participa das Venenosas.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 2,
+      "nome": "Ajota",
+      "uf": "SP",
+      "categoria": "Top Brasil",
+      "descricao": "Gastação e punchs.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 3,
+      "nome": "Allan Freestyle",
+      "uf": null,
+      "categoria": "Velha geração",
+      "descricao": "Técnica; experiência como jurado. Há conflito anterior entre SP e RJ a resolver.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 4,
+      "nome": "Alves",
+      "uf": "DF",
+      "categoria": "LENDA",
+      "descricao": "Rimas inteligentes e ideologia ligada à fé em Cristo.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 5,
+      "nome": "Apollo",
+      "uf": "SP",
+      "categoria": "Monstro da atualidade",
+      "descricao": "Versatilidade, técnica, construção e presença; referência competitiva.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 6,
+      "nome": "Araps",
+      "uf": "SP",
+      "categoria": "Esse cara ainda rima?",
+      "descricao": "Agressividade e punchs; referência histórica do under.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 7,
+      "nome": "Arielzinha",
+      "uf": "SP",
+      "categoria": "Under com carinha de mainstream",
+      "descricao": "Freestyle quente e construções fortes. Também chamada Ariel.",
+      "natureza": "real",
+      "aliases": [
+        "Ariel"
+      ],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 8,
+      "nome": "Barbosa",
+      "uf": "SP",
+      "categoria": "Under",
+      "descricao": "Agressividade e freestyle; lembra Magrão na avaliação presidencial.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 9,
+      "nome": "Barreto",
+      "uf": "SP",
+      "categoria": "LENDA",
+      "descricao": "Liricismo, construção e musicalidade; destaque também no autotune.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 10,
+      "nome": "Bask",
+      "uf": "SP",
+      "categoria": "Monstro da atualidade",
+      "descricao": "Punchs e força competitiva; referência da Norte.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 11,
+      "nome": "Baueb",
+      "uf": "SP",
+      "categoria": "Revelação",
+      "descricao": "Extremamente técnico; rimas que exigem reflexão para captar a construção.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 12,
+      "nome": "Big Mike",
+      "uf": "SP",
+      "categoria": "LENDA",
+      "descricao": "Completo: resposta, construção, vivência, técnica, referências, flow, voz grave e entrega imponente. GOAT do presidente.",
+      "natureza": "real",
+      "aliases": [
+        "Bigão"
+      ],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 13,
+      "nome": "Biro Biro",
+      "uf": "DF",
+      "categoria": "Aposentado",
+      "descricao": "Ideologia e técnica.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 14,
+      "nome": "Black",
+      "uf": "BA",
+      "categoria": "Aposentado",
+      "descricao": "Métrica e rimas inteligentes. Não confundir com Black Panther.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 15,
+      "nome": "Black Panther",
+      "uf": "SP",
+      "categoria": "Under com carinha de mainstream",
+      "descricao": "Flow e entrega de palco.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 16,
+      "nome": "Blackoutt",
+      "uf": "SP",
+      "categoria": "Under com carinha de mainstream",
+      "descricao": "Flow, swing e musicalidade.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 17,
+      "nome": "Bobby Mídia",
+      "uf": "PA",
+      "categoria": "Under com carinha de mainstream",
+      "descricao": "Punchs; destaque regional. Não é do CE.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 18,
+      "nome": "Bonfim",
+      "uf": "SP",
+      "categoria": "Under com carinha de mainstream",
+      "descricao": "MC completo.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 19,
+      "nome": "Brennuz",
+      "uf": "SP",
+      "categoria": "Top Brasil",
+      "descricao": "Técnica, flow e impacto; evolução para além da identificação com Detroit.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 20,
+      "nome": "BTC",
+      "uf": "RS",
+      "categoria": "Top Brasil",
+      "descricao": "Freestyle quente, intensidade e disposição para confronto; não necessariamente agressivo.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 21,
+      "nome": "Cadu",
+      "uf": "PR",
+      "categoria": "Under com carinha de mainstream",
+      "descricao": "Fictício; gastação e presença são referências anteriores, ainda pouco aprofundadas.",
+      "natureza": "fictício",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 22,
+      "nome": "Cebolinha",
+      "uf": null,
+      "categoria": "Excluído",
+      "descricao": "Manter apenas o registro da exclusão.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "excluído",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 23,
+      "nome": "César MC",
+      "uf": "ES",
+      "categoria": "LENDA",
+      "descricao": "Poesia agressiva, respostas, conteúdo, referências e fechamentos claros.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 24,
+      "nome": "Chris",
+      "uf": "MG",
+      "categoria": "Aposentado",
+      "descricao": "Flow e rimas de impacto; foco musical. Diferente de Cris do PR.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 25,
+      "nome": "Cifrasol",
+      "uf": "PR",
+      "categoria": "Under",
+      "descricao": "Mulher; rimas agressivas e poéticas, diversidade e força feminina na cena.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 26,
+      "nome": "Clara Lima",
+      "uf": "MG",
+      "categoria": "Aposentada",
+      "descricao": "Papo reto, posicionamento e agressividade; grande referência feminina para o presidente.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 27,
+      "nome": "Combo",
+      "uf": "SP",
+      "categoria": "Under",
+      "descricao": "Voz agressiva e punchs de impacto; lembra Big Mike na avaliação presidencial.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 28,
+      "nome": "Coral",
+      "uf": "SP",
+      "categoria": "Revelação",
+      "descricao": "Mirim de Guarulhos; punchs.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 29,
+      "nome": "Cris",
+      "uf": "PR",
+      "categoria": "Under com carinha de mainstream",
+      "descricao": "Fictício; poesia, liricismo e construção como identidade preservada, sem herdar resultados antigos.",
+      "natureza": "fictício",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 30,
+      "nome": "CZP",
+      "uf": "SP",
+      "categoria": "Under",
+      "descricao": "Punchs; teve atenção após confronto com Jotapê, conforme relato presidencial.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 31,
+      "nome": "Dandara",
+      "uf": null,
+      "categoria": "Under",
+      "descricao": "Rimas inteligentes e técnicas; menos projeção na entrega e presença. UF teve indicações conflitantes.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 32,
+      "nome": "Dehat",
+      "uf": "SP",
+      "categoria": "Under com carinha de mainstream",
+      "descricao": "MC completo.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 33,
+      "nome": "Derik",
+      "uf": "SP",
+      "categoria": "Under com carinha de mainstream",
+      "descricao": "Guarulhos; flow, musicalidade, entrega e presença.",
+      "natureza": "real",
+      "aliases": [
+        "Dherik"
+      ],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 34,
+      "nome": "Devilzinha",
+      "uf": "RJ",
+      "categoria": "Top Brasil",
+      "descricao": "Mulher trans; punchs, gastação e força competitiva.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 35,
+      "nome": "Dith",
+      "uf": "PE",
+      "categoria": "Under com carinha de mainstream",
+      "descricao": "Punchs.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 36,
+      "nome": "Dopre",
+      "uf": "SP",
+      "categoria": "Aposentado",
+      "descricao": "Impacto, técnica e flow; completo. Afastamento relacionado ao foco musical.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 37,
+      "nome": "Douglas Din",
+      "uf": "MG",
+      "categoria": "LENDA",
+      "descricao": "Inteligência, respostas e rimas históricas; peso competitivo nacional.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 38,
+      "nome": "Drizzy",
+      "uf": "MG",
+      "categoria": "Aposentado",
+      "descricao": "Flow e musicalidade; destaque histórico de 2017 segundo a base presidencial.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 39,
+      "nome": "Duda",
+      "uf": "BA",
+      "categoria": "Revelação",
+      "descricao": "Mirim; freestyle, agressividade, papo reto e ideologia. Idade exata pendente.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 40,
+      "nome": "Dudu",
+      "uf": "ES",
+      "categoria": "LENDA",
+      "descricao": "Freestyle limpo, coerência, poucos suportes, técnica, flow e entrega.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 41,
+      "nome": "Durap",
+      "uf": "SP",
+      "categoria": "Velha geração",
+      "descricao": "Freestyle de rua, rimas quentes e punchs diretas.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 42,
+      "nome": "Emicida",
+      "uf": "SP",
+      "categoria": "Velha geração",
+      "descricao": "Construção, conteúdo e inteligência; referência à frente da própria época na avaliação presidencial.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 43,
+      "nome": "Épico",
+      "uf": "MA",
+      "categoria": "Top Brasil",
+      "descricao": "Muito técnico. Não caracterizar automaticamente como agressivo.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 44,
+      "nome": "EZ",
+      "uf": "SP",
+      "categoria": "Revelação",
+      "descricao": "Mirim; punchs e presença de palco.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 45,
+      "nome": "Fael",
+      "uf": "RJ",
+      "categoria": "Velha geração",
+      "descricao": "Gastação, impacto e variedade de recursos.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 46,
+      "nome": "Filipe Ret",
+      "uf": "RJ",
+      "categoria": "Aposentado",
+      "descricao": "Gastação da antiga geração carioca.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 47,
+      "nome": "Fortes",
+      "uf": "SP",
+      "categoria": "Under com carinha de mainstream",
+      "descricao": "Interior paulista; agressividade e punchs de grande impacto.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 48,
+      "nome": "Freelipe",
+      "uf": "SP",
+      "categoria": "Aposentado",
+      "descricao": "GR; flow e levada, foco musical.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 49,
+      "nome": "Frizzy",
+      "uf": "RN",
+      "categoria": "Under com carinha de mainstream",
+      "descricao": "Presença de palco e rimas de impacto; não muito agressivo.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 50,
+      "nome": "Gabiz",
+      "uf": "PE",
+      "categoria": "Under",
+      "descricao": "Mulher trans; sotaque forte e presença de palco.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 51,
+      "nome": "Glaubin",
+      "uf": "SP",
+      "categoria": "Under com carinha de mainstream",
+      "descricao": "Gastação inteligente; ampliando recursos de punch e impacto.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 52,
+      "nome": "Gomes",
+      "uf": "DF",
+      "categoria": "Monstro da atualidade",
+      "descricao": "Rimas de impacto e presença de palco.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 53,
+      "nome": "Grafitteh",
+      "uf": "SP",
+      "categoria": "Monstro da atualidade",
+      "descricao": "Calmo, técnico e consistente; não depende de gritar.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 54,
+      "nome": "Guri",
+      "uf": "SP",
+      "categoria": "Monstro da atualidade",
+      "descricao": "Rei da construção na avaliação presidencial; cria histórias e imagens em poucos versos.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 55,
+      "nome": "H7",
+      "uf": "SP",
+      "categoria": "Revelação",
+      "descricao": "Mirim muito novo; rimas ainda básicas e identidade ligada ao flow e presença.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 56,
+      "nome": "Hellbala",
+      "uf": "SE",
+      "categoria": "Top Brasil",
+      "descricao": "Técnica, intensidade e agressividade na ficha-base.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 57,
+      "nome": "Hogue",
+      "uf": "PE",
+      "categoria": "Revelação",
+      "descricao": "Punchs e técnica.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 58,
+      "nome": "Ianzin",
+      "uf": "DF",
+      "categoria": "Under",
+      "descricao": "Presença, boas rimas e mortais como assinatura visual.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 59,
+      "nome": "Isa",
+      "uf": "PR",
+      "categoria": "Under",
+      "descricao": "Fictícia; luta das mulheres, força e presença de palco.",
+      "natureza": "fictício",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 60,
+      "nome": "Japa",
+      "uf": "BA",
+      "categoria": "Monstro da atualidade",
+      "descricao": "Agressividade e papo reto; grande trajetória estadual na base presidencial.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 61,
+      "nome": "Jaya",
+      "uf": "BA",
+      "categoria": "Esse cara ainda rima?",
+      "descricao": "Flow, musicalidade, presença e vivência.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 62,
+      "nome": "Jesp",
+      "uf": "SP",
+      "categoria": "Under",
+      "descricao": "Entrega de rima e presença de palco.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 63,
+      "nome": "Jheny",
+      "uf": "SP",
+      "categoria": "Under",
+      "descricao": "Punchs.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 64,
+      "nome": "Jhony",
+      "uf": "RJ",
+      "categoria": "Aposentado",
+      "descricao": "Gastação; referência histórica do Tanque.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 65,
+      "nome": "João Vega",
+      "uf": "RJ",
+      "categoria": "Under",
+      "descricao": "Técnica e liricismo.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 66,
+      "nome": "Joãozinho",
+      "uf": "PR",
+      "categoria": "Revelação",
+      "descricao": "Fictício; agressividade e punchs, MC de fatalities.",
+      "natureza": "fictício",
+      "aliases": [
+        "Joazinho"
+      ],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 67,
+      "nome": "Jotapê",
+      "uf": "SP",
+      "categoria": "LENDA",
+      "descricao": "Resposta imediata, inversões, punchs, deboche, comunicação clara, carisma e presença.",
+      "natureza": "real",
+      "aliases": [
+        "Jotape"
+      ],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 68,
+      "nome": "Juh Altão",
+      "uf": "SP",
+      "categoria": "Esse cara ainda rima?",
+      "descricao": "Punchs.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 69,
+      "nome": "Kaemy",
+      "uf": "GO",
+      "categoria": "Esse cara ainda rima?",
+      "descricao": "Papo reto e vivências de rua.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 70,
+      "nome": "Kairós",
+      "uf": "SP",
+      "categoria": "Under com carinha de mainstream",
+      "descricao": "Flow e levada.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 71,
+      "nome": "Kamui",
+      "uf": "MS",
+      "categoria": "Under",
+      "descricao": "Técnica e freestyle limpo.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 72,
+      "nome": "Kant",
+      "uf": "SP",
+      "categoria": "LENDA",
+      "descricao": "Construção, trocadilhos e punchs.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 73,
+      "nome": "Killua",
+      "uf": "SP",
+      "categoria": "Under com carinha de mainstream",
+      "descricao": "Punchs quentes, sem agressividade.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 74,
+      "nome": "Kisha",
+      "uf": "SP",
+      "categoria": "Esse cara ainda rima?",
+      "descricao": "Flow.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 75,
+      "nome": "KLJR",
+      "uf": "SP",
+      "categoria": "Revelação",
+      "descricao": "Mirim em desenvolvimento; potencial de MC completo na avaliação presidencial.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 76,
+      "nome": "Koell",
+      "uf": "SP",
+      "categoria": "Aposentado",
+      "descricao": "Construção, trocadilhos e técnica.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 77,
+      "nome": "Kroy",
+      "uf": "SP",
+      "categoria": "Monstro da atualidade",
+      "descricao": "Extremamente agressivo e provocador; encaradas, voz grossa e pressão.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 78,
+      "nome": "Larício",
+      "uf": "BA",
+      "categoria": "Velha geração",
+      "descricao": "Papo reto e agressividade.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 79,
+      "nome": "Laura",
+      "uf": "SP",
+      "categoria": "Under",
+      "descricao": "Rimas agressivas.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 80,
+      "nome": "Lecroy",
+      "uf": "SP",
+      "categoria": "Under com carinha de mainstream",
+      "descricao": "Flow e presença de palco.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 81,
+      "nome": "Leozin",
+      "uf": "SP",
+      "categoria": "Aposentado",
+      "descricao": "Punchs. Melhor amigo de Thiago, conforme presidente.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 82,
+      "nome": "Leshley",
+      "uf": "SP",
+      "categoria": "Under",
+      "descricao": "Punchs.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 83,
+      "nome": "Levinsk",
+      "uf": "SP",
+      "categoria": "Monstro da atualidade",
+      "descricao": "Agressividade, papo reto, ideologia e respostas de impacto.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 84,
+      "nome": "Lil Vi",
+      "uf": "SP",
+      "categoria": "Top Brasil",
+      "descricao": "Construção forte, punchs e musicalidade.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 85,
+      "nome": "Lili",
+      "uf": "SP",
+      "categoria": "Top Brasil",
+      "descricao": "Papo reto e agressividade com ideologia.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 86,
+      "nome": "Lino",
+      "uf": "SP",
+      "categoria": "Aposentado",
+      "descricao": "Presença de palco e entrega de rima.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 87,
+      "nome": "Lion",
+      "uf": "SP",
+      "categoria": "Esse cara ainda rima?",
+      "descricao": "Agressividade, construções fortes e temas pesados.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 88,
+      "nome": "Lorran",
+      "uf": "MG",
+      "categoria": "Under com carinha de mainstream",
+      "descricao": "Rimas sarcásticas.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 89,
+      "nome": "Luh do Click",
+      "uf": "SP",
+      "categoria": "Under com carinha de mainstream",
+      "descricao": "Agressividade e punchs com voz baixa.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 90,
+      "nome": "Lya",
+      "uf": "RJ",
+      "categoria": "Aposentada",
+      "descricao": "Estilo pendente de aprofundamento.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 91,
+      "nome": "Magrão",
+      "uf": "SP",
+      "categoria": "Esse cara ainda rima?",
+      "descricao": "Freestyle quente, improviso e agressividade.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 92,
+      "nome": "Malagueta",
+      "uf": "RJ",
+      "categoria": "Top Brasil",
+      "descricao": "Gastação e ideologia.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 93,
+      "nome": "Mamute",
+      "uf": "SP",
+      "categoria": "Velha geração",
+      "descricao": "Agressividade da velha escola paulista.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 94,
+      "nome": "Mano Ayron",
+      "uf": "SP",
+      "categoria": "Revelação e Top Brasil",
+      "descricao": "Construção, referências e punchs; perfil de rimas de impacto.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 95,
+      "nome": "Marechal",
+      "uf": "RJ",
+      "categoria": "Velha geração",
+      "descricao": "Referência histórica; estilo individual ainda pouco detalhado pelo presidente.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 96,
+      "nome": "Maria",
+      "uf": "SP",
+      "categoria": "Under com carinha de mainstream",
+      "descricao": "Papo reto, agressividade e ideologia.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 97,
+      "nome": "Martzin",
+      "uf": "MG",
+      "categoria": "Under com carinha de mainstream",
+      "descricao": "Punchs.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 98,
+      "nome": "MCharles",
+      "uf": "CE",
+      "categoria": "Esse cara ainda rima?",
+      "descricao": "Referência histórica cearense; estilo individual ainda pouco detalhado.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 99,
+      "nome": "MDG",
+      "uf": "DF",
+      "categoria": "Revelação",
+      "descricao": "Rimas quentes e fatalities; impacto para derrubar a casa.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 100,
+      "nome": "Medusa",
+      "uf": "RJ",
+      "categoria": "Avaliação presidencial: péssima",
+      "descricao": "Gastação, deboche e provocações pesadas. Não converter provocações em alegações factuais.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 101,
+      "nome": "Menor MC",
+      "uf": "AM",
+      "categoria": "Esse cara ainda rima?",
+      "descricao": "Rimas quentes com sotaque do Norte.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 102,
+      "nome": "Miliano",
+      "uf": null,
+      "categoria": "Esse cara ainda rima?",
+      "descricao": "Técnica; conflito de UF entre MT e MS a resolver. Mapa presidencial mais recente indica MT.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 103,
+      "nome": "Mitolas",
+      "uf": "SP",
+      "categoria": "Under",
+      "descricao": "Técnica e punchs.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 104,
+      "nome": "Monarka",
+      "uf": "BA",
+      "categoria": "Under com carinha de mainstream",
+      "descricao": "Agressividade, provocação e gastação; sangue no olho.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 105,
+      "nome": "Motta",
+      "uf": "SP",
+      "categoria": "Velha geração",
+      "descricao": "Técnica; experiência como jurado.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 106,
+      "nome": "MT",
+      "uf": "RJ",
+      "categoria": "Top Brasil",
+      "descricao": "MC completo.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 107,
+      "nome": "Naia",
+      "uf": "RN",
+      "categoria": "Top Brasil",
+      "descricao": "Agressividade e punchs.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 108,
+      "nome": "Nando",
+      "uf": null,
+      "categoria": "Excluído",
+      "descricao": "Manter apenas o registro da exclusão.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "excluído",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 109,
+      "nome": "Negra Rê",
+      "uf": "SP",
+      "categoria": "Esse cara ainda rima?",
+      "descricao": "Papo reto e freestyle.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 110,
+      "nome": "Nego Drama",
+      "uf": "RJ",
+      "categoria": "Aposentado",
+      "descricao": "Gastação da velha geração do Tanque.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 111,
+      "nome": "Negrote",
+      "uf": "SP",
+      "categoria": "Esse cara ainda rima?",
+      "descricao": "Agressividade e punchs.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 112,
+      "nome": "Neo",
+      "uf": "RJ",
+      "categoria": "LENDA",
+      "descricao": "Técnica, construção e respostas; referência competitiva carioca.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 113,
+      "nome": "Nina Veneno",
+      "uf": "SP",
+      "categoria": "Under",
+      "descricao": "Rimas intercaladas e punchs.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 114,
+      "nome": "Noventa",
+      "uf": "ES",
+      "categoria": "LENDA",
+      "descricao": "Gastação, deboche e respostas.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 115,
+      "nome": "Orochi",
+      "uf": "RJ",
+      "categoria": "LENDA",
+      "descricao": "Gastação e presença; trajetória histórica do Tanque. Frequência de participação a definir.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 116,
+      "nome": "Pedrin",
+      "uf": "ES",
+      "categoria": "Under com carinha de mainstream",
+      "descricao": "Estilo individual pendente de aprofundamento.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 117,
+      "nome": "Peke",
+      "uf": "RJ",
+      "categoria": "Revelação",
+      "descricao": "Gastação criativa.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 118,
+      "nome": "Pelé MilFlows",
+      "uf": "RJ",
+      "categoria": "Aposentado",
+      "descricao": "Gastação e flow.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 119,
+      "nome": "Perzzeus",
+      "uf": "BA",
+      "categoria": "Under com carinha de mainstream",
+      "descricao": "Técnica.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 120,
+      "nome": "Peu",
+      "uf": "PR",
+      "categoria": "Revelação",
+      "descricao": "Fictício; flow.",
+      "natureza": "fictício",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 121,
+      "nome": "Pitágoras",
+      "uf": "SP",
+      "categoria": "Under",
+      "descricao": "Punchs.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 122,
+      "nome": "Pivete",
+      "uf": "RJ",
+      "categoria": "Revelação",
+      "descricao": "Gastação e humor.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 123,
+      "nome": "Poeta Gabriela",
+      "uf": "PR",
+      "categoria": "Under com carinha de mainstream",
+      "descricao": "Liricismo e ideologia.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 124,
+      "nome": "Prado",
+      "uf": "SP",
+      "categoria": "Monstro da atualidade",
+      "descricao": "Agressividade, punchs e postura de confronto.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 125,
+      "nome": "Projota",
+      "uf": "SP",
+      "categoria": "Aposentado e velha geração",
+      "descricao": "Referência histórica; estilo individual pouco detalhado no cadastro.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 126,
+      "nome": "Punkka",
+      "uf": "SP",
+      "categoria": "Under",
+      "descricao": "Agressiva e direta.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 127,
+      "nome": "Pyetrin",
+      "uf": "RJ",
+      "categoria": "Under com carinha de mainstream",
+      "descricao": "Mirim; construção e entrega de rima.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 128,
+      "nome": "Pyetro",
+      "uf": "SP",
+      "categoria": "Under",
+      "descricao": "Mirim; construção e punchs de impacto.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 129,
+      "nome": "Rank",
+      "uf": "PB",
+      "categoria": "Under",
+      "descricao": "Entrega extrema; dá a alma, a vida e o sangue na batalha.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 130,
+      "nome": "Rashid",
+      "uf": "SP",
+      "categoria": "Velha geração",
+      "descricao": "Referência histórica; estilo individual pouco detalhado no cadastro.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 131,
+      "nome": "Ravena",
+      "uf": "SP",
+      "categoria": "Esse cara ainda rima?",
+      "descricao": "Agressividade, papo reto e rimas de impacto.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 132,
+      "nome": "Ray",
+      "uf": "BA",
+      "categoria": "Under com carinha de mainstream",
+      "descricao": "Agressividade e presença de palco.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 133,
+      "nome": "R.E",
+      "uf": "BA",
+      "categoria": "Revelação",
+      "descricao": "Mirim; agressividade e papo reto.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 134,
+      "nome": "Refel",
+      "uf": "SP",
+      "categoria": "Aposentado",
+      "descricao": "Rimas intercaladas.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 135,
+      "nome": "Riquelme",
+      "uf": "SP",
+      "categoria": "Aposentado",
+      "descricao": "Deboche e freestyle.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 136,
+      "nome": "Salvador da Rima",
+      "uf": "SP",
+      "categoria": "Esse cara ainda rima?",
+      "descricao": "Papo reto, vivência e confronto.",
+      "natureza": "real",
+      "aliases": [
+        "Salvador"
+      ],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 137,
+      "nome": "Sara Krl",
+      "uf": "SP",
+      "categoria": "Under",
+      "descricao": "Presença de palco e entrega de rima.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 138,
+      "nome": "Schuler",
+      "uf": "RJ",
+      "categoria": "Esse cara ainda rima?",
+      "descricao": "Gastação inteligente.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 139,
+      "nome": "Sete",
+      "uf": "SP",
+      "categoria": "Aposentado",
+      "descricao": "Flow.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 140,
+      "nome": "Sid",
+      "uf": "DF",
+      "categoria": "LENDA",
+      "descricao": "Ideologia, política, inteligência e construção.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 141,
+      "nome": "Sofia",
+      "uf": "SC",
+      "categoria": "Avaliação presidencial: péssima",
+      "descricao": "Liricismo e ideologia.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 142,
+      "nome": "Sol na Voz",
+      "uf": "SP",
+      "categoria": "Revelação",
+      "descricao": "Punchs diretas.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 143,
+      "nome": "Spike",
+      "uf": "SP",
+      "categoria": "Aposentado",
+      "descricao": "Flow e musicalidade.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 144,
+      "nome": "Tai",
+      "uf": "PE",
+      "categoria": "Aposentado",
+      "descricao": "Flow e timbre marcante; detalhes pendentes.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 145,
+      "nome": "Tavin",
+      "uf": "SP",
+      "categoria": "Esse cara ainda rima?",
+      "descricao": "Presença de palco inigualável na avaliação presidencial.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 146,
+      "nome": "Tazz",
+      "uf": "SP",
+      "categoria": "Under",
+      "descricao": "GR; punchs e rimas de impacto.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 147,
+      "nome": "Thiago",
+      "uf": "SP",
+      "categoria": "Aposentado",
+      "descricao": "Presença de palco e entrega; melhor amigo de Leozin.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 148,
+      "nome": "Thorment",
+      "uf": "RJ",
+      "categoria": "Under com carinha de mainstream",
+      "descricao": "Flow, gastação, energia e autotune.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 149,
+      "nome": "Tito",
+      "uf": null,
+      "categoria": "Revelação",
+      "descricao": "Mirim; inteligência e grande potencial. Destaque do DF no mapa presidencial; origem a confirmar explicitamente.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 150,
+      "nome": "Torvi",
+      "uf": "RJ",
+      "categoria": "Revelação",
+      "descricao": "Gastação e criatividade; construções inesperadas.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 151,
+      "nome": "Tubarão",
+      "uf": "SP",
+      "categoria": "Monstro da atualidade",
+      "descricao": "Multissilábicas, técnica e constância.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 152,
+      "nome": "Valle",
+      "uf": "PR",
+      "categoria": "Revelação",
+      "descricao": "Rimas quentes e presença de palco; MC cega, conforme informado pelo presidente.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 153,
+      "nome": "Vick Vi",
+      "uf": "SP",
+      "categoria": "Under com carinha de mainstream",
+      "descricao": "GR; flow e levada.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 154,
+      "nome": "Vinicius ZN",
+      "uf": "PE",
+      "categoria": "Under com carinha de mainstream",
+      "descricao": "Técnica e freestyle limpo. Classificação mais recente prevalece sobre a anterior.",
+      "natureza": "real",
+      "aliases": [
+        "ZN"
+      ],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 155,
+      "nome": "Vitu",
+      "uf": "PE",
+      "categoria": "Top Brasil",
+      "descricao": "Técnica, métrica e freestyle.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 156,
+      "nome": "Winnit",
+      "uf": null,
+      "categoria": "Esse cara ainda rima?",
+      "descricao": "Papo reto e vivências de rua; pessoa trans, elegível às Venenosas.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 157,
+      "nome": "WL",
+      "uf": "RJ",
+      "categoria": "Top Brasil",
+      "descricao": "Alto nível competitivo; estilo individual ainda precisa de descrição mais específica.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 158,
+      "nome": "WM",
+      "uf": "SP",
+      "categoria": "Top Brasil",
+      "descricao": "Presença de palco.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 159,
+      "nome": "Xamã",
+      "uf": null,
+      "categoria": "Aposentado",
+      "descricao": "Estilo individual pendente de aprofundamento.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 160,
+      "nome": "Xamuel",
+      "uf": "RS",
+      "categoria": "Monstro da atualidade",
+      "descricao": "Flow, swing, provocação e musicalidade.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 161,
+      "nome": "Yoga",
+      "uf": "BA",
+      "categoria": "Aposentado",
+      "descricao": "Flow, timbre e presença de palco.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 162,
+      "nome": "Yokaida",
+      "uf": "SP",
+      "categoria": "Under com carinha de mainstream",
+      "descricao": "Flow e musicalidade.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 163,
+      "nome": "Youngui",
+      "uf": "SP",
+      "categoria": "Esse cara ainda rima?",
+      "descricao": "Respostas, postura chucra e força competitiva.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 164,
+      "nome": "Zap",
+      "uf": "SP",
+      "categoria": "Esse cara ainda rima?",
+      "descricao": "Agressividade e freestyle.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 165,
+      "nome": "Zuluzão",
+      "uf": "SP",
+      "categoria": "Esse cara ainda rima?",
+      "descricao": "Agressividade, punchs, ideologia e presença intimidadora.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 166,
+      "nome": "Guerra",
+      "uf": "ES",
+      "categoria": "Aposentada",
+      "descricao": "Mulher; rimas básicas; fora do eixo.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 167,
+      "nome": "Naui",
+      "uf": "DF",
+      "categoria": "Aposentado",
+      "descricao": "Rimas inteligentes e polêmicas. Também grafado Nauí.",
+      "natureza": "real",
+      "aliases": [
+        "Nauí"
+      ],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 168,
+      "nome": "Peter do Busão",
+      "uf": "ES",
+      "categoria": "Under",
+      "descricao": "Técnica e rimas inteligentes; fora do eixo.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 169,
+      "nome": "Mandacaru",
+      "uf": "PE",
+      "categoria": "Under",
+      "descricao": "Técnica e rimas inteligentes; fora do eixo.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 170,
+      "nome": "Zandrio",
+      "uf": "RS",
+      "categoria": "Velha geração",
+      "descricao": "Punchs.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 171,
+      "nome": "Tonhão",
+      "uf": "CE",
+      "categoria": "Top Brasil",
+      "descricao": "Rimas quentes, punchs diretas e várias referências de anime.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    },
+    {
+      "posicao": 172,
+      "nome": "Alice Gorete",
+      "uf": "GO",
+      "categoria": "Esse cara ainda rima?",
+      "descricao": "Rimas quentes e punchs diretas; uma das mulheres mais difíceis de vencer na avaliação presidencial.",
+      "natureza": "real",
+      "aliases": [],
+      "status_cadastro": "válido",
+      "estatisticas_2027": {
+        "batalhas": 0,
+        "vitorias": 0,
+        "titulos": 0
+      }
+    }
+  ]
+}

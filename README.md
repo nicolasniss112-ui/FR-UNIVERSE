@@ -26,3 +26,14 @@ Abra `index.html` no navegador ou use uma extensão de servidor local (Live Serv
 - Automatização de rankings e conteúdos autorizados.
 
 **Nota:** esta versão é apenas front-end estático, sem persistência de dados. Conteúdos simulados devem permanecer identificados como tais. Não publique informações pessoais de MCs sem avaliar a necessidade e autorização.
+
+
+## Versão 2 — Cadastro de MCs
+- A página `mcs.html` carrega `mcs-data.json` com **172 posições históricas do cadastro**, sendo **170 MCs válidos** e **2 excluídos**.
+- Os excluídos (Cebolinha e Nando) permanecem apenas no arquivo de dados, não aparecem como perfis públicos.
+- Busca por nome e aliases, filtro por estado/natureza, fichas individuais e estatísticas 2027 zeradas.
+- Os 5 personagens fictícios iniciais estão identificados internamente e nos cartões.
+- Atributos desconhecidos não foram inventados. Não há resultados importados.
+- Envie **todos os arquivos do ZIP** para a raiz do repositório GitHub, substituindo os de mesmo nome.
+- `mcs-data.json` é indispensável para a página de MCs.
+- Esta versão ainda é estática: os dados são publicados via GitHub Pages, sem banco de dados.
