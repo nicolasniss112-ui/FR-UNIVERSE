@@ -23,6 +23,39 @@ const WEEK1_RANKING = [
   {pos:'15º',mc:'Prado',uf:'SP',titulos:0,vitorias:0,pts:2}
 ];
 
+const WEEK1_BATALHAS = [
+  {
+    casa:'ALDEIA',
+    sub:'1ª Edição (Edição Lendas — Trios) · 04/01/2027',
+    icon:'🎤',
+    resumo:'Campeões: Neo, Jotapê e Kant (3 × 0 invicto na final) · Vice: Big Mike, Ike e Valle.'
+  },
+  {
+    casa:'COLISEU',
+    sub:'1ª Edição (Individual) · 06/01/2027',
+    icon:'⚔',
+    resumo:'Campeão: Jotapê (2 × 1 na final) · Vice: WL.'
+  },
+  {
+    casa:'ANA ROSA',
+    sub:'1ª Edição (Individual) · 07/01/2027',
+    icon:'🎙',
+    resumo:'Campeão: Guri (2 × 1 na final) · Vice: Mano Ayron.'
+  },
+  {
+    casa:'NORTE',
+    sub:'1ª Edição (Formato Nacional) · 08/01/2027',
+    icon:'🔥',
+    resumo:'Campeão: Youngui (2 × 0 na final) · Vice: Dehat.'
+  },
+  {
+    casa:'JAMÁLIA',
+    sub:'Edição de Inauguração (Curitiba/PR) · 10/01/2027',
+    icon:'★',
+    resumo:'Campeã: Poeta Gabriela (4V–0D, 2 × 1 na final) · Vice: Joãozinho.'
+  }
+];
+
 const WEEK1_RIMAGRAM = [
   {handle:'@jotape.mc',texto:'Segunda na Aldeia com Neo e Kant (3×0), quarta no Coliseu (2×1). A Semana 1 começou pesada pro FR Universe! 🏆🔥',tag:'Aldeia & Coliseu · Semana 1'},
   {handle:'@poetagabriela',texto:'4 batalhas, 4 vezes no terceiro round, 4 vitórias por 2×1. Inauguração da Batalha da Jamália em Curitiba com o título em casa! 👑🎤',tag:'Batalha da Jamália · Curitiba/PR'},
@@ -50,7 +83,7 @@ const WEEK1_CALENDAR_EVENTS = {
 };
 
 const data={
-'batalhas.html':{title:'CASAS DE <span>BATALHA.</span>',eyebrow:'O circuito',desc:'Explore as casas de batalha, acompanhe as edições e consulte os resultados oficiais do FR Universe 2027.',cards:[['ALDEIA','Segunda-feira · 04/01','🎤'],['COLISEU','Quarta-feira · 06/01','⚔'],['ANA ROSA','Quinta-feira · 07/01','🎙'],['NORTE','Sexta-feira · 08/01','🔥'],['JAMALIA','Domingo · 10/01','★']]},
+'batalhas.html':{title:'CASAS DE <span>BATALHA.</span>',eyebrow:'O circuito · Semana 1',desc:'Resultados registrados na Semana 1 (04/01 a 10/01/2027) nas casas do FR Universe.',cards:[]},
 'competicoes.html':{title:'GRANDES <span>COMPETIÇÕES.</span>',eyebrow:'A disputa pelo topo',desc:'LNF Série A, estaduais, nacionais, copas e edições especiais. Cada competição terá seus próprios resultados e chaveamentos.',cards:[['LNF SÉRIE A','Seletivas SP, RJ e DF (09/01)','🏆'],['ESTADUAIS','20 classificados por UF','◈'],['NACIONAIS','Palco nacional','★'],['COPAS','Torneios e formatos especiais','⚡'],['ESPECIAIS','Eventos extraordinários','◆']]},
 'mcs.html':{title:'OS DONOS DO <span>MICROFONE.</span>',eyebrow:'Elenco oficial',desc:'Perfis, estilos, conquistas e históricos dos participantes. Os cadastros serão importados da base oficial aprovada pelo Presidente.',cards:[]},
 'rankings.html':{title:'A CORRIDA PELO <span>TOPO.</span>',eyebrow:'Ranking geral · Semana 1',desc:'Classificação geral oficial registrada após o fechamento da Semana 1 (04/01 a 10/01/2027).',cards:[]},
@@ -69,8 +102,11 @@ if(d){
 function empty(title,description,emoji='✦'){return `<div class="empty"><div class="big">${emoji}</div><h3>${title}</h3><p>${description}</p></div>`}
 
 function renderPage(page,d){
-  if(page==='batalhas.html'||page==='competicoes.html'){
-    return `<section class="section"><div class="sectionhead"><div><h2>${page==='batalhas.html'?'CIRCUITO DE BATALHAS':'COMPETIÇÕES OFICIAIS'}</h2><p>Semana 1 concluída (04/01 a 10/01/2027)</p></div></div><div class="grid">${d.cards.map(([name,sub,icon])=>`<article class="card"><div class="placeholder"><div class="symbol">${icon}</div><small>FR UNIVERSE 2027</small></div><div class="cardpad"><div class="kicker">${sub}</div><h3>${name}</h3><p>Registro oficial da Semana 1 computado no calendário e na cobertura do portal.</p></div></article>`).join('')}</div></section>`;
+  if(page==='batalhas.html'){
+    return `<section class="section"><div class="sectionhead"><div><h2>RESULTADOS DA SEMANA 1</h2><p>Edições concluídas de 04/01 a 10/01/2027</p></div></div><div class="grid">${WEEK1_BATALHAS.map(b=>`<article class="card"><div class="placeholder"><div class="symbol">${b.icon}</div><small>FR UNIVERSE · SEMANA 1</small></div><div class="cardpad"><div class="kicker">${b.sub}</div><h3>${b.casa}</h3><p style="color:#f8f8f8">${b.resumo}</p></div></article>`).join('')}</div></section>`;
+  }
+  if(page==='competicoes.html'){
+    return `<section class="section"><div class="sectionhead"><div><h2>COMPETIÇÕES OFICIAIS</h2><p>Semana 1 concluída (04/01 a 10/01/2027)</p></div></div><div class="grid">${d.cards.map(([name,sub,icon])=>`<article class="card"><div class="placeholder"><div class="symbol">${icon}</div><small>FR UNIVERSE 2027</small></div><div class="cardpad"><div class="kicker">${sub}</div><h3>${name}</h3><p>Registro oficial da Semana 1 computado no calendário e na cobertura do portal.</p></div></article>`).join('')}</div></section>`;
   }
   if(page==='mcs.html')return `<section class="section"><div class="sectionhead"><div><h2>ELENCO OFICIAL</h2><p>170 MCs válidos • 5 personagens fictícios • base oficial</p></div></div><div class="mc-summary"><span><strong>170</strong> MCs cadastrados</span><span><strong>5</strong> fictícios</span><span><strong>01</strong> semana registrada</span></div><div class="filters mc-controls"><input class="search" id="mc-search" placeholder="Buscar MC por nome ou apelido..." aria-label="Buscar MC"><select class="mc-select" id="mc-state" aria-label="Filtrar por estado"><option value="">Todos os estados</option></select><select class="mc-select" id="mc-nature" aria-label="Filtrar por natureza"><option value="">Reais e fictícios</option><option value="real">Reais</option><option value="fictício">Fictícios</option></select></div><p class="mc-count" id="mc-count" aria-live="polite"></p><div class="mc-grid" id="mc-list"></div><div class="mc-more-wrap"><button class="btn secondary" id="mc-more" type="button" hidden>VER MAIS MCS</button></div><p class="fine">As categorias e descrições representam o cadastro fornecido pelo Presidente, não uma avaliação externa verificada. Informações desconhecidas permanecem pendentes.</p></section><dialog id="mc-dialog" class="mc-dialog" aria-label="Ficha do MC"><button class="mc-close" id="mc-close" aria-label="Fechar ficha">✕</button><div id="mc-detail"></div></dialog>`;
   if(page==='rankings.html'){
@@ -86,7 +122,7 @@ function renderPage(page,d){
     return `<section class="section"><div class="sectionhead"><div><h2>DESTAQUES EM VÍDEO · SEMANA 1</h2><p>Registros textuais simulados • sem reprodução de vídeo real</p></div></div><div class="grid">${vids}</div></section>`;
   }
   if(page==='jornal.html')return `<section class="section"><div class="sectionhead"><div><h2>EDIÇÃO DA SEMANA 1</h2><p>04/01 a 10/01/2027 · Fechamento oficial</p></div></div><div class="feature"><article class="card"><div class="placeholder" style="min-height:250px"><div class="symbol">FR</div><small>Manchete da Semana 1</small></div><div class="cardpad"><div class="label">Manchete principal</div><h3 style="font-size:34px;margin-top:18px">JOTAPÊ ABRE 2027 COM DOIS TÍTULOS; POETA GABRIELA LEVA A JAMÁLIA E LNF DEFINE 60 CLASSIFICADOS</h3><p>Neo, Jotapê e Kant vencem a Aldeia por 3×0; Jotapê leva o Coliseu por 2×1; Guri vence o Ana Rosa por 2×1; Youngui leva a Norte por 2×0; Poeta Gabriela é campeã inaugural da Jamália em Curitiba (4V–0D); e SP, RJ e DF classificam 20 MCs cada para a LNF.</p></div></article><div class="card cardpad"><div class="label">Nesta edição</div><h3>COBERTURA OFICIAL · SEMANA 1</h3><p><strong>Campeões:</strong> Neo, Jotapê e Kant (Aldeia); Jotapê (Coliseu); Guri (Ana Rosa); Youngui (Norte); Poeta Gabriela (Jamália).</p><hr style="border:0;border-top:1px solid #333"><p><strong>Principais resultados:</strong> Finais em 3×0, 2×1, 2×1, 2×0 e 2×1; Seletivas LNF com 60 classificados e 36 eliminados.</p><hr style="border:0;border-top:1px solid #333"><p><strong>Momentos autorizados:</strong> Quatro vitórias seguidas por 2×1 de Poeta Gabriela na Jamália e repescagens decisivas na LNF.</p><hr style="border:0;border-top:1px solid #333"><p><strong>Panorama das competições:</strong> Grade semanal de janeiro de 2027 (04/01 a 10/01) integralmente registrada.</p><p class="fine">Apenas a edição mais recente ficará disponível nesta página.</p></div></div></section>`;
-  if(page==='calendario.html')return `<section class="section"><div class="sectionhead"><div><h2>HISTÓRICO DE 2027</h2><p>Somente eventos concluídos e oficialmente registrados</p></div></div><div class="card cardpad" style="max-width:850px;margin:auto"><div class="calendarbar"><button id="prevmonth" aria-label="Mês anterior">❮</button><h2 id="monthname">JANEIRO 2027</h2><button id="nextmonth" aria-label="Próximo mês">❯</button></div><div class="week" id="calendar"></div><p class="fine" style="margin-top:20px">Os símbolos das casas e competições aparecem nos dias de eventos concluídos. Ao clicar, abrirão a página oficial correspondente.</p></div></section>`;
+  if(page==='calendario.html')return `<section class="section"><div class="sectionhead"><div><h2>HISTÓRICO DE 2027</h2><p>Somente eventos concluídos e oficialmente registrados</p></div></div><div class="card cardpad" style="max-width:850px;margin:auto"><div class="calendarbar"><button id="prevmonth" aria-label="Mês anterior">❮</button><h2 id="monthname">JANEIRO 2027</h2><button id="nextmonth" aria-label="Próximo mês">❯</button></div><div class="week" id="calendar"></div><p class="fine" style="margin-top:20px">Os símbolos das casas e competições aparecerão nos dias de eventos concluídos. Ao clicar, abrirão a página oficial correspondente.</p></div></section>`;
   return '';
 }
 
