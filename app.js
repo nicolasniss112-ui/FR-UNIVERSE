@@ -4,6 +4,214 @@ const header=`<header class="topbar"><div class="navwrap"><a class="brand" href=
 const footer=`<footer class="footer"><div class="container"><span><strong>FR UNIVERSE</strong> © 2027 · Portal de universo fictício de batalhas de rima</span><span>Resultados e estatísticas somente após registro oficial</span></div></footer>`;
 document.getElementById('header').innerHTML=header;document.getElementById('footer').innerHTML=footer;
 
+const BATALHAS_EDICOES = {
+  'ALDEIA': {
+    sub: 'Segunda-feira · São Paulo',
+    icon: '🎤',
+    resumo: '1ª Edição (Edição Lendas) · Clique para ver edições e acontecimentos',
+    edicoes: [
+      {
+        nome: '1ª Edição (Edição Lendas) — Batalha de Trios',
+        campeao: 'Neo, Jotapê e Kant (título invicto por 3×0 na Grande Final)',
+        vice: 'Big Mike, Ike e Valle',
+        acontecimentos: [
+          'Semifinalistas: Tubarão, Kroy e Bask | Apollo, Salvador da RIMA e Noventa.',
+          'Quartas de Final: Guri, Prado e Tavin | Colombiana, Bob13 e Nicolas Niss | Barreto, Dopre e Brennuz | César, Sid e MCharles.',
+          'Placares das Quartas: Tubarão/Kroy/Bask 3×2 Guri/Prado/Tavin; Colombiana/Bob13/Nicolas Niss 0×3 Big Mike/Ike/Valle; Neo/Jotapê/Kant 3×1 Barreto/Dopre/Brennuz; César/Sid/MCharles 2×3 Apollo/Salvador da RIMA/Noventa.',
+          'Semifinais: Tubarão/Kroy/Bask 2×3 Big Mike/Ike/Valle; Neo/Jotapê/Kant 3×0 Apollo/Salvador da RIMA/Noventa.',
+          'Grande Final: Big Mike, Ike e Valle 0×3 Neo, Jotapê e Kant.'
+        ]
+      }
+    ]
+  },
+  'COLISEU': {
+    sub: 'Quarta-feira',
+    icon: '⚔',
+    resumo: '1ª Edição (Individual) · Clique para ver edições e acontecimentos',
+    edicoes: [
+      {
+        nome: '1ª Edição — Individual',
+        campeao: 'Jotapê',
+        vice: 'WL',
+        acontecimentos: [
+          'Semifinalistas: Neo | Magrão.',
+          'Quartas de Final: Noventa | Perigx | Devilzinha | Torvi.',
+          'Eliminados na 1ª Fase: Peke | Kaell | Xamuel | FP | Ike | Rico Mesquita | Nego Drama | Pivete.',
+          'Caminho de Jotapê: 1ª Fase 2×0 vs Kaell; Quartas 2×0 vs Devilzinha; Semifinal 2×0 vs Magrão; Final 2×1 vs WL.'
+        ]
+      }
+    ]
+  },
+  'ANA ROSA': {
+    sub: 'Quinta-feira',
+    icon: '🎙',
+    resumo: '1ª Edição (Individual) · Clique para ver edições e acontecimentos',
+    edicoes: [
+      {
+        nome: '1ª Edição — Individual',
+        campeao: 'Guri',
+        vice: 'Mano Ayron',
+        acontecimentos: [
+          'Semifinalistas: Salvador | Kroy.',
+          'Quartas de Final: Fortes | Dehat | Ike | Magrão.',
+          'Eliminados na 1ª Fase: Zuluzão | Bask | Bobby Midia | Valle | Levinsk | Tavin | Lion | Prado.',
+          'Caminho de Guri: 1ª Fase 2×0 vs Lion; Quartas 2×0 vs Dehat; Semifinal 2×1 vs Salvador; Final 2×1 vs Mano Ayron.'
+        ]
+      }
+    ]
+  },
+  'NORTE': {
+    sub: 'Sexta-feira',
+    icon: '🔥',
+    resumo: '1ª Edição (Formato Nacional) · Clique para ver edições e acontecimentos',
+    edicoes: [
+      {
+        nome: '1ª Edição — Individual (Formato Nacional)',
+        campeao: 'Youngui',
+        vice: 'Dehat',
+        acontecimentos: [
+          'Semifinalistas: Glaubin | Prado.',
+          'Quartas de Final: MCharles | Martin | Tavin | Levinsk.',
+          'Eliminados na 1ª Fase: Jotapê | Tonhão | Japa | Kroy | Sara Krl | Lion | Xamuel | Vick Vi.',
+          'Caminho de Youngui: 1ª Fase 2×1 vs Tonhão; Quartas 2×0 vs Levinsk; Semifinal 2×1 vs Prado; Final 2×0 vs Dehat.'
+        ]
+      }
+    ]
+  },
+  'JAMALIA': {
+    sub: 'Domingo · Curitiba · PR',
+    icon: '★',
+    resumo: 'Edição de Inauguração (16 MCs) · Clique para ver edições e acontecimentos',
+    edicoes: [
+      {
+        nome: 'Edição de Inauguração — Individual (16 MCs)',
+        campeao: 'Poeta Gabriela (4V–0D, 8–4 em rounds; quatro vitórias seguidas por 2×1)',
+        vice: 'Joãozinho (3V–1D, 7–2 em rounds)',
+        acontecimentos: [
+          'Semifinalistas: Olhinho (2V–1D, 5–4 em rounds) | Ranks (2V–1D, 4–3 em rounds).',
+          'Quartas (1V–1D): Bigode 041, Levitico, Cadu e Cris.',
+          'Oitavas (0V–1D): HW, Ravina, Lilica, Jef, Valle, Ike, Peu e Isa.',
+          'Caminho de Poeta Gabriela: Oitavas 03 2×1 vs Lilica; Quartas 02 2×1 vs Levitico; Semifinal 01 2×1 vs Olhinho; Final 2×1 vs Joãozinho.'
+        ]
+      }
+    ]
+  }
+};
+
+const COMPETICOES_EDICOES = {
+  'LNF SÉRIE A': {
+    sub: 'Liga nacional · Seletivas SP, RJ e DF',
+    icon: '🏆',
+    resumo: '20 classificados por estado (60 no total) · Clique para ver acontecimentos',
+    edicoes: [
+      {
+        nome: 'Seletivas Estaduais — São Paulo (SP)',
+        campeao: '20 Classificados (16 diretos + 4 repescagem)',
+        vice: '12 Eliminados',
+        acontecimentos: [
+          'Diretos (16): Mano Ayron, Kroy, Guri, Brennuz, Kairós, Prado, KLJR, Levinsk, Bask, Ajota, Dehat, Luh do Click, Arielzinha, Bonfim, Glaubin e Tubarão.',
+          'Repescagem (4): WM, EZ, Apollo e Killua.',
+          'Eliminados 1ª Fase Repescagem (8): Blackoutt, Sol na Voz, Baueb, Black Panther, Coral, Fortes, H7 e Lecroy.',
+          'Eliminados Finais Repescagem (4): Derik, Lili, Lil Vi e Grafitteh (eliminado no detalhe por 1×2 para Killua).'
+        ]
+      },
+      {
+        nome: 'Seletivas Estaduais — Rio de Janeiro (RJ)',
+        campeao: '20 Classificados (16 diretos + 4 repescagem)',
+        vice: '12 Eliminados',
+        acontecimentos: [
+          'Diretos (16): Davi da 7, Nick Mory, MT, Filart, Kisol, Celia, WL, Chefona, João Vega, Pyetrin, Rico Mesquita, Mano na Area, Malagueta, Torvi, Thorment e Lujia.',
+          'Repescagem (4): Nene, Bigode, Nicolas e Pivete.',
+          'Eliminados 1ª Fase Repescagem (8): Schuler, Nart, Devilzinha, Julia, Peke, MC RJ #32, Bom na Rima e Karin.',
+          'Eliminados Finais Repescagem (4): Ge, Rough, Saloic e Scooby.',
+          'Destaques: Rico Mesquita avançou direto (2×1 sobre Ge); Pivete se recuperou após perder na 1ª rodada para Nick Mory (0×2) e venceu Scooby (2×1) na repescagem; Devilzinha e Peke caíram na 1ª fase da repescagem.'
+        ]
+      },
+      {
+        nome: 'Seletivas Estaduais — Distrito Federal (DF)',
+        campeao: '20 Classificados (16 diretos + 4 repescagem)',
+        vice: '12 Eliminados',
+        acontecimentos: [
+          'Diretos 1.ª Ronda (16): Foca Paranoá, Tito, Luna Guará, Cali Riacho, Kira Cruzeiro Velho, Zeca Gama, Mel Lago Sul, Mirela Recanto, Ianzin, Teca Estrutural, Roni São Sebastião, Léo Núcleo Bandeirante, Tinho Octogonal, Brisa Planaltina, Guga Águas Claras e Rato da Asa.',
+          'Repescagem Finais de Vaga (4): Pietra Candangolândia, Nanda Samambaia, Soraia Brazlândia e Breno Sobradinho.',
+          'Eliminados 1.ª Fase Repescagem (8): MDG, Vini Lago Norte, Kael DF, Duda Ceilândia, Juju Santa Maria, Gomes, Digo Varjão e Vektor Taguatinga.',
+          'Eliminados Finais Repescagem (4): Tavo Cruzeiro, Nati Jardim Botânico, Beto Vicente Pires e Bia Park Way.',
+          'Destaques: Tito (2×1 vs Juju Santa Maria) e Ianzin (2×0 vs Duda Ceilândia) avançaram direto; Gomes e MDG caíram na repescagem para Nati Jardim Botânico e Nanda Samambaia; Nanda Samambaia e Soraia Brazlândia venceram suas finais de repescagem por 2×0.'
+        ]
+      }
+    ]
+  },
+  'ESTADUAIS': {
+    sub: 'Disputas por estado',
+    icon: '◈',
+    resumo: 'Seletivas SP, RJ e DF registradas · Clique para ver acontecimentos',
+    edicoes: [
+      {
+        nome: 'Seletivas Estaduais LNF — SP, RJ e DF',
+        campeao: '60 Classificados no total (20 por estado)',
+        vice: '36 Eliminados no total (12 por estado)',
+        acontecimentos: [
+          'Estados registrados: São Paulo (SP), Rio de Janeiro (RJ) e Distrito Federal (DF).'
+        ]
+      }
+    ]
+  },
+  'NACIONAIS': {
+    sub: 'Palco nacional',
+    icon: '★',
+    resumo: 'Batalha da Norte (Formato Nacional) · Clique para ver acontecimentos',
+    edicoes: [
+      {
+        nome: 'Batalha da Norte · 1ª Edição (Formato Nacional)',
+        campeao: 'Youngui (2×0 vs Dehat na final)',
+        vice: 'Dehat',
+        acontecimentos: [
+          'Semifinalistas: Glaubin e Prado.',
+          'Caminho de Youngui: 2×1 vs Tonhão, 2×0 vs Levinsk, 2×1 vs Prado e 2×0 vs Dehat.'
+        ]
+      }
+    ]
+  },
+  'COPAS': {
+    sub: 'Torneios e formatos especiais',
+    icon: '⚡',
+    resumo: 'Sem edições registradas até o momento · Clique para ver detalhes',
+    edicoes: [
+      {
+        nome: 'Status das Copas',
+        campeao: 'Nenhum campeão registrado',
+        vice: '—',
+        acontecimentos: [
+          'Nenhum resultado oficial de copa foi registrado até agora.'
+        ]
+      }
+    ]
+  },
+  'ESPECIAIS': {
+    sub: 'Eventos extraordinários',
+    icon: '◆',
+    resumo: 'Aldeia (Edição Lendas) & Jamália (Inauguração) · Clique para ver acontecimentos',
+    edicoes: [
+      {
+        nome: 'Aldeia · 1ª Edição (Edição Lendas — Trios)',
+        campeao: 'Neo, Jotapê e Kant (3×0 na final)',
+        vice: 'Big Mike, Ike e Valle',
+        acontecimentos: [
+          'Formato de trios com título invicto de Neo, Jotapê e Kant.'
+        ]
+      },
+      {
+        nome: 'Batalha da Jamália (BDJ) · Edição de Inauguração (Curitiba/PR)',
+        campeao: 'Poeta Gabriela (4V–0D, 8–4 em rounds; 2×1 na final)',
+        vice: 'Joãozinho (3V–1D, 7–2 em rounds)',
+        acontecimentos: [
+          'Inauguração em Curitiba (PR) com 16 MCs e quatro vitórias seguidas por 2×1 de Poeta Gabriela.'
+        ]
+      }
+    ]
+  }
+};
+
 const WEEK1_RANKING = [
   {pos:'1º',mc:'Guri',uf:'SP',titulos:1,vitorias:4,pts:9},
   {pos:'1º',mc:'Jotapê',uf:'SP',titulos:1,vitorias:4,pts:9},
@@ -24,12 +232,12 @@ const WEEK1_RANKING = [
 ];
 
 const WEEK1_CALENDAR_EVENTS = {
-  '2027-1-4': {label:'Aldeia #1',href:'batalhas.html',title:'04/01/2027 — Batalha da Aldeia · 1ª Edição (Edição Lendas — Trios)'},
-  '2027-1-6': {label:'Coliseu #1',href:'batalhas.html',title:'06/01/2027 — Batalha do Coliseu · 1ª Edição (Individual)'},
-  '2027-1-7': {label:'Ana Rosa #1',href:'batalhas.html',title:'07/01/2027 — Batalha do Ana Rosa · 1ª Edição (Individual)'},
-  '2027-1-8': {label:'Norte #1',href:'batalhas.html',title:'08/01/2027 — Batalha da Norte · 1ª Edição (Formato Nacional)'},
-  '2027-1-9': {label:'LNF Seletivas',href:'competicoes.html',title:'09/01/2027 — LNF · Seletivas Estaduais (SP, RJ e DF)'},
-  '2027-1-10': {label:'Jamália #1',href:'batalhas.html',title:'10/01/2027 — Batalha da Jamália · Edição de Inauguração (Curitiba/PR)'}
+  '2027-1-4': {label:'Aldeia #1',href:'batalhas.html?abrir=ALDEIA',title:'04/01/2027 — Batalha da Aldeia · 1ª Edição'},
+  '2027-1-6': {label:'Coliseu #1',href:'batalhas.html?abrir=COLISEU',title:'06/01/2027 — Batalha do Coliseu · 1ª Edição'},
+  '2027-1-7': {label:'Ana Rosa #1',href:'batalhas.html?abrir=ANA%20ROSA',title:'07/01/2027 — Batalha do Ana Rosa · 1ª Edição'},
+  '2027-1-8': {label:'Norte #1',href:'batalhas.html?abrir=NORTE',title:'08/01/2027 — Batalha da Norte · 1ª Edição'},
+  '2027-1-9': {label:'LNF Seletivas',href:'competicoes.html?abrir=LNF%20S%C3%89RIE%20A',title:'09/01/2027 — LNF · Seletivas Estaduais (SP, RJ e DF)'},
+  '2027-1-10': {label:'Jamália #1',href:'batalhas.html?abrir=JAMALIA',title:'10/01/2027 — Batalha da Jamália · Inauguração'}
 };
 
 const RIMAGRAM_POSTS = [
@@ -117,8 +325,8 @@ const RIMATUBE_ITEMS = [
 ];
 
 const data={
-'batalhas.html':{title:'CASAS DE <span>BATALHA.</span>',eyebrow:'O circuito',desc:'Explore as casas de batalha, acompanhe as edições e consulte os resultados oficiais do FR Universe 2027.',cards:[['ALDEIA','Segunda-feira','🎤'],['COLISEU','Quarta-feira','⚔'],['ANA ROSA','Quinta-feira','🎙'],['NORTE','Sexta-feira','🔥'],['JAMALIA','Domingo','★']]},
-'competicoes.html':{title:'GRANDES <span>COMPETIÇÕES.</span>',eyebrow:'A disputa pelo topo',desc:'LNF Série A, estaduais, nacionais, copas e edições especiais. Cada competição terá seus próprios resultados e chaveamentos.',cards:[['LNF SÉRIE A','Liga nacional','🏆'],['ESTADUAIS','Disputas por estado','◈'],['NACIONAIS','Palco nacional','★'],['COPAS','Torneios e formatos especiais','⚡'],['ESPECIAIS','Eventos extraordinários','◆']]},
+'batalhas.html':{title:'CASAS DE <span>BATALHA.</span>',eyebrow:'O circuito',desc:'Clique em uma casa de batalha para ver as edições e acontecimentos registrados.',cards:[]},
+'competicoes.html':{title:'GRANDES <span>COMPETIÇÕES.</span>',eyebrow:'A disputa pelo topo',desc:'Clique em uma competição para ver as edições e acontecimentos registrados.',cards:[]},
 'mcs.html':{title:'OS DONOS DO <span>MICROFONE.</span>',eyebrow:'Elenco oficial',desc:'Perfis, estilos, conquistas e históricos dos participantes. Os cadastros serão importados da base oficial aprovada pelo Presidente.',cards:[]},
 'rankings.html':{title:'A CORRIDA PELO <span>TOPO.</span>',eyebrow:'Ranking geral · Semana 1',desc:'Classificação geral oficial da 1ª semana de janeiro de 2027 (04/01 a 10/01/2027).',cards:[]},
 'rimagram.html':{title:'O UNIVERSO <span>REPERCUTE.</span>',eyebrow:'Rimagram',desc:'Feed social do FR Universe com os acontecimentos registrados.',cards:[]},
@@ -129,8 +337,77 @@ const data={
 const d=data[current];if(d){document.title=d.title.replace(/<[^>]+>/g,'')+' | FR Universe 2027';document.getElementById('content').innerHTML=`<section class="pagehero"><div class="container"><div class="eyebrow">${d.eyebrow}</div><h1>${d.title}</h1><p>${d.desc}</p><span class="status">Registros publicados · 2027</span></div></section><main class="container">${renderPage(current,d)}</main>`;}
 function empty(title,description,emoji='✦'){return `<div class="empty"><div class="big">${emoji}</div><h3>${title}</h3><p>${description}</p></div>`}
 
+function ensureDetailDialog(){
+  let dlg=document.getElementById('fu-detail-dialog');
+  if(!dlg){
+    dlg=document.createElement('dialog');
+    dlg.id='fu-detail-dialog';
+    dlg.className='mc-dialog';
+    dlg.innerHTML=`<button class="mc-close" id="fu-detail-close" type="button" aria-label="Fechar">✕</button><div id="fu-detail-content"></div>`;
+    document.body.appendChild(dlg);
+    document.getElementById('fu-detail-close').onclick=()=>dlg.close();
+    dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close();});
+  }
+  return dlg;
+}
+
+function openEdicoesModal(tituloTopo, nomeItem, subItem, listaEdicoes){
+  if(!listaEdicoes||!listaEdicoes.length)return;
+  const dlg=ensureDetailDialog();
+  const blocks=listaEdicoes.map(ed=>`
+    <div style="background:#191b20;border:1px solid #2e3138;border-radius:6px;padding:16px;margin-top:14px">
+      <div class="label">EDIÇÃO REGISTRADA</div>
+      <h3 style="font-size:24px;margin:6px 0 10px">${ed.nome}</h3>
+      <div class="mc-profile-meta" style="margin-bottom:14px">
+        <div><small>CAMPEÃO / DESTAQUE</small><strong>${ed.campeao}</strong></div>
+        <div><small>VICE / STATUS</small><strong>${ed.vice}</strong></div>
+      </div>
+      <div class="label" style="margin-bottom:6px">ACONTECIMENTOS DA EDIÇÃO</div>
+      <ul style="margin:0;padding-left:18px;color:#d6d8de;font-size:12px;line-height:1.65">
+        ${ed.acontecimentos.map(a=>`<li style="margin-bottom:6px">${a}</li>`).join('')}
+      </ul>
+    </div>
+  `).join('');
+  document.getElementById('fu-detail-content').innerHTML=`
+    <div class="label">${tituloTopo}</div>
+    <h2 style="font-size:40px;margin:10px 0 6px">${nomeItem}</h2>
+    <p style="color:#f3c54c;font-size:12px;font-weight:800;text-transform:uppercase;margin:0">${subItem}</p>
+    ${blocks}
+  `;
+  dlg.showModal();
+}
+
 function renderPage(page,d){
-  if(page==='batalhas.html'||page==='competicoes.html'){return `<section class="section"><div class="sectionhead"><div><h2>${page==='batalhas.html'?'CIRCUITO DE BATALHAS':'COMPETIÇÕES OFICIAIS'}</h2><p>Casas e competições registradas</p></div></div><div class="grid">${d.cards.map(([name,sub,icon])=>`<article class="card"><div class="placeholder"><div class="symbol">${icon}</div><small>FR UNIVERSE 2027</small></div><div class="cardpad"><div class="kicker">${sub}</div><h3>${name}</h3><p>Resultados e chaveamentos oficiais registrados na rodada.</p></div></article>`).join('')}</div></section>`}
+  if(page==='batalhas.html'){
+    const cardsHtml=Object.entries(BATALHAS_EDICOES).map(([nome,info])=>`
+      <button class="mc-card" type="button" data-open-batalha="${nome}" style="display:flex;flex-direction:column;width:100%">
+        <span class="mc-art" style="width:100%"><span class="mc-initial">${info.icon}</span><span class="mc-art-note">FR UNIVERSE 2027</span></span>
+        <span class="mc-info">
+          <span class="mc-location">${info.sub}</span>
+          <strong>${nome}</strong>
+          <span class="mc-category">${info.resumo}</span>
+          <span class="mc-view">VER EDIÇÕES ↗</span>
+        </span>
+      </button>
+    `).join('');
+    return `<section class="section"><div class="sectionhead"><div><h2>CIRCUITO DE BATALHAS</h2><p>Clique em uma batalha para abrir suas edições e acontecimentos</p></div></div><div class="grid">${cardsHtml}</div></section>`;
+  }
+
+  if(page==='competicoes.html'){
+    const cardsHtml=Object.entries(COMPETICOES_EDICOES).map(([nome,info])=>`
+      <button class="mc-card" type="button" data-open-comp="${nome}" style="display:flex;flex-direction:column;width:100%">
+        <span class="mc-art" style="width:100%"><span class="mc-initial">${info.icon}</span><span class="mc-art-note">FR UNIVERSE 2027</span></span>
+        <span class="mc-info">
+          <span class="mc-location">${info.sub}</span>
+          <strong>${nome}</strong>
+          <span class="mc-category">${info.resumo}</span>
+          <span class="mc-view">VER EDIÇÕES ↗</span>
+        </span>
+      </button>
+    `).join('');
+    return `<section class="section"><div class="sectionhead"><div><h2>COMPETIÇÕES OFICIAIS</h2><p>Clique em uma competição para abrir suas edições e acontecimentos</p></div></div><div class="grid">${cardsHtml}</div></section>`;
+  }
+
   if(page==='mcs.html')return `<section class="section"><div class="sectionhead"><div><h2>ELENCO OFICIAL</h2><p>170 MCs válidos • 5 personagens fictícios • estatísticas 2027 zeradas</p></div></div><div class="mc-summary"><span><strong>170</strong> MCs cadastrados</span><span><strong>5</strong> fictícios</span><span><strong>0</strong> resultados de 2027</span></div><div class="filters mc-controls"><input class="search" id="mc-search" placeholder="Buscar MC por nome ou apelido..." aria-label="Buscar MC"><select class="mc-select" id="mc-state" aria-label="Filtrar por estado"><option value="">Todos os estados</option></select><select class="mc-select" id="mc-nature" aria-label="Filtrar por natureza"><option value="">Reais e fictícios</option><option value="real">Reais</option><option value="fictício">Fictícios</option></select></div><p class="mc-count" id="mc-count" aria-live="polite"></p><div class="mc-grid" id="mc-list"></div><div class="mc-more-wrap"><button class="btn secondary" id="mc-more" type="button" hidden>VER MAIS MCS</button></div><p class="fine">As categorias e descrições representam o cadastro fornecido pelo Presidente, não uma avaliação externa verificada. Informações desconhecidas permanecem pendentes.</p></section><dialog id="mc-dialog" class="mc-dialog" aria-label="Ficha do MC"><button class="mc-close" id="mc-close" aria-label="Fechar ficha">✕</button><div id="mc-detail"></div></dialog>`;
 
   if(page==='rankings.html'){
@@ -240,6 +517,36 @@ function renderPage(page,d){
 
   if(page==='calendario.html')return `<section class="section"><div class="sectionhead"><div><h2>HISTÓRICO DE 2027</h2><p>Somente eventos concluídos e oficialmente registrados</p></div></div><div class="card cardpad" style="max-width:850px;margin:auto"><div class="calendarbar"><button id="prevmonth" aria-label="Mês anterior">❮</button><h2 id="monthname">JANEIRO 2027</h2><button id="nextmonth" aria-label="Próximo mês">❯</button></div><div class="week" id="calendar"></div><p class="fine" style="margin-top:20px">Os símbolos das casas e competições aparecem nos dias de eventos concluídos. Ao clicar, abrirão a página oficial correspondente.</p></div></section>`;
   return '';
+}
+
+if(current==='batalhas.html'){
+  document.getElementById('content').addEventListener('click',e=>{
+    const btn=e.target.closest('[data-open-batalha]');
+    if(!btn)return;
+    const chave=btn.dataset.openBatalha;
+    const item=BATALHAS_EDICOES[chave];
+    if(item)openEdicoesModal('BATALHA · EDIÇÕES E ACONTECIMENTOS',chave,item.sub,item.edicoes);
+  });
+  const abrir=new URLSearchParams(location.search).get('abrir');
+  if(abrir&&BATALHAS_EDICOES[abrir]){
+    const item=BATALHAS_EDICOES[abrir];
+    openEdicoesModal('BATALHA · EDIÇÕES E ACONTECIMENTOS',abrir,item.sub,item.edicoes);
+  }
+}
+
+if(current==='competicoes.html'){
+  document.getElementById('content').addEventListener('click',e=>{
+    const btn=e.target.closest('[data-open-comp]');
+    if(!btn)return;
+    const chave=btn.dataset.openComp;
+    const item=COMPETICOES_EDICOES[chave];
+    if(item)openEdicoesModal('COMPETIÇÃO · EDIÇÕES E ACONTECIMENTOS',chave,item.sub,item.edicoes);
+  });
+  const abrir=new URLSearchParams(location.search).get('abrir');
+  if(abrir&&COMPETICOES_EDICOES[abrir]){
+    const item=COMPETICOES_EDICOES[abrir];
+    openEdicoesModal('COMPETIÇÃO · EDIÇÕES E ACONTECIMENTOS',abrir,item.sub,item.edicoes);
+  }
 }
 
 if(current==='calendario.html'){
