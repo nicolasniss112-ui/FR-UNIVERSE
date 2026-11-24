@@ -6,66 +6,84 @@ document.getElementById('header').innerHTML=header;document.getElementById('foot
 
 const RIMAGRAM_POSTS = [
   {
-    autor: 'Batalha da Aldeia · 1ª Edição (Edição Lendas)',
-    sub: 'São Paulo — Segunda-feira · Trios',
-    texto: 'Neo, Jotapê e Kant levam o título invicto por 3×0 na Grande Final contra Big Mike, Ike e Valle! Semifinais: Tubarão, Kroy e Bask | Apollo, Salvador da RIMA e Noventa.'
+    perfil: '@aldeia.sp',
+    nome: 'Batalha da Aldeia · 1ª Edição (Edição Lendas)',
+    meta: 'São Paulo — Segunda-feira · Batalha de Trios',
+    badge: 'CAMPEÕES 3×0',
+    texto: 'Neo, Jotapê e Kant levam o título invicto por 3×0 na Grande Final contra Big Mike, Ike e Valle. Semifinais: Tubarão, Kroy e Bask | Apollo, Salvador da RIMA e Noventa.'
   },
   {
-    autor: 'Batalha do Coliseu · 1ª Edição',
-    sub: 'Quarta-feira · Individual',
-    texto: 'Jotapê é campeão vencendo WL por 2×1 na final! Caminho do campeão: 2×0 vs Kaell, 0×2/2×0 vs Devilzinha, 2×0 vs Magrão e 2×1 vs WL.'
+    perfil: '@coliseu.oficial',
+    nome: 'Batalha do Coliseu · 1ª Edição',
+    meta: 'Quarta-feira · Individual',
+    badge: 'CAMPEÃO 2×1',
+    texto: 'Jotapê é campeão vencendo WL por 2×1 na final! Semifinalistas: Neo e Magrão. Quartas: Noventa, Perigx, Devilzinha e Torvi.'
   },
   {
-    autor: 'Batalha do Ana Rosa · 1ª Edição',
-    sub: 'Quinta-feira · Individual',
-    texto: 'Guri conquista o título superando Mano Ayron por 2×1 na final! Semifinalistas: Salvador e Kroy; Quartas: Fortes, Dehat, Ike e Magrão.'
+    perfil: '@anarosa.batalha',
+    nome: 'Batalha do Ana Rosa · 1ª Edição',
+    meta: 'Quinta-feira · Individual',
+    badge: 'CAMPEÃO 2×1',
+    texto: 'Guri conquista o título superando Mano Ayron por 2×1 na final! Semifinalistas: Salvador e Kroy. Quartas: Fortes, Dehat, Ike e Magrão.'
   },
   {
-    autor: 'Batalha da Norte · 1ª Edição',
-    sub: 'Sexta-feira · Formato Nacional',
-    texto: 'Youngui leva o título no Formato Nacional vencendo Dehat por 2×0 na final! Semifinalistas: Glaubin e Prado; Quartas: MCharles, Martin, Tavin e Levinsk.'
+    perfil: '@norte.batalha',
+    nome: 'Batalha da Norte · 1ª Edição',
+    meta: 'Sexta-feira · Formato Nacional',
+    badge: 'CAMPEÃO 2×0',
+    texto: 'Youngui leva o título no Formato Nacional vencendo Dehat por 2×0 na final! Semifinalistas: Glaubin e Prado. Quartas: MCharles, Martin, Tavin e Levinsk.'
   },
   {
-    autor: 'Seletivas Estaduais — LNF',
-    sub: 'SP (20 classificados) · RJ (20 classificados) · DF (20 classificados)',
-    texto: '60 classificados no total (16 diretos + 4 repescagem por estado). Destaques: Killua (2×1 vs Grafitteh em SP), Pivete (2×1 vs Scooby no RJ) e Nanda Samambaia / Soraia Brazlândia (2×0 nas finais do DF).'
+    perfil: '@lnf.oficial',
+    nome: 'Seletivas Estaduais — LNF',
+    meta: 'SP · RJ · DF · 20 Classificados por Estado',
+    badge: '60 CLASSIFICADOS',
+    texto: 'SP: 16 diretos + WM, EZ, Apollo e Killua (2×1 vs Grafitteh). RJ: 16 diretos + Nene, Bigode, Nicolas e Pivete (2×1 vs Scooby). DF: 16 diretos + Pietra Candangolândia, Nanda Samambaia (2×0), Soraia Brazlândia (2×0) e Breno Sobradinho.'
   },
   {
-    autor: 'Batalha da Jamália (BDJ) · Inauguração',
-    sub: 'Curitiba · PR — Domingo · Individual (16 MCs)',
+    perfil: '@jamalia.cwb',
+    nome: 'Batalha da Jamália (BDJ) · Inauguração',
+    meta: 'Curitiba · PR — Domingo · Individual (16 MCs)',
+    badge: '4V–0D · 2×1',
     texto: 'Poeta Gabriela é campeã inaugural com campanha 4V–0D (8–4 em rounds), vencendo quatro confrontos seguidos por 2×1 (Lilica, Levitico, Olhinho e Joãozinho na final).'
   }
 ];
 
 const RIMATUBE_ITEMS = [
   {
-    titulo: 'Aldeia · 1ª Edição (Edição Lendas — Trios)',
-    sub: 'São Paulo — Segunda-feira · Final: Big Mike, Ike e Valle 0 × 3 Neo, Jotapê e Kant',
+    selo: 'TRIOS · FINAL 0×3',
+    canal: 'FR UNIVERSE TV · SÃO PAULO',
+    titulo: 'Aldeia · 1ª Edição (Edição Lendas): Big Mike, Ike e Valle 0 × 3 Neo, Jotapê e Kant',
     detalhe: 'Quartas: Tubarão/Kroy/Bask 3×2 Guri/Prado/Tavin; Colombiana/Bob13/Nicolas Niss 0×3 Big Mike/Ike/Valle; Neo/Jotapê/Kant 3×1 Barreto/Dopre/Brennuz; César/Sid/MCharles 2×3 Apollo/Salvador da RIMA/Noventa. Semis: Tubarão/Kroy/Bask 2×3 Big Mike/Ike/Valle; Neo/Jotapê/Kant 3×0 Apollo/Salvador da RIMA/Noventa.'
   },
   {
-    titulo: 'Coliseu · 1ª Edição (Individual)',
-    sub: 'Quarta-feira · Final: WL 1 × 2 Jotapê',
+    selo: 'INDIVIDUAL · FINAL 1×2',
+    canal: 'FR UNIVERSE TV · COLISEU',
+    titulo: 'Coliseu · 1ª Edição: WL 1 × 2 Jotapê',
     detalhe: 'Caminho de Jotapê: 1ª Fase 2×0 vs Kaell; Quartas 2×0 vs Devilzinha; Semifinal 2×0 vs Magrão; Final 2×1 vs WL. Vice: WL; Semis: Neo e Magrão.'
   },
   {
-    titulo: 'Ana Rosa · 1ª Edição (Individual)',
-    sub: 'Quinta-feira · Final: Guri 2 × 1 Mano Ayron',
+    selo: 'INDIVIDUAL · FINAL 2×1',
+    canal: 'FR UNIVERSE TV · ANA ROSA',
+    titulo: 'Ana Rosa · 1ª Edição: Guri 2 × 1 Mano Ayron',
     detalhe: 'Caminho de Guri: 1ª Fase 2×0 vs Lion; Quartas 2×0 vs Dehat; Semifinal 2×1 vs Salvador; Final 2×1 vs Mano Ayron. Vice: Mano Ayron; Semis: Salvador e Kroy.'
   },
   {
-    titulo: 'Norte · 1ª Edição (Formato Nacional)',
-    sub: 'Sexta-feira · Final: Dehat 0 × 2 Youngui',
+    selo: 'NACIONAL · FINAL 0×2',
+    canal: 'FR UNIVERSE TV · NORTE',
+    titulo: 'Norte · 1ª Edição (Formato Nacional): Dehat 0 × 2 Youngui',
     detalhe: 'Caminho de Youngui: 1ª Fase 2×1 vs Tonhão; Quartas 2×0 vs Levinsk; Semifinal 2×1 vs Prado; Final 2×0 vs Dehat. Vice: Dehat; Semis: Glaubin e Prado.'
   },
   {
-    titulo: 'Jamália (BDJ) · Edição de Inauguração (Curitiba · PR)',
-    sub: 'Domingo · Individual (16 MCs) · Final: Poeta Gabriela 2 × 1 Joãozinho',
+    selo: 'BDJ 16 MCS · FINAL 2×1',
+    canal: 'FR UNIVERSE TV · CURITIBA/PR',
+    titulo: 'Jamália (BDJ) · Inauguração: Poeta Gabriela 2 × 1 Joãozinho',
     detalhe: 'Poeta Gabriela (4V–0D, 8–4 em rounds): Oitavas 03 2×1 vs Lilica; Quartas 02 2×1 vs Levitico; Semifinal 01 2×1 vs Olhinho; Final 2×1 vs Joãozinho (3V–1D, 7–2 em rounds).'
   },
   {
-    titulo: 'Seletivas Estaduais — LNF (SP, RJ e DF)',
-    sub: '20 Classificados e 12 Eliminados por Estado',
+    selo: 'LNF · SELETIVAS SP/RJ/DF',
+    canal: 'FR UNIVERSE TV · LNF',
+    titulo: 'Seletivas Estaduais da LNF: 20 Classificados e 12 Eliminados por UF',
     detalhe: 'SP: 16 diretos + WM, EZ, Apollo e Killua (2×1 vs Grafitteh). RJ: 16 diretos + Nene, Bigode, Nicolas e Pivete (2×1 vs Scooby). DF: 16 diretos + Pietra Candangolândia, Nanda Samambaia (2×0), Soraia Brazlândia (2×0) e Breno Sobradinho.'
   }
 ];
@@ -75,29 +93,109 @@ const data={
 'competicoes.html':{title:'GRANDES <span>COMPETIÇÕES.</span>',eyebrow:'A disputa pelo topo',desc:'LNF Série A, estaduais, nacionais, copas e edições especiais. Cada competição terá seus próprios resultados e chaveamentos.',cards:[['LNF SÉRIE A','Liga nacional','🏆'],['ESTADUAIS','Disputas por estado','◈'],['NACIONAIS','Palco nacional','★'],['COPAS','Torneios e formatos especiais','⚡'],['ESPECIAIS','Eventos extraordinários','◆']]},
 'mcs.html':{title:'OS DONOS DO <span>MICROFONE.</span>',eyebrow:'Elenco oficial',desc:'Perfis, estilos, conquistas e históricos dos participantes. Os cadastros serão importados da base oficial aprovada pelo Presidente.',cards:[]},
 'rankings.html':{title:'A CORRIDA PELO <span>TOPO.</span>',eyebrow:'Ranking nacional',desc:'Classificação exclusiva das edições individuais das casas de batalha. Pontuação calculada somente com resultados oficiais registrados.',cards:[]},
-'rimagram.html':{title:'O UNIVERSO <span>REPERCUTE.</span>',eyebrow:'Rimagram',desc:'O feed do FR Universe com os acontecimentos registrados na rodada.',cards:[]},
-'rimatube.html':{title:'BATALHAS QUE <span>MARCAM.</span>',eyebrow:'RimaTube',desc:'Registros textuais dos confrontos e resultados registrados na rodada.',cards:[]},
-'jornal.html':{title:'JORNAL DO <span>RAP.</span>',eyebrow:'Cobertura semanal',desc:'Edição resumida com campeões, resultados, seletivas da LNF e destaques registrados.',cards:[]},
+'rimagram.html':{title:'O UNIVERSO <span>REPERCUTE.</span>',eyebrow:'Rimagram',desc:'Feed social do FR Universe com os acontecimentos registrados.',cards:[]},
+'rimatube.html':{title:'BATALHAS QUE <span>MARCAM.</span>',eyebrow:'RimaTube',desc:'Central de destaques e registros dos confrontos e seletivas.',cards:[]},
+'jornal.html':{title:'JORNAL DO <span>RAP.</span>',eyebrow:'Cobertura semanal',desc:'Edição impressa do FR Universe com campeões, resultados e seletivas da LNF.',cards:[]},
 'calendario.html':{title:'CADA DATA, UMA <span>HISTÓRIA.</span>',eyebrow:'Calendário histórico',desc:'Navegue pelos meses de 2027 e consulte as edições já realizadas. Eventos futuros não aparecem neste calendário.',cards:[]}
 };
 const d=data[current];if(d){document.title=d.title.replace(/<[^>]+>/g,'')+' | FR Universe 2027';document.getElementById('content').innerHTML=`<section class="pagehero"><div class="container"><div class="eyebrow">${d.eyebrow}</div><h1>${d.title}</h1><p>${d.desc}</p><span class="status">Registros publicados · 2027</span></div></section><main class="container">${renderPage(current,d)}</main>`;}
 function empty(title,description,emoji='✦'){return `<div class="empty"><div class="big">${emoji}</div><h3>${title}</h3><p>${description}</p></div>`}
+
 function renderPage(page,d){
   if(page==='batalhas.html'||page==='competicoes.html'){return `<section class="section"><div class="sectionhead"><div><h2>${page==='batalhas.html'?'CIRCUITO DE BATALHAS':'COMPETIÇÕES OFICIAIS'}</h2><p>Casas e competições registradas</p></div></div><div class="grid">${d.cards.map(([name,sub,icon])=>`<article class="card"><div class="placeholder"><div class="symbol">${icon}</div><small>FR UNIVERSE 2027</small></div><div class="cardpad"><div class="kicker">${sub}</div><h3>${name}</h3><p>Resultados e chaveamentos oficiais registrados na rodada.</p></div></article>`).join('')}</div></section>`}
   if(page==='mcs.html')return `<section class="section"><div class="sectionhead"><div><h2>ELENCO OFICIAL</h2><p>170 MCs válidos • 5 personagens fictícios • estatísticas 2027 zeradas</p></div></div><div class="mc-summary"><span><strong>170</strong> MCs cadastrados</span><span><strong>5</strong> fictícios</span><span><strong>0</strong> resultados de 2027</span></div><div class="filters mc-controls"><input class="search" id="mc-search" placeholder="Buscar MC por nome ou apelido..." aria-label="Buscar MC"><select class="mc-select" id="mc-state" aria-label="Filtrar por estado"><option value="">Todos os estados</option></select><select class="mc-select" id="mc-nature" aria-label="Filtrar por natureza"><option value="">Reais e fictícios</option><option value="real">Reais</option><option value="fictício">Fictícios</option></select></div><p class="mc-count" id="mc-count" aria-live="polite"></p><div class="mc-grid" id="mc-list"></div><div class="mc-more-wrap"><button class="btn secondary" id="mc-more" type="button" hidden>VER MAIS MCS</button></div><p class="fine">As categorias e descrições representam o cadastro fornecido pelo Presidente, não uma avaliação externa verificada. Informações desconhecidas permanecem pendentes.</p></section><dialog id="mc-dialog" class="mc-dialog" aria-label="Ficha do MC"><button class="mc-close" id="mc-close" aria-label="Fechar ficha">✕</button><div id="mc-detail"></div></dialog>`;
   if(page==='rankings.html')return `<section class="section"><div class="sectionhead"><div><h2>PÓDIO NACIONAL</h2><p>Somente edições individuais das casas de batalha</p></div></div>${empty('O PÓDIO AINDA ESTÁ VAZIO','Nenhuma edição de 2027 foi registrada. O ranking começará do zero.','🏆')}<div style="height:24px"></div><div class="tablewrap"><table><thead><tr><th>Posição</th><th>MC</th><th>UF</th><th>Títulos</th><th>Vitórias</th><th>Pontos</th></tr></thead><tbody><tr><td colspan="6" style="text-align:center;padding:34px;color:#999">Aguardando primeiros resultados oficiais</td></tr></tbody></table></div><p class="fine">Regras: campeão +7, vice +5, semifinal +3, vitória 2×0 +1, derrota na primeira fase −1. Desempates: títulos, vitórias e empate mantido.</p></section>`;
+
   if(page==='rimagram.html'){
-    return `<section class="section"><div class="sectionhead"><div><h2>FEED DO UNIVERSO</h2><p>Resultados e repercussões registradas</p></div></div><div style="max-width:680px;margin:auto">${RIMAGRAM_POSTS.map(p=>`<article class="card cardpad" style="margin-bottom:16px"><div class="label">${p.sub}</div><h3 style="font-size:24px;margin-top:8px">${p.autor}</h3><p style="color:#f8f8f8;font-size:14px;margin-top:10px">${p.texto}</p></article>`).join('')}</div></section>`;
+    const postsHtml = RIMAGRAM_POSTS.map(p=>`
+      <article class="card" style="margin-bottom:20px;border-color:#2e3138">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 20px;border-bottom:1px solid #25282e;background:#14161b">
+          <div style="display:flex;align-items:center;gap:12px">
+            <div style="width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#f3c54c,#7c5e14);color:#111;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:18px;display:grid;place-items:center;flex-shrink:0">FR</div>
+            <div>
+              <div style="font-size:13px;font-weight:800;color:#f8f8f8">${p.perfil}</div>
+              <div style="font-size:11px;color:#999da6">${p.meta}</div>
+            </div>
+          </div>
+          <span style="border:1px solid #66562b;color:#f3c54c;background:#251f12;padding:5px 9px;border-radius:4px;font-size:10px;font-weight:800;letter-spacing:.08em;white-space:nowrap">${p.badge}</span>
+        </div>
+        <div style="padding:20px;background:radial-gradient(circle at 85% 15%,rgba(243,197,76,.08),transparent 55%)">
+          <h3 style="font-size:24px;margin:0 0 10px">${p.nome}</h3>
+          <p style="color:#e6e7eb;font-size:14px;line-height:1.65;margin:0">${p.texto}</p>
+        </div>
+        <div style="display:flex;gap:18px;padding:12px 20px;border-top:1px solid #25282e;background:#101216;color:#aeb0b6;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em">
+          <span>♡ Curtir</span>
+          <span>💬 Comentários</span>
+          <span>↗ Compartilhar</span>
+        </div>
+      </article>
+    `).join('');
+    return `<section class="section"><div class="sectionhead"><div><h2>RIMAGRAM · FEED OFICIAL</h2><p>Publicações registradas na rodada</p></div></div><div style="max-width:640px;margin:0 auto">${postsHtml}</div></section>`;
   }
+
   if(page==='rimatube.html'){
-    return `<section class="section"><div class="sectionhead"><div><h2>DESTAQUES EM VÍDEO</h2><p>Registros textuais dos confrontos e seletivas</p></div></div><div class="grid">${RIMATUBE_ITEMS.map(v=>`<article class="card"><div class="placeholder"><div class="symbol">▶</div><small>FR UNIVERSE 2027</small></div><div class="cardpad"><div class="kicker">${v.sub}</div><h3>${v.titulo}</h3><p>${v.detalhe}</p></div></article>`).join('')}</div></section>`;
+    const vidsHtml = RIMATUBE_ITEMS.map(v=>`
+      <article class="card" style="display:flex;flex-direction:column;border-color:#2e3138">
+        <div style="position:relative;aspect-ratio:16/9;background:radial-gradient(circle at 65% 35%,#4a3916,#191a1f 55%,#0c0d10 100%);display:flex;align-items:center;justify-content:center;border-bottom:1px solid #27292f">
+          <div style="width:58px;height:42px;border-radius:10px;background:#f3c54c;color:#111;display:grid;place-items:center;font-size:18px;font-weight:900;box-shadow:0 8px 24px rgba(0,0,0,.55)">▶</div>
+          <span style="position:absolute;top:12px;left:12px;background:rgba(8,9,11,.85);border:1px solid #66562b;color:#f3c54c;padding:4px 8px;border-radius:3px;font-size:10px;font-weight:800;letter-spacing:.08em">${v.canal}</span>
+          <span style="position:absolute;bottom:12px;right:12px;background:rgba(8,9,11,.9);color:#f8f8f8;padding:4px 8px;border-radius:3px;font-size:10px;font-weight:800;letter-spacing:.06em">${v.selo}</span>
+        </div>
+        <div class="cardpad" style="flex:1">
+          <h3 style="font-size:23px;margin:0 0 10px;line-height:1.05">${v.titulo}</h3>
+          <p style="color:#b8bac2;font-size:12px;line-height:1.65;margin:0">${v.detalhe}</p>
+        </div>
+      </article>
+    `).join('');
+    return `<section class="section"><div class="sectionhead"><div><h2>RIMATUBE · CENTRAL DE CONFRONTOS</h2><p>Registros textuais dos confrontos e seletivas</p></div></div><div class="grid">${vidsHtml}</div></section>`;
   }
+
   if(page==='jornal.html'){
-    return `<section class="section"><div class="sectionhead"><div><h2>EDIÇÃO DA SEMANA</h2><p>Cobertura completa das casas e seletivas da LNF</p></div></div><div class="feature"><article class="card"><div class="placeholder" style="min-height:250px"><div class="symbol">FR</div><small>Manchete da semana</small></div><div class="cardpad"><div class="label">Manchete principal</div><h3 style="font-size:34px;margin-top:20px">NEO, JOTAPÊ E KANT LEVAM A ALDEIA; JOTAPÊ VENCE O COLISEU; GURI LEVA O ANA ROSA; YOUNGUI VENCE A NORTE; POETA GABRIELA ESTREIA COM TÍTULO NA JAMÁLIA E LNF DEFINE 60 CLASSIFICADOS</h3><p style="margin-top:14px">Confira os campeões, finais, caminhos dos campeões e os 20 classificados por estado em SP, RJ e DF.</p></div></article><div class="card cardpad"><div class="label">Nesta edição</div><h3>COBERTURA OFICIAL</h3><p><strong>Aldeia · 1ª Edição (Edição Lendas — Trios):</strong> Campeões Neo, Jotapê e Kant (3×0 na final) · Vice: Big Mike, Ike e Valle.</p><hr style="border:0;border-top:1px solid #333"><p><strong>Coliseu · 1ª Edição:</strong> Campeão Jotapê (2×1 vs WL) · <strong>Ana Rosa · 1ª Edição:</strong> Campeão Guri (2×1 vs Mano Ayron) · <strong>Norte · 1ª Edição:</strong> Campeão Youngui (2×0 vs Dehat).</p><hr style="border:0;border-top:1px solid #333"><p><strong>Jamália (BDJ) · Inauguração (Curitiba/PR):</strong> Campeã Poeta Gabriela (4V–0D, 8–4 em rounds, quatro vitórias por 2×1, final 2×1 vs Joãozinho).</p><hr style="border:0;border-top:1px solid #333"><p><strong>Seletivas LNF (SP, RJ e DF):</strong> 20 classificados e 12 eliminados em cada estado (16 diretos + 4 repescagem por UF).</p></div></div></section>`;
+    return `
+      <section class="section">
+        <div class="card" style="border-color:#66562b;background:#121317;margin-bottom:20px">
+          <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;padding:14px 24px;border-bottom:1px solid #2b2d34;background:#18191e">
+            <span style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:20px;letter-spacing:.08em;color:#f3c54c;text-transform:uppercase">JORNAL DO RAP · EDIÇÃO SEMANAL</span>
+            <span style="font-size:11px;font-weight:800;color:#aeb0b6;letter-spacing:.1em;text-transform:uppercase">FR UNIVERSE 2027 · COBERTURA OFICIAL</span>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+            <div style="padding:26px;border-right:1px solid #25272e">
+              <div class="label">MANCHETE PRINCIPAL</div>
+              <h2 style="font-size:36px;line-height:1.02;margin:12px 0 14px">NEO, JOTAPÊ E KANT LEVAM A ALDEIA; JOTAPÊ VENCE O COLISEU; GURI LEVA O ANA ROSA; YOUNGUI VENCE A NORTE; POETA GABRIELA ESTREIA COM TÍTULO NA JAMÁLIA E LNF DEFINE 60 CLASSIFICADOS</h2>
+              <p style="color:#c5c7ce;font-size:13px;line-height:1.7;margin:0">Cobertura completa das casas de batalha e das seletivas estaduais da LNF (SP, RJ e DF) registradas na rodada.</p>
+            </div>
+            <div style="padding:26px;display:flex;flex-direction:column;gap:14px">
+              <div class="label">COLUNA DE RESULTADOS</div>
+              <div>
+                <strong style="color:#f3c54c;font-size:12px;text-transform:uppercase">Aldeia · 1ª Edição (Edição Lendas — Trios)</strong>
+                <p style="color:#d4d6dc;font-size:12px;line-height:1.6;margin:4px 0 0">Campeões: Neo, Jotapê e Kant (3×0 na final) · Vice: Big Mike, Ike e Valle.</p>
+              </div>
+              <hr style="border:0;border-top:1px solid #262830;margin:0">
+              <div>
+                <strong style="color:#f3c54c;font-size:12px;text-transform:uppercase">Coliseu, Ana Rosa e Norte</strong>
+                <p style="color:#d4d6dc;font-size:12px;line-height:1.6;margin:4px 0 0">Coliseu: Jotapê campeão (2×1 vs WL) · Ana Rosa: Guri campeão (2×1 vs Mano Ayron) · Norte (Formato Nacional): Youngui campeão (2×0 vs Dehat).</p>
+              </div>
+              <hr style="border:0;border-top:1px solid #262830;margin:0">
+              <div>
+                <strong style="color:#f3c54c;font-size:12px;text-transform:uppercase">Jamália (BDJ) · Inauguração (Curitiba/PR)</strong>
+                <p style="color:#d4d6dc;font-size:12px;line-height:1.6;margin:4px 0 0">Campeã: Poeta Gabriela (4V–0D, 8–4 em rounds; quatro vitórias por 2×1, final 2×1 vs Joãozinho).</p>
+              </div>
+              <hr style="border:0;border-top:1px solid #262830;margin:0">
+              <div>
+                <strong style="color:#f3c54c;font-size:12px;text-transform:uppercase">Seletivas LNF (SP, RJ e DF)</strong>
+                <p style="color:#d4d6dc;font-size:12px;line-height:1.6;margin:4px 0 0">20 classificados e 12 eliminados por estado (16 diretos + 4 repescagem em SP, RJ e DF).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    `;
   }
+
   if(page==='calendario.html')return `<section class="section"><div class="sectionhead"><div><h2>HISTÓRICO DE 2027</h2><p>Somente eventos concluídos e oficialmente registrados</p></div></div><div class="card cardpad" style="max-width:850px;margin:auto"><div class="calendarbar"><button id="prevmonth" aria-label="Mês anterior">❮</button><h2 id="monthname">JANEIRO 2027</h2><button id="nextmonth" aria-label="Próximo mês">❯</button></div><div class="week" id="calendar"></div><p class="fine" style="margin-top:20px">Os símbolos das casas e competições aparecerão nos dias de eventos concluídos. Ao clicar, abrirão a página oficial correspondente.</p></div></section>`;
   return '';
 }
+
 if(current==='calendario.html'){let m=0;const months=['JANEIRO','FEVEREIRO','MARÇO','ABRIL','MAIO','JUNHO','JULHO','AGOSTO','SETEMBRO','OUTUBRO','NOVEMBRO','DEZEMBRO'];function draw(){document.getElementById('monthname').textContent=months[m]+' 2027';let first=new Date(2027,m,1).getDay(),count=new Date(2027,m+1,0).getDate();document.getElementById('calendar').innerHTML=['DOM','SEG','TER','QUA','QUI','SEX','SÁB'].map(d=>`<div class="weekday">${d}</div>`).join('')+Array.from({length:first},()=>'<div class="day outside"></div>').join('')+Array.from({length:count},(_,i)=>`<div class="day">${i+1}</div>`).join('');document.getElementById('prevmonth').disabled=m===0;document.getElementById('nextmonth').disabled=m===11}document.getElementById('prevmonth').onclick=()=>{m--;draw()};document.getElementById('nextmonth').onclick=()=>{m++;draw()};draw()}
 
 if(current==='mcs.html'){
