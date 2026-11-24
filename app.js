@@ -63,10 +63,10 @@ const BATALHAS_EDICOES = {
   'NORTE': {
     sub: 'Sexta-feira',
     icon: '🔥',
-    resumo: '1ª Edição (Formato Nacional) · Clique para ver edições e acontecimentos',
+    resumo: '1ª Edição (Formato 45s / 90s / 45s) · Clique para ver edições e acontecimentos',
     edicoes: [
       {
-        nome: '1ª Edição — Individual (Formato Nacional)',
+        nome: '1ª Edição — Individual (Formato 45s / 90s / 45s)',
         campeao: 'Youngui',
         vice: 'Dehat',
         acontecimentos: [
@@ -159,18 +159,8 @@ const COMPETICOES_EDICOES = {
   'NACIONAIS': {
     sub: 'Palco nacional',
     icon: '★',
-    resumo: 'Batalha da Norte (Formato Nacional) · Clique para ver acontecimentos',
-    edicoes: [
-      {
-        nome: 'Batalha da Norte · 1ª Edição (Formato Nacional)',
-        campeao: 'Youngui (2×0 vs Dehat na final)',
-        vice: 'Dehat',
-        acontecimentos: [
-          'Semifinalistas: Glaubin e Prado.',
-          'Caminho de Youngui: 2×1 vs Tonhão, 2×0 vs Levinsk, 2×1 vs Prado e 2×0 vs Dehat.'
-        ]
-      }
-    ]
+    resumo: 'Nenhuma edição registrada até o momento',
+    edicoes: []
   },
   'COPAS': {
     sub: 'Torneios e formatos especiais',
@@ -265,9 +255,9 @@ const RIMAGRAM_POSTS = [
   {
     perfil: '@norte.batalha',
     nome: 'Batalha da Norte · 1ª Edição',
-    meta: 'Sexta-feira · Formato Nacional',
+    meta: 'Sexta-feira · Formato 45s / 90s / 45s',
     badge: 'CAMPEÃO 2×0',
-    texto: 'Youngui leva o título no Formato Nacional vencendo Dehat por 2×0 na final! Semifinalistas: Glaubin e Prado. Quartas: MCharles, Martin, Tavin e Levinsk.'
+    texto: 'Youngui leva o título no formato 45s / 90s / 45s vencendo Dehat por 2×0 na final! Semifinalistas: Glaubin e Prado. Quartas: MCharles, Martin, Tavin e Levinsk.'
   },
   {
     perfil: '@lnf.oficial',
@@ -303,12 +293,6 @@ const RIMATUBE_ITEMS = [
     canal: 'FR UNIVERSE TV · ANA ROSA',
     titulo: 'Ana Rosa · 1ª Edição: Guri 2 × 1 Mano Ayron',
     detalhe: 'Caminho de Guri: 1ª Fase 2×0 vs Lion; Quartas 2×0 vs Dehat; Semifinal 2×1 vs Salvador; Final 2×1 vs Mano Ayron. Vice: Mano Ayron; Semis: Salvador e Kroy.'
-  },
-  {
-    selo: 'NACIONAL · FINAL 0×2',
-    canal: 'FR UNIVERSE TV · NORTE',
-    titulo: 'Norte · 1ª Edição (Formato Nacional): Dehat 0 × 2 Youngui',
-    detalhe: 'Caminho de Youngui: 1ª Fase 2×1 vs Tonhão; Quartas 2×0 vs Levinsk; Semifinal 2×1 vs Prado; Final 2×0 vs Dehat. Vice: Dehat; Semis: Glaubin e Prado.'
   },
   {
     selo: 'BDJ 16 MCS · FINAL 2×1',
@@ -352,8 +336,17 @@ function ensureDetailDialog(){
 }
 
 function openEdicoesModal(tituloTopo, nomeItem, subItem, listaEdicoes){
-  if(!listaEdicoes||!listaEdicoes.length)return;
   const dlg=ensureDetailDialog();
+  if(!listaEdicoes||!listaEdicoes.length){
+    document.getElementById('fu-detail-content').innerHTML=`
+      <div class="label">${tituloTopo}</div>
+      <h2 style="font-size:40px;margin:10px 0 6px">${nomeItem}</h2>
+      <p style="color:#f3c54c;font-size:12px;font-weight:800;text-transform:uppercase;margin:0 0 18px">${subItem}</p>
+      ${empty('NENHUMA EDIÇÃO REGISTRADA','Ainda não há edições ou resultados oficiais registrados neste tópico.','★')}
+    `;
+    dlg.showModal();
+    return;
+  }
   const blocks=listaEdicoes.map(ed=>`
     <div style="background:#191b20;border:1px solid #2e3138;border-radius:6px;padding:16px;margin-top:14px">
       <div class="label">EDIÇÃO REGISTRADA</div>
@@ -496,7 +489,7 @@ function renderPage(page,d){
               <hr style="border:0;border-top:1px solid #262830;margin:0">
               <div>
                 <strong style="color:#f3c54c;font-size:12px;text-transform:uppercase">Coliseu, Ana Rosa e Norte</strong>
-                <p style="color:#d4d6dc;font-size:12px;line-height:1.6;margin:4px 0 0">Coliseu: Jotapê campeão (2×1 vs WL) · Ana Rosa: Guri campeão (2×1 vs Mano Ayron) · Norte (Formato Nacional): Youngui campeão (2×0 vs Dehat).</p>
+                <p style="color:#d4d6dc;font-size:12px;line-height:1.6;margin:4px 0 0">Coliseu: Jotapê campeão (2×1 vs WL) · Ana Rosa: Guri campeão (2×1 vs Mano Ayron) · Norte (45s / 90s / 45s): Youngui campeão (2×0 vs Dehat).</p>
               </div>
               <hr style="border:0;border-top:1px solid #262830;margin:0">
               <div>
