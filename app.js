@@ -3,190 +3,122 @@ const current=(location.pathname.split('/').pop()||'index.html');
 const header=`<header class="topbar"><div class="navwrap"><a class="brand" href="index.html">FR <em>UNIVERSE</em><span style="color:#777;font-size:10px;vertical-align:top;margin-left:5px">2027</span></a><nav class="nav" aria-label="Navegação principal">${pages.map(([url,name])=>`<a href="${url}" class="${current===url?'active':''}">${name}</a>`).join('')}</nav><span class="live">● TEMPORADA 2027</span></div></header>`;
 const footer=`<footer class="footer"><div class="container"><span><strong>FR UNIVERSE</strong> © 2027 · Portal de universo fictício de batalhas de rima</span><span>Resultados e estatísticas somente após registro oficial</span></div></footer>`;
 document.getElementById('header').innerHTML=header;document.getElementById('footer').innerHTML=footer;
-const data={
-'batalhas.html':{title:'CASAS DE <span>BATALHA.</span>',eyebrow:'O circuito',desc:'Explore as casas de batalha, acompanhe as edições e consulte os resultados oficiais do FR Universe 2027.',cards:[['ALDEIA','Segunda-feira','🎤'],['COLISEU','Quarta-feira','⚔'],['ANA ROSA','Quinta-feira','🎙'],['NORTE','Sexta-feira','🔥'],['JAMALIA','Domingo','★']]},
-'competicoes.html':{title:'GRANDES <span>COMPETIÇÕES.</span>',eyebrow:'A disputa pelo topo',desc:'LNF Série A, estaduais, nacionais, copas e edições especiais. Cada competição terá seus próprios resultados e chaveamentos.',cards:[['LNF SÉRIE A','Liga nacional','🏆'],['ESTADUAIS','Disputas por estado','◈'],['NACIONAIS','Palco nacional','★'],['COPAS','Torneios e formatos especiais','⚡'],['ESPECIAIS','Eventos extraordinários','◆']]},
-'mcs.html':{title:'OS DONOS DO <span>MICROFONE.</span>',eyebrow:'Elenco oficial',desc:'Perfis, estilos, conquistas e históricos dos participantes. Os cadastros serão importados da base oficial aprovada pelo Presidente.',cards:[]},
-'rankings.html':{title:'A CORRIDA PELO <span>TOPO.</span>',eyebrow:'Ranking nacional',desc:'Classificação exclusiva das edições individuais das casas de batalha. Pontuação calculada somente com resultados oficiais registrados.',cards:[]},
-'rimagram.html':{title:'O UNIVERSO <span>REPERCUTE.</span>',eyebrow:'Rimagram',desc:'O feed social fictício do FR Universe: campeões, comentários e acontecimentos autorizados pelo Presidente.',cards:[]},
-'rimatube.html':{title:'BATALHAS QUE <span>MARCAM.</span>',eyebrow:'RimaTube',desc:'Registros simulados das batalhas selecionadas pelo Presidente. Não são vídeos reais e não há reprodução de imagens de confrontos.',cards:[]},
-'jornal.html':{title:'JORNAL DO <span>RAP.</span>',eyebrow:'Cobertura semanal',desc:'Uma edição resumida por semana, após a Jamalia e o fechamento presidencial. A manchete principal é escolhida pelo Presidente.',cards:[]},
-'calendario.html':{title:'CADA DATA, UMA <span>HISTÓRIA.</span>',eyebrow:'Calendário histórico',desc:'Navegue pelos meses de 2027 e consulte as edições já realizadas. Eventos futuros não aparecem neste calendário.',cards:[]}
+
+const WEEK1_RANKING = [
+  {pos:'1º',mc:'Guri',uf:'SP',titulos:1,vitorias:4,pts:9},
+  {pos:'1º',mc:'Jotapê',uf:'SP',titulos:1,vitorias:4,pts:9},
+  {pos:'1º',mc:'Youngui',uf:'—',titulos:1,vitorias:4,pts:9},
+  {pos:'4º',mc:'Poeta Gabriela',uf:'PR',titulos:1,vitorias:4,pts:7},
+  {pos:'5º',mc:'Joãozinho',uf:'PR',titulos:0,vitorias:3,pts:5},
+  {pos:'5º',mc:'Dehat',uf:'SP',titulos:0,vitorias:0,pts:5},
+  {pos:'5º',mc:'Mano Ayron',uf:'SP',titulos:0,vitorias:0,pts:5},
+  {pos:'5º',mc:'WL',uf:'RJ',titulos:0,vitorias:0,pts:5},
+  {pos:'9º',mc:'Olhinho',uf:'PR',titulos:0,vitorias:2,pts:3},
+  {pos:'9º',mc:'Ranks',uf:'—',titulos:0,vitorias:2,pts:3},
+  {pos:'9º',mc:'Glaubin',uf:'SP',titulos:0,vitorias:0,pts:3},
+  {pos:'9º',mc:'Magrão',uf:'—',titulos:0,vitorias:0,pts:3},
+  {pos:'9º',mc:'Neo',uf:'—',titulos:0,vitorias:0,pts:3},
+  {pos:'9º',mc:'Salvador',uf:'—',titulos:0,vitorias:0,pts:3},
+  {pos:'15º',mc:'Kroy',uf:'SP',titulos:0,vitorias:0,pts:2},
+  {pos:'15º',mc:'Prado',uf:'SP',titulos:0,vitorias:0,pts:2}
+];
+
+const WEEK1_RIMAGRAM = [
+  {handle:'@jotape.mc',texto:'Segunda na Aldeia com Neo e Kant (3×0), quarta no Coliseu (2×1). A Semana 1 começou pesada pro FR Universe! 🏆🔥',tag:'Aldeia & Coliseu · Semana 1'},
+  {handle:'@poetagabriela',texto:'4 batalhas, 4 vezes no terceiro round, 4 vitórias por 2×1. Inauguração da Batalha da Jamália em Curitiba com o título em casa! 👑🎤',tag:'Batalha da Jamália · Curitiba/PR'},
+  {handle:'@youngui.mc',texto:'Formato Nacional na sexta exigiu tudo. 2×0 na final da Norte e mais um troféu na conta.',tag:'Batalha da Norte · Formato Nacional'},
+  {handle:'@guri.mc',texto:'Ana Rosa na quinta foi guerra até o fim: 2×1 em cima do Mano Ayron e o título garantido.',tag:'Batalha do Ana Rosa · Semana 1'},
+  {handle:'@fruniverse.oficial',texto:'Fechamento da Semana 1 (04/01 a 10/01/2027): Aldeia, Coliseu, Ana Rosa, Norte, Seletivas LNF (SP, RJ, DF) e Jamália concluídos.',tag:'Oficial · Semana 1'}
+];
+
+const WEEK1_RIMATUBE = [
+  {titulo:'Big Mike, Ike e Valle 0 × 3 Neo, Jotapê e Kant',sub:'Batalha da Aldeia · 1ª Edição (Edição Lendas — Trios) · 04/01/2027',nota:'Final em trios com título invicto de Neo, Jotapê e Kant.'},
+  {titulo:'WL 1 × 2 Jotapê',sub:'Batalha do Coliseu · 1ª Edição (Individual) · 06/01/2027',nota:'Decisão do título individual após vitórias por 2×0 de Jotapê sobre Kaell, Devilzinha e Magrão.'},
+  {titulo:'Guri 2 × 1 Mano Ayron',sub:'Batalha do Ana Rosa · 1ª Edição (Individual) · 07/01/2027',nota:'Final equilibrada fechando a campanha de Guri após passar por Lion, Dehat e Salvador.'},
+  {titulo:'Dehat 0 × 2 Youngui',sub:'Batalha da Norte · 1ª Edição (Formato Nacional) · 08/01/2027',nota:'Youngui conquista o título nacional vencendo Tonhão, Levinsk, Prado e Dehat.'},
+  {titulo:'Poeta Gabriela 2 × 1 Joãozinho',sub:'Batalha da Jamália (BDJ) · Inauguração (Curitiba/PR) · 10/01/2027',nota:'Quarta vitória por 2×1 seguida de Poeta Gabriela (4V–0D) na estreia da Jamália.'},
+  {titulo:'Seletivas LNF — Repescagem (SP, RJ e DF)',sub:'LNF · 09/01/2027',nota:'Destaques para Killua (2×1 vs Grafitteh em SP), Pivete (2×1 vs Scooby no RJ) e os 60 classificados.'}
+];
+
+const WEEK1_CALENDAR_EVENTS = {
+  '2027-1-4': {label:'Aldeia #1',href:'batalhas.html',title:'04/01/2027 — Batalha da Aldeia · 1ª Edição (Edição Lendas — Trios)'},
+  '2027-1-6': {label:'Coliseu #1',href:'batalhas.html',title:'06/01/2027 — Batalha do Coliseu · 1ª Edição (Individual)'},
+  '2027-1-7': {label:'Ana Rosa #1',href:'batalhas.html',title:'07/01/2027 — Batalha do Ana Rosa · 1ª Edição (Individual)'},
+  '2027-1-8': {label:'Norte #1',href:'batalhas.html',title:'08/01/2027 — Batalha da Norte · 1ª Edição (Formato Nacional)'},
+  '2027-1-9': {label:'LNF Seletivas',href:'competicoes.html',title:'09/01/2027 — LNF · Seletivas Estaduais (SP, RJ e DF)'},
+  '2027-1-10': {label:'Jamália #1',href:'batalhas.html',title:'10/01/2027 — Batalha da Jamália · Edição de Inauguração (Curitiba/PR)'}
 };
-const d=data[current];if(d){document.title=d.title.replace(/<[^>]+>/g,'')+' | FR Universe 2027';document.getElementById('content').innerHTML=`<section class="pagehero"><div class="container"><div class="eyebrow">${d.eyebrow}</div><h1>${d.title}</h1><p>${d.desc}</p><span class="status">Aguardando registros oficiais</span></div></section><main class="container">${renderPage(current,d)}</main>`;}
+
+const data={
+'batalhas.html':{title:'CASAS DE <span>BATALHA.</span>',eyebrow:'O circuito',desc:'Explore as casas de batalha, acompanhe as edições e consulte os resultados oficiais do FR Universe 2027.',cards:[['ALDEIA','Segunda-feira · 04/01','🎤'],['COLISEU','Quarta-feira · 06/01','⚔'],['ANA ROSA','Quinta-feira · 07/01','🎙'],['NORTE','Sexta-feira · 08/01','🔥'],['JAMALIA','Domingo · 10/01','★']]},
+'competicoes.html':{title:'GRANDES <span>COMPETIÇÕES.</span>',eyebrow:'A disputa pelo topo',desc:'LNF Série A, estaduais, nacionais, copas e edições especiais. Cada competição terá seus próprios resultados e chaveamentos.',cards:[['LNF SÉRIE A','Seletivas SP, RJ e DF (09/01)','🏆'],['ESTADUAIS','20 classificados por UF','◈'],['NACIONAIS','Palco nacional','★'],['COPAS','Torneios e formatos especiais','⚡'],['ESPECIAIS','Eventos extraordinários','◆']]},
+'mcs.html':{title:'OS DONOS DO <span>MICROFONE.</span>',eyebrow:'Elenco oficial',desc:'Perfis, estilos, conquistas e históricos dos participantes. Os cadastros serão importados da base oficial aprovada pelo Presidente.',cards:[]},
+'rankings.html':{title:'A CORRIDA PELO <span>TOPO.</span>',eyebrow:'Ranking geral · Semana 1',desc:'Classificação geral oficial registrada após o fechamento da Semana 1 (04/01 a 10/01/2027).',cards:[]},
+'rimagram.html':{title:'O UNIVERSO <span>REPERCUTE.</span>',eyebrow:'Rimagram · Semana 1',desc:'O feed social do FR Universe: campeões, comentários e acontecimentos registrados na Semana 1.',cards:[]},
+'rimatube.html':{title:'BATALHAS QUE <span>MARCAM.</span>',eyebrow:'RimaTube · Semana 1',desc:'Registros textuais simulados das batalhas em destaque da Semana 1. Não são vídeos reais e não há reprodução de imagens de confrontos.',cards:[]},
+'jornal.html':{title:'JORNAL DO <span>RAP.</span>',eyebrow:'Cobertura semanal · Semana 1',desc:'Edição da Semana 1 (04/01 a 10/01/2027) após o fechamento oficial da rodada.',cards:[]},
+'calendario.html':{title:'CADA DATA, UMA <span>HISTÓRIA.</span>',eyebrow:'Calendário histórico · 2027',desc:'Navegue pelos meses de 2027 e consulte as edições já realizadas. Eventos futuros não aparecem neste calendário.',cards:[]}
+};
+
+const d=data[current];
+if(d){
+  document.title=d.title.replace(/<[^>]+>/g,'')+' | FR Universe 2027';
+  document.getElementById('content').innerHTML=`<section class="pagehero"><div class="container"><div class="eyebrow">${d.eyebrow}</div><h1>${d.title}</h1><p>${d.desc}</p><span class="status">Semana 1 registrada · 2027</span></div></section><main class="container">${renderPage(current,d)}</main>`;
+}
+
 function empty(title,description,emoji='✦'){return `<div class="empty"><div class="big">${emoji}</div><h3>${title}</h3><p>${description}</p></div>`}
-function renderPage(page,d){if(page==='batalhas.html'||page==='competicoes.html'){return `<section class="section"><div class="sectionhead"><div><h2>${page==='batalhas.html'?'CIRCUITO DE BATALHAS':'COMPETIÇÕES OFICIAIS'}</h2><p>Estrutura inicial • resultados ainda não registrados</p></div></div><div class="grid">${d.cards.map(([name,sub,icon])=>`<article class="card"><div class="placeholder"><div class="symbol">${icon}</div><small>FR UNIVERSE 2027</small></div><div class="cardpad"><div class="kicker">${sub}</div><h3>${name}</h3><p>Edições, confrontos e resultados serão exibidos após a estreia oficial.</p></div></article>`).join('')}</div></section>`}
-if(page==='mcs.html')return `<section class="section"><div class="sectionhead"><div><h2>ELENCO OFICIAL</h2><p>170 MCs válidos • 5 personagens fictícios • estatísticas 2027 zeradas</p></div></div><div class="mc-summary"><span><strong>170</strong> MCs cadastrados</span><span><strong>5</strong> fictícios</span><span><strong>0</strong> resultados de 2027</span></div><div class="filters mc-controls"><input class="search" id="mc-search" placeholder="Buscar MC por nome ou apelido..." aria-label="Buscar MC"><select class="mc-select" id="mc-state" aria-label="Filtrar por estado"><option value="">Todos os estados</option></select><select class="mc-select" id="mc-nature" aria-label="Filtrar por natureza"><option value="">Reais e fictícios</option><option value="real">Reais</option><option value="fictício">Fictícios</option></select></div><p class="mc-count" id="mc-count" aria-live="polite"></p><div class="mc-grid" id="mc-list"></div><div class="mc-more-wrap"><button class="btn secondary" id="mc-more" type="button" hidden>VER MAIS MCS</button></div><p class="fine">As categorias e descrições representam o cadastro fornecido pelo Presidente, não uma avaliação externa verificada. Informações desconhecidas permanecem pendentes.</p></section><dialog id="mc-dialog" class="mc-dialog" aria-label="Ficha do MC"><button class="mc-close" id="mc-close" aria-label="Fechar ficha">✕</button><div id="mc-detail"></div></dialog>`;
-if(page==='rankings.html')return `<section class="section"><div class="sectionhead"><div><h2>PÓDIO NACIONAL</h2><p>Somente edições individuais das casas de batalha</p></div></div>${empty('O PÓDIO AINDA ESTÁ VAZIO','Nenhuma edição de 2027 foi registrada. O ranking começará do zero.','🏆')}<div style="height:24px"></div><div class="tablewrap"><table><thead><tr><th>Posição</th><th>MC</th><th>UF</th><th>Títulos</th><th>Vitórias</th><th>Pontos</th></tr></thead><tbody><tr><td colspan="6" style="text-align:center;padding:34px;color:#999">Aguardando primeiros resultados oficiais</td></tr></tbody></table></div><p class="fine">Regras: campeão +7, vice +5, semifinal +3, vitória 2×0 +1, derrota na primeira fase −1. Desempates: títulos, vitórias e empate mantido.</p></section>`;
-if(page==='rimagram.html')return `<section class="section"><div class="sectionhead"><div><h2>FEED DO UNIVERSO</h2><p>Publicações simuladas e autorizadas</p></div></div><div style="max-width:660px;margin:auto">${empty('O FEED AINDA ESTÁ EM SILÊNCIO','O primeiro post será publicado quando houver um campeão oficial de uma edição autorizada. Acontecimentos especiais exigem aprovação presidencial.','📱')}</div></section>`;
-if(page==='rimatube.html')return `<section class="section"><div class="sectionhead"><div><h2>DESTAQUES EM VÍDEO</h2><p>Representações textuais simuladas • sem reprodução de vídeo real</p></div></div>${empty('NENHUMA BATALHA SELECIONADA','Somente confrontos escolhidos individualmente pelo Presidente terão registros nesta página.','▶')}</section>`;
-if(page==='jornal.html')return `<section class="section"><div class="sectionhead"><div><h2>EDIÇÃO DA SEMANA</h2><p>Uma edição resumida • manchete presidencial</p></div></div><div class="feature"><article class="card"><div class="placeholder" style="min-height:250px"><div class="symbol">FR</div><small>Manchete da semana</small></div><div class="cardpad"><div class="label">Edição atual</div><h3>AGUARDANDO A ESTREIA DO FR UNIVERSE 2027</h3><p>O jornal será preparado após o fechamento oficial da primeira semana.</p></div></article><div class="card cardpad"><div class="label">Nesta edição</div><h3>COBERTURA OFICIAL</h3><p>Campeões da semana</p><hr style="border:0;border-top:1px solid #333"><p>Principais resultados</p><hr style="border:0;border-top:1px solid #333"><p>Momentos autorizados</p><hr style="border:0;border-top:1px solid #333"><p>Panorama das competições</p><p class="fine">Apenas a edição mais recente ficará disponível nesta página.</p></div></div></section>`;
-if(page==='calendario.html')return `<section class="section"><div class="sectionhead"><div><h2>HISTÓRICO DE 2027</h2><p>Somente eventos concluídos e oficialmente registrados</p></div></div><div class="card cardpad" style="max-width:850px;margin:auto"><div class="calendarbar"><button id="prevmonth" aria-label="Mês anterior">❮</button><h2 id="monthname">JANEIRO 2027</h2><button id="nextmonth" aria-label="Próximo mês">❯</button></div><div class="week" id="calendar"></div><p class="fine" style="margin-top:20px">Os símbolos das casas e competições aparecerão nos dias de eventos concluídos. Ao clicar, abrirão a página oficial correspondente.</p></div></section>`;
-return ''}
-if(current==='calendario.html'){let m=0;const months=['JANEIRO','FEVEREIRO','MARÇO','ABRIL','MAIO','JUNHO','JULHO','AGOSTO','SETEMBRO','OUTUBRO','NOVEMBRO','DEZEMBRO'];function draw(){document.getElementById('monthname').textContent=months[m]+' 2027';let first=new Date(2027,m,1).getDay(),count=new Date(2027,m+1,0).getDate();document.getElementById('calendar').innerHTML=['DOM','SEG','TER','QUA','QUI','SEX','SÁB'].map(d=>`<div class="weekday">${d}</div>`).join('')+Array.from({length:first},()=>'<div class="day outside"></div>').join('')+Array.from({length:count},(_,i)=>`<div class="day">${i+1}</div>`).join('');document.getElementById('prevmonth').disabled=m===0;document.getElementById('nextmonth').disabled=m===11}document.getElementById('prevmonth').onclick=()=>{m--;draw()};document.getElementById('nextmonth').onclick=()=>{m++;draw()};draw()}
+
+function renderPage(page,d){
+  if(page==='batalhas.html'||page==='competicoes.html'){
+    return `<section class="section"><div class="sectionhead"><div><h2>${page==='batalhas.html'?'CIRCUITO DE BATALHAS':'COMPETIÇÕES OFICIAIS'}</h2><p>Semana 1 concluída (04/01 a 10/01/2027)</p></div></div><div class="grid">${d.cards.map(([name,sub,icon])=>`<article class="card"><div class="placeholder"><div class="symbol">${icon}</div><small>FR UNIVERSE 2027</small></div><div class="cardpad"><div class="kicker">${sub}</div><h3>${name}</h3><p>Registro oficial da Semana 1 computado no calendário e na cobertura do portal.</p></div></article>`).join('')}</div></section>`;
+  }
+  if(page==='mcs.html')return `<section class="section"><div class="sectionhead"><div><h2>ELENCO OFICIAL</h2><p>170 MCs válidos • 5 personagens fictícios • base oficial</p></div></div><div class="mc-summary"><span><strong>170</strong> MCs cadastrados</span><span><strong>5</strong> fictícios</span><span><strong>01</strong> semana registrada</span></div><div class="filters mc-controls"><input class="search" id="mc-search" placeholder="Buscar MC por nome ou apelido..." aria-label="Buscar MC"><select class="mc-select" id="mc-state" aria-label="Filtrar por estado"><option value="">Todos os estados</option></select><select class="mc-select" id="mc-nature" aria-label="Filtrar por natureza"><option value="">Reais e fictícios</option><option value="real">Reais</option><option value="fictício">Fictícios</option></select></div><p class="mc-count" id="mc-count" aria-live="polite"></p><div class="mc-grid" id="mc-list"></div><div class="mc-more-wrap"><button class="btn secondary" id="mc-more" type="button" hidden>VER MAIS MCS</button></div><p class="fine">As categorias e descrições representam o cadastro fornecido pelo Presidente, não uma avaliação externa verificada. Informações desconhecidas permanecem pendentes.</p></section><dialog id="mc-dialog" class="mc-dialog" aria-label="Ficha do MC"><button class="mc-close" id="mc-close" aria-label="Fechar ficha">✕</button><div id="mc-detail"></div></dialog>`;
+  if(page==='rankings.html'){
+    const rows = WEEK1_RANKING.map(r=>`<tr><td><strong>${r.pos}</strong></td><td><strong>${r.mc}</strong></td><td>${r.uf}</td><td>${r.titulos}</td><td>${r.vitorias}</td><td><strong>${r.pts}</strong></td></tr>`).join('');
+    return `<section class="section"><div class="sectionhead"><div><h2>RANKING GERAL · SEMANA 1</h2><p>Pontuação oficial da 1ª semana de janeiro de 2027</p></div></div><div class="tablewrap"><table><thead><tr><th>Posição</th><th>MC</th><th>UF</th><th>Títulos</th><th>Vitórias</th><th>Pontos</th></tr></thead><tbody>${rows}</tbody></table></div><p class="fine">Regras: campeão +7, vice +5, semifinal +3, vitória 2×0 +1, derrota na primeira fase −1. Desempates: títulos, vitórias e empate mantido.</p></section>`;
+  }
+  if(page==='rimagram.html'){
+    const posts = WEEK1_RIMAGRAM.map(p=>`<article class="card cardpad" style="margin-bottom:16px"><div class="label">${p.tag}</div><h3 style="font-size:22px;margin-top:8px">${p.handle}</h3><p style="color:#f8f8f8;font-size:14px;margin-top:10px">${p.texto}</p></article>`).join('');
+    return `<section class="section"><div class="sectionhead"><div><h2>FEED DO UNIVERSO · SEMANA 1</h2><p>Publicações registradas na Semana 1 (04/01 a 10/01/2027)</p></div></div><div style="max-width:680px;margin:auto">${posts}</div></section>`;
+  }
+  if(page==='rimatube.html'){
+    const vids = WEEK1_RIMATUBE.map(v=>`<article class="card"><div class="placeholder"><div class="symbol">▶</div><small>FR UNIVERSE · SEMANA 1</small></div><div class="cardpad"><div class="kicker">${v.sub}</div><h3>${v.titulo}</h3><p>${v.nota}</p></div></article>`).join('');
+    return `<section class="section"><div class="sectionhead"><div><h2>DESTAQUES EM VÍDEO · SEMANA 1</h2><p>Registros textuais simulados • sem reprodução de vídeo real</p></div></div><div class="grid">${vids}</div></section>`;
+  }
+  if(page==='jornal.html')return `<section class="section"><div class="sectionhead"><div><h2>EDIÇÃO DA SEMANA 1</h2><p>04/01 a 10/01/2027 · Fechamento oficial</p></div></div><div class="feature"><article class="card"><div class="placeholder" style="min-height:250px"><div class="symbol">FR</div><small>Manchete da Semana 1</small></div><div class="cardpad"><div class="label">Manchete principal</div><h3 style="font-size:34px;margin-top:18px">JOTAPÊ ABRE 2027 COM DOIS TÍTULOS; POETA GABRIELA LEVA A JAMÁLIA E LNF DEFINE 60 CLASSIFICADOS</h3><p>Neo, Jotapê e Kant vencem a Aldeia por 3×0; Jotapê leva o Coliseu por 2×1; Guri vence o Ana Rosa por 2×1; Youngui leva a Norte por 2×0; Poeta Gabriela é campeã inaugural da Jamália em Curitiba (4V–0D); e SP, RJ e DF classificam 20 MCs cada para a LNF.</p></div></article><div class="card cardpad"><div class="label">Nesta edição</div><h3>COBERTURA OFICIAL · SEMANA 1</h3><p><strong>Campeões:</strong> Neo, Jotapê e Kant (Aldeia); Jotapê (Coliseu); Guri (Ana Rosa); Youngui (Norte); Poeta Gabriela (Jamália).</p><hr style="border:0;border-top:1px solid #333"><p><strong>Principais resultados:</strong> Finais em 3×0, 2×1, 2×1, 2×0 e 2×1; Seletivas LNF com 60 classificados e 36 eliminados.</p><hr style="border:0;border-top:1px solid #333"><p><strong>Momentos autorizados:</strong> Quatro vitórias seguidas por 2×1 de Poeta Gabriela na Jamália e repescagens decisivas na LNF.</p><hr style="border:0;border-top:1px solid #333"><p><strong>Panorama das competições:</strong> Grade semanal de janeiro de 2027 (04/01 a 10/01) integralmente registrada.</p><p class="fine">Apenas a edição mais recente ficará disponível nesta página.</p></div></div></section>`;
+  if(page==='calendario.html')return `<section class="section"><div class="sectionhead"><div><h2>HISTÓRICO DE 2027</h2><p>Somente eventos concluídos e oficialmente registrados</p></div></div><div class="card cardpad" style="max-width:850px;margin:auto"><div class="calendarbar"><button id="prevmonth" aria-label="Mês anterior">❮</button><h2 id="monthname">JANEIRO 2027</h2><button id="nextmonth" aria-label="Próximo mês">❯</button></div><div class="week" id="calendar"></div><p class="fine" style="margin-top:20px">Os símbolos das casas e competições aparecem nos dias de eventos concluídos. Ao clicar, abrirão a página oficial correspondente.</p></div></section>`;
+  return '';
+}
+
+if(current==='calendario.html'){
+  let m=0;
+  const months=['JANEIRO','FEVEREIRO','MARÇO','ABRIL','MAIO','JUNHO','JULHO','AGOSTO','SETEMBRO','OUTUBRO','NOVEMBRO','DEZEMBRO'];
+  function draw(){
+    document.getElementById('monthname').textContent=months[m]+' 2027';
+    let first=new Date(2027,m,1).getDay(),count=new Date(2027,m+1,0).getDate();
+    const daysHtml = Array.from({length:count},(_,i)=>{
+      const dayNum = i+1;
+      const ev = WEEK1_CALENDAR_EVENTS[`2027-${m+1}-${dayNum}`];
+      if(ev){
+        return `<a class="day" href="${ev.href}" title="${ev.title}" style="display:flex;flex-direction:column;justify-content:space-between;border-color:#f3c54c;background:#1d1910"><span>${dayNum}</span><small style="color:#f3c54c;font-weight:800;font-size:10px;line-height:1.15">${ev.label}</small></a>`;
+      }
+      return `<div class="day">${dayNum}</div>`;
+    }).join('');
+    document.getElementById('calendar').innerHTML=['DOM','SEG','TER','QUA','QUI','SEX','SÁB'].map(d=>`<div class="weekday">${d}</div>`).join('')+Array.from({length:first},()=>'<div class="day outside"></div>').join('')+daysHtml;
+    document.getElementById('prevmonth').disabled=m===0;
+    document.getElementById('nextmonth').disabled=m===11;
+  }
+  document.getElementById('prevmonth').onclick=()=>{m--;draw()};
+  document.getElementById('nextmonth').onclick=()=>{m++;draw()};
+  draw();
+}
 
 if(current==='mcs.html'){
   const el=document.getElementById('mc-list'), search=document.getElementById('mc-search'), state=document.getElementById('mc-state'), nature=document.getElementById('mc-nature'), more=document.getElementById('mc-more'), count=document.getElementById('mc-count'), dialog=document.getElementById('mc-dialog');
   const esc=s=>String(s??'').replace(/[&<>\"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[c]));
   const normalize=s=>String(s??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
   let roster=[],shown=24,filtered=[];
-
-const photoPaths = {
-  1:"lote 5/Acuca.jpg",
-  2:"lote 2/ajota.jpg",
-  3:"lote 2/Allan Freestyle.jpg",
-  4:"lote 2/alves.jpg",
-  5:"lote 2/Apollo.jpg",
-  6:"lote 2/Araps.jpg",
-  7:"lote 2/Arielzinha.jpg",
-  8:"lote 2/Barbosa.jpg",
-  9:"lote 2/Barreto.jpg",
-  10:"lote 2/Bask.jpg",
-  11:"lote 2/baueb.jpg",
-  12:"lote 5/big mike.jpg",
-  13:"lote 2/Biro Biro.jpg",
-  14:"lote 2/Black.jpg",
-  15:"lote 2/Black Panther.jpg",
-  16:"lote 2/Blackoutt.jpg",
-  17:"lote 2/Bobby Mídia.jpg",
-  18:"lote 2/Bonfim.jpg",
-  19:"lote 2/Brennuz.jpg",
-  20:"lote 2/BTC.jpg",
-  23:"lote 2/César MC.jpg",
-  24:"lote 5/Chris.jpg",
-  25:"lote 2/Cifrasol.jpg",
-  26:"lote 2/Clara Lima.jpg",
-  27:"lote 2/Combo.jpg",
-  28:"lote 2/coral.jpg",
-  30:"lote 2/CZP.jpg",
-  31:"lote 2/Dandara.jpg",
-  32:"lote 2/dehat.jpg",
-  33:"lote 2/Derik.jpg",
-  34:"lote 2/Devilzinha.jpg",
-  35:"lote 2/dith.webp",
-  36:"lote 2/Dopre.jpg",
-  37:"lote 2/Douglas Din.jpg",
-  38:"lote 2/Drizzy.jpg",
-  39:"lote 2/Duda.jpg",
-  40:"lote 2/Dudu.jpg",
-  41:"lote 2/Durap.jpg",
-  42:"lote 2/Emicida.jpg",
-  43:"lote 2/Épico.jpg",
-  44:"lote 2/EZ.jpg",
-  45:"lote 2/Fael.jpg",
-  47:"lote 2/Fortes.jpg",
-  48:"lote 2/Freelipe.jpg",
-  49:"lote 2/Frizzy.jpg",
-  50:"lote 1/Gabiz.jpg",
-  51:"lote 1/Glaubin.jpg",
-  52:"lote 1/Gomes.jpg",
-  53:"lote 1/Grafitteh.jpg",
-  54:"lote 1/Guri.jpg",
-  55:"lote 1/H7.jpg",
-  56:"lote 1/Hellbala.jpg",
-  57:"lote 4/Hogue.jpg",
-  58:"lote 1/Ianzin.jpg",
-  60:"lote 4/Japa.jpg",
-  61:"lote 1/Jaya.jpg",
-  62:"lote 1/Jesp.jpg",
-  63:"lote 1/jheny.jpg",
-  64:"lote 1/Jhony.jpg",
-  65:"lote 1/João Vega.jpg",
-  67:"lote 4/Jotapê.jpg",
-  68:"lote 1/Juh Altão.jpg",
-  69:"lote 4/Kaemy.jpg",
-  70:"lote 1/Kairós.jpg",
-  71:"lote 1/Kamui.jpg",
-  72:"lote 1/kant.jpg",
-  73:"lote 1/Killua.jpg",
-  74:"lote 1/Kisha.jpg",
-  75:"lote 1/KLJR.jpg",
-  76:"lote 1/Koell.jpg",
-  77:"lote 1/Kroy.jpg",
-  78:"lote 1/Larício.jpg",
-  79:"lote 1/Laura.jpg",
-  80:"lote 1/Lecroy.jpg",
-  81:"lote 1/Leozin.jpg",
-  82:"lote 1/Leshley.jpg",
-  83:"lote 4/Levinsk.jpg",
-  84:"lote 1/Lil Vi.jpg",
-  85:"lote 1/Lili.jpg",
-  86:"lote 1/Lino.jpg",
-  87:"lote 1/Lion.jpg",
-  88:"lote 1/Lorran.jpg",
-  89:"lote 3/Luh do Click.jpg",
-  90:"lote 1/Lya.jpg",
-  91:"lote 1/Magrão.jpg",
-  92:"lote 1/Malagueta.jpg",
-  93:"lote 1/Mamute.jpg",
-  94:"lote 1/Mano Ayron.jpg",
-  95:"lote 1/Marechal.jpg",
-  96:"lote 1/Maria.jpg",
-  97:"lote 1/Martzin.jpg",
-  98:"lote 1/MCharles.jpg",
-  99:"lote 1/MDG.jpg",
-  101:"lote 1/Menor MC.jpg",
-  102:"lote 1/Miliano.webp",
-  103:"lote 1/Mitolas.jpg",
-  104:"lote 1/Monarka.jpg",
-  105:"lote 1/Motta.jpg",
-  106:"lote 1/MT.jpg",
-  107:"lote 1/Naia.jpg",
-  110:"lote 1/Nego Drama.webp",
-  111:"lote 1/Negrote.jpg",
-  112:"lote 3/Neo.jpg",
-  114:"lote 1/Noventa.jpg",
-  117:"lote 1/Peke.jpg",
-  121:"lote 1/Pitágoras.jpg",
-  123:"lote 1/Poeta Gabriela.jpg",
-  124:"lote 1/prado.jpg",
-  126:"lote 1/Punkka.jpg",
-  127:"lote 1/Pyetrin.jpg",
-  129:"lote 1/Rank.jpg",
-  131:"lote 1/Ravena.jpg",
-  132:"lote 1/Ray.jpg",
-  133:"lote 1/R.E.jpg",
-  134:"lote 1/Refel.jpg",
-  135:"lote 1/Riquelme.jpg",
-  136:"lote 1/Salvador da Rima.jpg",
-  137:"lote 1/Sara Krl.jpg",
-  138:"lote 1/Schuler.jpg",
-  140:"lote 1/Sid.jpg",
-  141:"lote 1/Sofia.jpg",
-  142:"lote 1/Sol na Voz.jpg",
-  145:"lote 3/Tavin.jpg",
-  146:"lote 1/Tazz.jpg",
-  147:"lote 1/Thiago.jpg",
-  148:"lote 1/Thorment.jpg",
-  149:"lote 1/Tito.jpg",
-  150:"lote 1/Torvi.jpg",
-  151:"lote 1/Tubarão.jpg",
-  152:"lote 1/Valle.jpg",
-  153:"lote 1/Vick Vi.jpg",
-  154:"lote 1/Vinicius ZN.jpg",
-  155:"lote 1/Vitu.jpg",
-  156:"lote 3/Winnit.jpg",
-  157:"lote 3/WL.jpg",
-  158:"lote 1/WM.jpg",
-  160:"lote 1/Xamuel.jpg",
-  161:"lote 1/Yoga.jpg",
-  162:"lote 1/Yokaida.jpg",
-  163:"lote 1/Youngui.jpg",
-  164:"lote 1/Zap.jpg",
-  165:"lote 1/Zuluzão.jpg",
-  166:"lote 4/Guerra.jpg",
-  167:"lote 1/Naui.jpg",
-  168:"lote 1/Peter do Busão.jpg",
-  169:"lote 1/Mandacaru.jpg",
-  170:"lote 1/Zandrio.jpg",
-  171:"lote 1/Tonhão.jpg",
-  172:"lote 2/Alice Gorete.jpg"
-};
-
-const portrait = m =>
-  m.natureza === 'fictício'
-    ? `avatars/avatar-${String((m.posicao*7+3)%16+1).padStart(2,'0')}.webp`
-    : photoPaths[m.posicao] || '';
+  const portrait=m=>m.natureza==='fictício'?`avatars/avatar-${String((m.posicao*7+3)%16+1).padStart(2,'0')}.webp`:`fotos/mc-${String(m.posicao).padStart(3,'0')}.webp`;
 
   function draw(){const q=normalize(search.value.trim());filtered=roster.filter(m=>(!state.value||(state.value==='pendente'?!m.uf:m.uf===state.value))&&(!nature.value||m.natureza===nature.value)&&(!q||normalize([m.nome,...m.aliases].join(' ')).includes(q)));count.textContent=`${filtered.length} MC${filtered.length===1?'':'s'} encontrado${filtered.length===1?'':'s'}`;el.innerHTML=filtered.slice(0,shown).map(m=>`<button class="mc-card" data-id="${m.posicao}" type="button" aria-label="Ver ficha de ${esc(m.nome)}"><span class="mc-art"><img class="mc-portrait" src="${portrait(m)}" alt="Foto de ${esc(m.nome)}" loading="lazy"><span class="mc-art-note">FR UNIVERSE • 2027</span></span><span class="mc-info"><span class="mc-location">${esc(m.uf||'UF pendente')} ${m.natureza==='fictício'?'<span class="mc-fiction">FICTÍCIO</span>':''}</span><strong>${esc(m.nome)}</strong><span class="mc-category">${esc(m.categoria)}</span><span class="mc-view">VER FICHA ↗</span></span></button>`).join('');more.hidden=shown>=filtered.length;}
   function openProfile(id){const m=roster.find(m=>m.posicao===id);if(!m)return;document.getElementById('mc-detail').innerHTML=`<div class="mc-profile-top"><span class="mc-profile-avatar"><img src="${portrait(m)}" alt="Foto de ${esc(m.nome)}"></span><div><div class="label">FICHA OFICIAL • FR UNIVERSE 2027</div><h2>${esc(m.nome)}</h2><p>${esc(m.uf||'Estado pendente')} • ${esc(m.natureza==='fictício'?'Personagem fictício':'MC real')}</p></div></div><div class="mc-profile-meta"><div><small>CATEGORIA</small><strong>${esc(m.categoria)}</strong></div><div><small>APELIDOS</small><strong>${esc(m.aliases.length?m.aliases.join(', '):'Não informados')}</strong></div></div><h3>ESTILO E CARACTERÍSTICAS</h3><p class="mc-description">${esc(m.descricao)}</p><h3>ESTATÍSTICAS • 2027</h3><div class="mc-profile-stats"><div><b>0</b><small>Batalhas</small></div><div><b>0</b><small>Vitórias</small></div><div><b>0</b><small>Títulos</small></div></div><p class="fine">Nenhum resultado do reinício de 2027 foi registrado. Dados de temporadas anteriores não são contabilizados.</p>`;dialog.showModal();}
