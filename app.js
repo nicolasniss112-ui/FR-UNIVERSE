@@ -4,6 +4,34 @@ const header=`<header class="topbar"><div class="navwrap"><a class="brand" href=
 const footer=`<footer class="footer"><div class="container"><span><strong>FR UNIVERSE</strong> © 2027 · Portal de universo fictício de batalhas de rima</span><span>Resultados e estatísticas somente após registro oficial</span></div></footer>`;
 document.getElementById('header').innerHTML=header;document.getElementById('footer').innerHTML=footer;
 
+const WEEK1_RANKING = [
+  {pos:'1º',mc:'Guri',uf:'SP',titulos:1,vitorias:4,pts:9},
+  {pos:'1º',mc:'Jotapê',uf:'SP',titulos:1,vitorias:4,pts:9},
+  {pos:'1º',mc:'Youngui',uf:'—',titulos:1,vitorias:4,pts:9},
+  {pos:'4º',mc:'Poeta Gabriela',uf:'PR',titulos:1,vitorias:4,pts:7},
+  {pos:'5º',mc:'Joãozinho',uf:'PR',titulos:0,vitorias:3,pts:5},
+  {pos:'5º',mc:'Dehat',uf:'SP',titulos:0,vitorias:0,pts:5},
+  {pos:'5º',mc:'Mano Ayron',uf:'SP',titulos:0,vitorias:0,pts:5},
+  {pos:'5º',mc:'WL',uf:'RJ',titulos:0,vitorias:0,pts:5},
+  {pos:'9º',mc:'Olhinho',uf:'PR',titulos:0,vitorias:2,pts:3},
+  {pos:'9º',mc:'Ranks',uf:'—',titulos:0,vitorias:2,pts:3},
+  {pos:'9º',mc:'Glaubin',uf:'SP',titulos:0,vitorias:0,pts:3},
+  {pos:'9º',mc:'Magrão',uf:'—',titulos:0,vitorias:0,pts:3},
+  {pos:'9º',mc:'Neo',uf:'—',titulos:0,vitorias:0,pts:3},
+  {pos:'9º',mc:'Salvador',uf:'—',titulos:0,vitorias:0,pts:3},
+  {pos:'15º',mc:'Kroy',uf:'SP',titulos:0,vitorias:0,pts:2},
+  {pos:'15º',mc:'Prado',uf:'SP',titulos:0,vitorias:0,pts:2}
+];
+
+const WEEK1_CALENDAR_EVENTS = {
+  '2027-1-4': {label:'Aldeia #1',href:'batalhas.html',title:'04/01/2027 — Batalha da Aldeia · 1ª Edição (Edição Lendas — Trios)'},
+  '2027-1-6': {label:'Coliseu #1',href:'batalhas.html',title:'06/01/2027 — Batalha do Coliseu · 1ª Edição (Individual)'},
+  '2027-1-7': {label:'Ana Rosa #1',href:'batalhas.html',title:'07/01/2027 — Batalha do Ana Rosa · 1ª Edição (Individual)'},
+  '2027-1-8': {label:'Norte #1',href:'batalhas.html',title:'08/01/2027 — Batalha da Norte · 1ª Edição (Formato Nacional)'},
+  '2027-1-9': {label:'LNF Seletivas',href:'competicoes.html',title:'09/01/2027 — LNF · Seletivas Estaduais (SP, RJ e DF)'},
+  '2027-1-10': {label:'Jamália #1',href:'batalhas.html',title:'10/01/2027 — Batalha da Jamália · Edição de Inauguração (Curitiba/PR)'}
+};
+
 const RIMAGRAM_POSTS = [
   {
     perfil: '@aldeia.sp',
@@ -92,11 +120,11 @@ const data={
 'batalhas.html':{title:'CASAS DE <span>BATALHA.</span>',eyebrow:'O circuito',desc:'Explore as casas de batalha, acompanhe as edições e consulte os resultados oficiais do FR Universe 2027.',cards:[['ALDEIA','Segunda-feira','🎤'],['COLISEU','Quarta-feira','⚔'],['ANA ROSA','Quinta-feira','🎙'],['NORTE','Sexta-feira','🔥'],['JAMALIA','Domingo','★']]},
 'competicoes.html':{title:'GRANDES <span>COMPETIÇÕES.</span>',eyebrow:'A disputa pelo topo',desc:'LNF Série A, estaduais, nacionais, copas e edições especiais. Cada competição terá seus próprios resultados e chaveamentos.',cards:[['LNF SÉRIE A','Liga nacional','🏆'],['ESTADUAIS','Disputas por estado','◈'],['NACIONAIS','Palco nacional','★'],['COPAS','Torneios e formatos especiais','⚡'],['ESPECIAIS','Eventos extraordinários','◆']]},
 'mcs.html':{title:'OS DONOS DO <span>MICROFONE.</span>',eyebrow:'Elenco oficial',desc:'Perfis, estilos, conquistas e históricos dos participantes. Os cadastros serão importados da base oficial aprovada pelo Presidente.',cards:[]},
-'rankings.html':{title:'A CORRIDA PELO <span>TOPO.</span>',eyebrow:'Ranking nacional',desc:'Classificação exclusiva das edições individuais das casas de batalha. Pontuação calculada somente com resultados oficiais registrados.',cards:[]},
+'rankings.html':{title:'A CORRIDA PELO <span>TOPO.</span>',eyebrow:'Ranking geral · Semana 1',desc:'Classificação geral oficial da 1ª semana de janeiro de 2027 (04/01 a 10/01/2027).',cards:[]},
 'rimagram.html':{title:'O UNIVERSO <span>REPERCUTE.</span>',eyebrow:'Rimagram',desc:'Feed social do FR Universe com os acontecimentos registrados.',cards:[]},
 'rimatube.html':{title:'BATALHAS QUE <span>MARCAM.</span>',eyebrow:'RimaTube',desc:'Central de destaques e registros dos confrontos e seletivas.',cards:[]},
 'jornal.html':{title:'JORNAL DO <span>RAP.</span>',eyebrow:'Cobertura semanal',desc:'Edição impressa do FR Universe com campeões, resultados e seletivas da LNF.',cards:[]},
-'calendario.html':{title:'CADA DATA, UMA <span>HISTÓRIA.</span>',eyebrow:'Calendário histórico',desc:'Navegue pelos meses de 2027 e consulte as edições já realizadas. Eventos futuros não aparecem neste calendário.',cards:[]}
+'calendario.html':{title:'CADA DATA, UMA <span>HISTÓRIA.</span>',eyebrow:'Calendário histórico',desc:'Navegue pelos meses de 2027 e clique nos dias destacados para abrir a página correspondente.',cards:[]}
 };
 const d=data[current];if(d){document.title=d.title.replace(/<[^>]+>/g,'')+' | FR Universe 2027';document.getElementById('content').innerHTML=`<section class="pagehero"><div class="container"><div class="eyebrow">${d.eyebrow}</div><h1>${d.title}</h1><p>${d.desc}</p><span class="status">Registros publicados · 2027</span></div></section><main class="container">${renderPage(current,d)}</main>`;}
 function empty(title,description,emoji='✦'){return `<div class="empty"><div class="big">${emoji}</div><h3>${title}</h3><p>${description}</p></div>`}
@@ -104,7 +132,25 @@ function empty(title,description,emoji='✦'){return `<div class="empty"><div cl
 function renderPage(page,d){
   if(page==='batalhas.html'||page==='competicoes.html'){return `<section class="section"><div class="sectionhead"><div><h2>${page==='batalhas.html'?'CIRCUITO DE BATALHAS':'COMPETIÇÕES OFICIAIS'}</h2><p>Casas e competições registradas</p></div></div><div class="grid">${d.cards.map(([name,sub,icon])=>`<article class="card"><div class="placeholder"><div class="symbol">${icon}</div><small>FR UNIVERSE 2027</small></div><div class="cardpad"><div class="kicker">${sub}</div><h3>${name}</h3><p>Resultados e chaveamentos oficiais registrados na rodada.</p></div></article>`).join('')}</div></section>`}
   if(page==='mcs.html')return `<section class="section"><div class="sectionhead"><div><h2>ELENCO OFICIAL</h2><p>170 MCs válidos • 5 personagens fictícios • estatísticas 2027 zeradas</p></div></div><div class="mc-summary"><span><strong>170</strong> MCs cadastrados</span><span><strong>5</strong> fictícios</span><span><strong>0</strong> resultados de 2027</span></div><div class="filters mc-controls"><input class="search" id="mc-search" placeholder="Buscar MC por nome ou apelido..." aria-label="Buscar MC"><select class="mc-select" id="mc-state" aria-label="Filtrar por estado"><option value="">Todos os estados</option></select><select class="mc-select" id="mc-nature" aria-label="Filtrar por natureza"><option value="">Reais e fictícios</option><option value="real">Reais</option><option value="fictício">Fictícios</option></select></div><p class="mc-count" id="mc-count" aria-live="polite"></p><div class="mc-grid" id="mc-list"></div><div class="mc-more-wrap"><button class="btn secondary" id="mc-more" type="button" hidden>VER MAIS MCS</button></div><p class="fine">As categorias e descrições representam o cadastro fornecido pelo Presidente, não uma avaliação externa verificada. Informações desconhecidas permanecem pendentes.</p></section><dialog id="mc-dialog" class="mc-dialog" aria-label="Ficha do MC"><button class="mc-close" id="mc-close" aria-label="Fechar ficha">✕</button><div id="mc-detail"></div></dialog>`;
-  if(page==='rankings.html')return `<section class="section"><div class="sectionhead"><div><h2>PÓDIO NACIONAL</h2><p>Somente edições individuais das casas de batalha</p></div></div>${empty('O PÓDIO AINDA ESTÁ VAZIO','Nenhuma edição de 2027 foi registrada. O ranking começará do zero.','🏆')}<div style="height:24px"></div><div class="tablewrap"><table><thead><tr><th>Posição</th><th>MC</th><th>UF</th><th>Títulos</th><th>Vitórias</th><th>Pontos</th></tr></thead><tbody><tr><td colspan="6" style="text-align:center;padding:34px;color:#999">Aguardando primeiros resultados oficiais</td></tr></tbody></table></div><p class="fine">Regras: campeão +7, vice +5, semifinal +3, vitória 2×0 +1, derrota na primeira fase −1. Desempates: títulos, vitórias e empate mantido.</p></section>`;
+
+  if(page==='rankings.html'){
+    const top3 = WEEK1_RANKING.slice(0,3).map(r=>`
+      <article class="card cardpad" style="border-color:#66562b">
+        <div class="kicker">POS. ${r.pos} · ${r.uf}</div>
+        <h3 style="font-size:32px;margin:8px 0">${r.mc}</h3>
+        <p style="color:#f3c54c;font-weight:800;font-size:15px;margin:0">${r.pts} PONTOS · ${r.titulos} TÍTULO · ${r.vitorias} VITÓRIAS</p>
+      </article>
+    `).join('');
+    const rows = WEEK1_RANKING.map(r=>`<tr><td><strong>${r.pos}</strong></td><td><strong>${r.mc}</strong></td><td>${r.uf}</td><td>${r.titulos}</td><td>${r.vitorias}</td><td><strong style="color:#f3c54c">${r.pts}</strong></td></tr>`).join('');
+    return `
+      <section class="section">
+        <div class="sectionhead"><div><h2>RANKING GERAL · SEMANA 1</h2><p>Classificação geral da 1ª semana de janeiro de 2027</p></div></div>
+        <div class="grid" style="margin-bottom:26px">${top3}</div>
+        <div class="tablewrap"><table><thead><tr><th>Posição</th><th>MC</th><th>UF</th><th>Títulos</th><th>Vitórias</th><th>Pontos</th></tr></thead><tbody>${rows}</tbody></table></div>
+        <p class="fine">Regras: campeão +7, vice +5, semifinal +3, vitória 2×0 +1, derrota na primeira fase −1. Desempates: títulos, vitórias e empate mantido.</p>
+      </section>
+    `;
+  }
 
   if(page==='rimagram.html'){
     const postsHtml = RIMAGRAM_POSTS.map(p=>`
@@ -192,11 +238,32 @@ function renderPage(page,d){
     `;
   }
 
-  if(page==='calendario.html')return `<section class="section"><div class="sectionhead"><div><h2>HISTÓRICO DE 2027</h2><p>Somente eventos concluídos e oficialmente registrados</p></div></div><div class="card cardpad" style="max-width:850px;margin:auto"><div class="calendarbar"><button id="prevmonth" aria-label="Mês anterior">❮</button><h2 id="monthname">JANEIRO 2027</h2><button id="nextmonth" aria-label="Próximo mês">❯</button></div><div class="week" id="calendar"></div><p class="fine" style="margin-top:20px">Os símbolos das casas e competições aparecerão nos dias de eventos concluídos. Ao clicar, abrirão a página oficial correspondente.</p></div></section>`;
+  if(page==='calendario.html')return `<section class="section"><div class="sectionhead"><div><h2>HISTÓRICO DE 2027</h2><p>Somente eventos concluídos e oficialmente registrados</p></div></div><div class="card cardpad" style="max-width:850px;margin:auto"><div class="calendarbar"><button id="prevmonth" aria-label="Mês anterior">❮</button><h2 id="monthname">JANEIRO 2027</h2><button id="nextmonth" aria-label="Próximo mês">❯</button></div><div class="week" id="calendar"></div><p class="fine" style="margin-top:20px">Os símbolos das casas e competições aparecem nos dias de eventos concluídos. Ao clicar, abrirão a página oficial correspondente.</p></div></section>`;
   return '';
 }
 
-if(current==='calendario.html'){let m=0;const months=['JANEIRO','FEVEREIRO','MARÇO','ABRIL','MAIO','JUNHO','JULHO','AGOSTO','SETEMBRO','OUTUBRO','NOVEMBRO','DEZEMBRO'];function draw(){document.getElementById('monthname').textContent=months[m]+' 2027';let first=new Date(2027,m,1).getDay(),count=new Date(2027,m+1,0).getDate();document.getElementById('calendar').innerHTML=['DOM','SEG','TER','QUA','QUI','SEX','SÁB'].map(d=>`<div class="weekday">${d}</div>`).join('')+Array.from({length:first},()=>'<div class="day outside"></div>').join('')+Array.from({length:count},(_,i)=>`<div class="day">${i+1}</div>`).join('');document.getElementById('prevmonth').disabled=m===0;document.getElementById('nextmonth').disabled=m===11}document.getElementById('prevmonth').onclick=()=>{m--;draw()};document.getElementById('nextmonth').onclick=()=>{m++;draw()};draw()}
+if(current==='calendario.html'){
+  let m=0;
+  const months=['JANEIRO','FEVEREIRO','MARÇO','ABRIL','MAIO','JUNHO','JULHO','AGOSTO','SETEMBRO','OUTUBRO','NOVEMBRO','DEZEMBRO'];
+  function draw(){
+    document.getElementById('monthname').textContent=months[m]+' 2027';
+    let first=new Date(2027,m,1).getDay(),count=new Date(2027,m+1,0).getDate();
+    const daysHtml=Array.from({length:count},(_,i)=>{
+      const dayNum=i+1;
+      const ev=WEEK1_CALENDAR_EVENTS[`2027-${m+1}-${dayNum}`];
+      if(ev){
+        return `<a class="day" href="${ev.href}" title="${ev.title}" style="display:flex;flex-direction:column;justify-content:space-between;border-color:#f3c54c;background:#1d1910"><span>${dayNum}</span><small style="color:#f3c54c;font-weight:800;font-size:10px;line-height:1.15">${ev.label}</small></a>`;
+      }
+      return `<div class="day">${dayNum}</div>`;
+    }).join('');
+    document.getElementById('calendar').innerHTML=['DOM','SEG','TER','QUA','QUI','SEX','SÁB'].map(d=>`<div class="weekday">${d}</div>`).join('')+Array.from({length:first},()=>'<div class="day outside"></div>').join('')+daysHtml;
+    document.getElementById('prevmonth').disabled=m===0;
+    document.getElementById('nextmonth').disabled=m===11;
+  }
+  document.getElementById('prevmonth').onclick=()=>{m--;draw()};
+  document.getElementById('nextmonth').onclick=()=>{m++;draw()};
+  draw();
+}
 
 if(current==='mcs.html'){
   const el=document.getElementById('mc-list'), search=document.getElementById('mc-search'), state=document.getElementById('mc-state'), nature=document.getElementById('mc-nature'), more=document.getElementById('mc-more'), count=document.getElementById('mc-count'), dialog=document.getElementById('mc-dialog');
