@@ -1,8 +1,25 @@
-const pages=[['index.html','Início'],['batalhas.html','Batalhas'],['competicoes.html','Competições'],['mcs.html','MCs'],['rankings.html','Rankings'],['rimagram.html','Rimagram'],['rimatube.html','RimaTube'],['jornal.html','Jornal do Rap'],['calendario.html','Calendário']];
-const current=(location.pathname.split('/').pop()||'index.html');
-const header=`<header class="topbar"><div class="navwrap"><a class="brand" href="index.html">FR <em>UNIVERSE</em><span style="color:#777;font-size:10px;vertical-align:top;margin-left:5px">2027</span></a><nav class="nav" aria-label="Navegação principal">${pages.map(([url,name])=>`<a href="${url}" class="${current===url?'active':''}">${name}</a>`).join('')}</nav><span class="live">● TEMPORADA 2027</span></div></header>`;
-const footer=`<footer class="footer"><div class="container"><span><strong>FR UNIVERSE</strong> © 2027 · Portal de universo fictício de batalhas de rima</span><span>Resultados e estatísticas somente após registro oficial</span></div></footer>`;
-document.getElementById('header').innerHTML=header;document.getElementById('footer').innerHTML=footer;
+const pages = [
+  ['index.html', 'Início'],
+  ['batalhas.html', 'Batalhas'],
+  ['competicoes.html', 'Competições'],
+  ['mcs.html', 'MCs'],
+  ['rankings.html', 'Rankings'],
+  ['rimagram.html', 'Rimagram'],
+  ['rimatube.html', 'RimaTube'],
+  ['jornal.html', 'Jornal do Rap'],
+  ['calendario.html', 'Calendário']
+];
+
+const current = location.pathname.split('/').pop() || 'index.html';
+
+const header = `<header class="topbar"><div class="navwrap"><a class="brand" href="index.html">FR <em>UNIVERSE</em><span style="color:#777;font-size:10px;vertical-align:top;margin-left:5px">2027</span></a><nav class="nav" aria-label="Navegação principal">${pages.map(([url, name]) => `<a href="${url}" class="${current === url ? 'active' : ''}">${name}</a>`).join('')}</nav><span class="live">● TEMPORADA 2027</span></div></header>`;
+
+const footer = `<footer class="footer"><div class="container"><span><strong>FR UNIVERSE</strong> © 2027 · Portal de universo fictício de batalhas de rima</span><span>Resultados e estatísticas somente após registro oficial</span></div></footer>`;
+
+const headerEl = document.getElementById('header');
+const footerEl = document.getElementById('footer');
+if (headerEl) headerEl.innerHTML = header;
+if (footerEl) footerEl.innerHTML = footer;
 
 const BATALHAS_EDICOES = {
   'ALDEIA': {
@@ -203,31 +220,31 @@ const COMPETICOES_EDICOES = {
 };
 
 const WEEK1_RANKING = [
-  {pos:'1º',mc:'Guri',uf:'SP',titulos:1,vitorias:4,pts:9},
-  {pos:'1º',mc:'Jotapê',uf:'SP',titulos:1,vitorias:4,pts:9},
-  {pos:'1º',mc:'Youngui',uf:'—',titulos:1,vitorias:4,pts:9},
-  {pos:'4º',mc:'Poeta Gabriela',uf:'PR',titulos:1,vitorias:4,pts:7},
-  {pos:'5º',mc:'Joãozinho',uf:'PR',titulos:0,vitorias:3,pts:5},
-  {pos:'5º',mc:'Dehat',uf:'SP',titulos:0,vitorias:0,pts:5},
-  {pos:'5º',mc:'Mano Ayron',uf:'SP',titulos:0,vitorias:0,pts:5},
-  {pos:'5º',mc:'WL',uf:'RJ',titulos:0,vitorias:0,pts:5},
-  {pos:'9º',mc:'Olhinho',uf:'PR',titulos:0,vitorias:2,pts:3},
-  {pos:'9º',mc:'Ranks',uf:'—',titulos:0,vitorias:2,pts:3},
-  {pos:'9º',mc:'Glaubin',uf:'SP',titulos:0,vitorias:0,pts:3},
-  {pos:'9º',mc:'Magrão',uf:'—',titulos:0,vitorias:0,pts:3},
-  {pos:'9º',mc:'Neo',uf:'—',titulos:0,vitorias:0,pts:3},
-  {pos:'9º',mc:'Salvador',uf:'—',titulos:0,vitorias:0,pts:3},
-  {pos:'15º',mc:'Kroy',uf:'SP',titulos:0,vitorias:0,pts:2},
-  {pos:'15º',mc:'Prado',uf:'SP',titulos:0,vitorias:0,pts:2}
+  { pos: '1º', mc: 'Guri', uf: 'SP', titulos: 1, vitorias: 4, pts: 9 },
+  { pos: '1º', mc: 'Jotapê', uf: 'SP', titulos: 1, vitorias: 4, pts: 9 },
+  { pos: '1º', mc: 'Youngui', uf: '—', titulos: 1, vitorias: 4, pts: 9 },
+  { pos: '4º', mc: 'Poeta Gabriela', uf: 'PR', titulos: 1, vitorias: 4, pts: 7 },
+  { pos: '5º', mc: 'Joãozinho', uf: 'PR', titulos: 0, vitorias: 3, pts: 5 },
+  { pos: '5º', mc: 'Dehat', uf: 'SP', titulos: 0, vitorias: 0, pts: 5 },
+  { pos: '5º', mc: 'Mano Ayron', uf: 'SP', titulos: 0, vitorias: 0, pts: 5 },
+  { pos: '5º', mc: 'WL', uf: 'RJ', titulos: 0, vitorias: 0, pts: 5 },
+  { pos: '9º', mc: 'Olhinho', uf: 'PR', titulos: 0, vitorias: 2, pts: 3 },
+  { pos: '9º', mc: 'Ranks', uf: '—', titulos: 0, vitorias: 2, pts: 3 },
+  { pos: '9º', mc: 'Glaubin', uf: 'SP', titulos: 0, vitorias: 0, pts: 3 },
+  { pos: '9º', mc: 'Magrão', uf: '—', titulos: 0, vitorias: 0, pts: 3 },
+  { pos: '9º', mc: 'Neo', uf: '—', titulos: 0, vitorias: 0, pts: 3 },
+  { pos: '9º', mc: 'Salvador', uf: '—', titulos: 0, vitorias: 0, pts: 3 },
+  { pos: '15º', mc: 'Kroy', uf: 'SP', titulos: 0, vitorias: 0, pts: 2 },
+  { pos: '15º', mc: 'Prado', uf: 'SP', titulos: 0, vitorias: 0, pts: 2 }
 ];
 
 const WEEK1_CALENDAR_EVENTS = {
-  '2027-1-4': {label:'Aldeia #1',href:'batalhas.html?abrir=ALDEIA',title:'04/01/2027 — Batalha da Aldeia · 1ª Edição'},
-  '2027-1-6': {label:'Coliseu #1',href:'batalhas.html?abrir=COLISEU',title:'06/01/2027 — Batalha do Coliseu · 1ª Edição'},
-  '2027-1-7': {label:'Ana Rosa #1',href:'batalhas.html?abrir=ANA%20ROSA',title:'07/01/2027 — Batalha do Ana Rosa · 1ª Edição'},
-  '2027-1-8': {label:'Norte #1',href:'batalhas.html?abrir=NORTE',title:'08/01/2027 — Batalha da Norte · 1ª Edição'},
-  '2027-1-9': {label:'LNF Seletivas',href:'competicoes.html?abrir=LNF%20S%C3%89RIE%20A',title:'09/01/2027 — LNF · Seletivas Estaduais (SP, RJ e DF)'},
-  '2027-1-10': {label:'Jamália #1',href:'batalhas.html?abrir=JAMALIA',title:'10/01/2027 — Batalha da Jamália · Inauguração'}
+  '2027-1-4': { label: 'Aldeia #1', href: 'batalhas.html?abrir=ALDEIA', title: '04/01/2027 — Batalha da Aldeia · 1ª Edição' },
+  '2027-1-6': { label: 'Coliseu #1', href: 'batalhas.html?abrir=COLISEU', title: '06/01/2027 — Batalha do Coliseu · 1ª Edição' },
+  '2027-1-7': { label: 'Ana Rosa #1', href: 'batalhas.html?abrir=ANA%20ROSA', title: '07/01/2027 — Batalha do Ana Rosa · 1ª Edição' },
+  '2027-1-8': { label: 'Norte #1', href: 'batalhas.html?abrir=NORTE', title: '08/01/2027 — Batalha da Norte · 1ª Edição' },
+  '2027-1-9': { label: 'LNF Seletivas', href: 'competicoes.html?abrir=LNF%20S%C3%89RIE%20A', title: '09/01/2027 — LNF · Seletivas Estaduais (SP, RJ e DF)' },
+  '2027-1-10': { label: 'Jamália #1', href: 'batalhas.html?abrir=JAMALIA', title: '10/01/2027 — Batalha da Jamália · Inauguração' }
 };
 
 const RIMAGRAM_POSTS = [
@@ -308,45 +325,51 @@ const RIMATUBE_ITEMS = [
   }
 ];
 
-const data={
-'batalhas.html':{title:'CASAS DE <span>BATALHA.</span>',eyebrow:'O circuito',desc:'Clique em uma casa de batalha para ver as edições e acontecimentos registrados.',cards:[]},
-'competicoes.html':{title:'GRANDES <span>COMPETIÇÕES.</span>',eyebrow:'A disputa pelo topo',desc:'Clique em uma competição para ver as edições e acontecimentos registrados.',cards:[]},
-'mcs.html':{title:'OS DONOS DO <span>MICROFONE.</span>',eyebrow:'Elenco oficial',desc:'Perfis, estilos, conquistas e históricos dos participantes. Os cadastros serão importados da base oficial aprovada pelo Presidente.',cards:[]},
-'rankings.html':{title:'A CORRIDA PELO <span>TOPO.</span>',eyebrow:'Ranking geral · Semana 1',desc:'Classificação geral oficial da 1ª semana de janeiro de 2027 (04/01 a 10/01/2027).',cards:[]},
-'rimagram.html':{title:'O UNIVERSO <span>REPERCUTE.</span>',eyebrow:'Rimagram',desc:'Feed social do FR Universe com os acontecimentos registrados.',cards:[]},
-'rimatube.html':{title:'BATALHAS QUE <span>MARCAM.</span>',eyebrow:'RimaTube',desc:'Central de destaques e registros dos confrontos e seletivas.',cards:[]},
-'jornal.html':{title:'JORNAL DO <span>RAP.</span>',eyebrow:'Cobertura semanal',desc:'Edição impressa do FR Universe com campeões, resultados e seletivas da LNF.',cards:[]},
-'calendario.html':{title:'CADA DATA, UMA <span>HISTÓRIA.</span>',eyebrow:'Calendário histórico',desc:'Navegue pelos meses de 2027 e clique nos dias destacados para abrir a página correspondente.',cards:[]}
+const data = {
+  'batalhas.html': { title: 'CASAS DE <span>BATALHA.</span>', eyebrow: 'O circuito', desc: 'Clique em uma casa de batalha para ver as edições e acontecimentos registrados.' },
+  'competicoes.html': { title: 'GRANDES <span>COMPETIÇÕES.</span>', eyebrow: 'A disputa pelo topo', desc: 'Clique em uma competição para ver as edições e acontecimentos registrados.' },
+  'mcs.html': { title: 'OS DONOS DO <span>MICROFONE.</span>', eyebrow: 'Elenco oficial', desc: 'Perfis, estilos, conquistas e históricos dos participantes.' },
+  'rankings.html': { title: 'A CORRIDA PELO <span>TOPO.</span>', eyebrow: 'Ranking geral · Semana 1', desc: 'Classificação geral oficial da 1ª semana de janeiro de 2027 (04/01 a 10/01/2027).' },
+  'rimagram.html': { title: 'O UNIVERSO <span>REPERCUTE.</span>', eyebrow: 'Rimagram', desc: 'Feed social do FR Universe com os acontecimentos registrados.' },
+  'rimatube.html': { title: 'BATALHAS QUE <span>MARCAM.</span>', eyebrow: 'RimaTube', desc: 'Central de destaques e registros dos confrontos e seletivas.' },
+  'jornal.html': { title: 'JORNAL DO <span>RAP.</span>', eyebrow: 'Cobertura semanal', desc: 'Edição impressa do FR Universe com campeões, resultados e seletivas da LNF.' },
+  'calendario.html': { title: 'CADA DATA, UMA <span>HISTÓRIA.</span>', eyebrow: 'Calendário histórico', desc: 'Navegue pelos meses de 2027 e clique nos dias destacados para abrir a página correspondente.' }
 };
-const d=data[current];if(d){document.title=d.title.replace(/<[^>]+>/g,'')+' | FR Universe 2027';document.getElementById('content').innerHTML=`<section class="pagehero"><div class="container"><div class="eyebrow">${d.eyebrow}</div><h1>${d.title}</h1><p>${d.desc}</p><span class="status">Registros publicados · 2027</span></div></section><main class="container">${renderPage(current,d)}</main>`;}
-function empty(title,description,emoji='✦'){return `<div class="empty"><div class="big">${emoji}</div><h3>${title}</h3><p>${description}</p></div>`}
 
-function ensureDetailDialog(){
-  let dlg=document.getElementById('fu-detail-dialog');
-  if(!dlg){
-    dlg=document.createElement('dialog');
-    dlg.id='fu-detail-dialog';
-    dlg.className='mc-dialog';
-    dlg.innerHTML=`<button class="mc-close" id="fu-detail-close" type="button" aria-label="Fechar">✕</button><div id="fu-detail-content"></div>`;
+const contentEl = document.getElementById('content');
+const pageData = data[current];
+
+function empty(title, description, emoji = '✦') {
+  return `<div class="empty"><div class="big">${emoji}</div><h3>${title}</h3><p>${description}</p></div>`;
+}
+
+function ensureDetailDialog() {
+  let dlg = document.getElementById('fu-detail-dialog');
+  if (!dlg) {
+    dlg = document.createElement('dialog');
+    dlg.id = 'fu-detail-dialog';
+    dlg.className = 'mc-dialog';
+    dlg.innerHTML = `<button class="mc-close" id="fu-detail-close" type="button" aria-label="Fechar">✕</button><div id="fu-detail-content"></div>`;
     document.body.appendChild(dlg);
-    document.getElementById('fu-detail-close').onclick=()=>dlg.close();
-    dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close();});
+    document.getElementById('fu-detail-close').onclick = () => dlg.close();
+    dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
   }
   return dlg;
 }
 
-function openEdicoesModal(tituloTopo, nomeItem, subItem, listaEdicoes){
-  const dlg=ensureDetailDialog();
-  if(!listaEdicoes||!listaEdicoes.length){
-    document.getElementById('fu-detail-content').innerHTML=`
+function openEdicoesModal(tituloTopo, nomeItem, subItem, listaEdicoes) {
+  const dlg = ensureDetailDialog();
+  if (!listaEdicoes || !listaEdicoes.length) {
+    document.getElementById('fu-detail-content').innerHTML = `
       <div class="label">${tituloTopo}</div>
       <h2 style="font-size:40px;margin:10px 0 6px">${nomeItem}</h2>
-      <p style="color:#f3c54c;font-size:12px;font-weight:800;text-transform:uppercase;margin:0 0 18px">${subItem}</p>${empty('NENHUMA EDIÇÃO REGISTRADA','Ainda não há edições ou resultados oficiais registrados neste tópico.','★')}
+      <p style="color:#f3c54c;font-size:12px;font-weight:800;text-transform:uppercase;margin:0 0 18px">${subItem}</p>
+      ${empty('NENHUMA EDIÇÃO REGISTRADA', 'Ainda não há edições ou resultados oficiais registrados neste tópico.', '★')}
     `;
     dlg.showModal();
     return;
   }
-  const blocks=listaEdicoes.map(ed=>`
+  const blocks = listaEdicoes.map((ed) => `
     <div style="background:#191b20;border:1px solid #2e3138;border-radius:6px;padding:16px;margin-top:14px">
       <div class="label">EDIÇÃO REGISTRADA</div>
       <h3 style="font-size:24px;margin:6px 0 10px">${ed.nome}</h3>
@@ -356,21 +379,22 @@ function openEdicoesModal(tituloTopo, nomeItem, subItem, listaEdicoes){
       </div>
       <div class="label" style="margin-bottom:6px">ACONTECIMENTOS DA EDIÇÃO</div>
       <ul style="margin:0;padding-left:18px;color:#d6d8de;font-size:12px;line-height:1.65">
-        ${ed.acontecimentos.map(a=>`<li style="margin-bottom:6px">${a}</li>`).join('')}
+        ${ed.acontecimentos.map((a) => `<li style="margin-bottom:6px">${a}</li>`).join('')}
       </ul>
     </div>
   `).join('');
-  document.getElementById('fu-detail-content').innerHTML=`
+  document.getElementById('fu-detail-content').innerHTML = `
     <div class="label">${tituloTopo}</div>
     <h2 style="font-size:40px;margin:10px 0 6px">${nomeItem}</h2>
-    <p style="color:#f3c54c;font-size:12px;font-weight:800;text-transform:uppercase;margin:0">${subItem}</p>${blocks}
+    <p style="color:#f3c54c;font-size:12px;font-weight:800;text-transform:uppercase;margin:0">${subItem}</p>
+    ${blocks}
   `;
   dlg.showModal();
 }
 
-function renderPage(page,d){
-  if(page==='batalhas.html'){
-    const cardsHtml=Object.entries(BATALHAS_EDICOES).map(([nome,info])=>`
+function renderPage(page) {
+  if (page === 'batalhas.html') {
+    const cardsHtml = Object.entries(BATALHAS_EDICOES).map(([nome, info]) => `
       <button class="mc-card" type="button" data-open-batalha="${nome}" style="display:flex;flex-direction:column;width:100%">
         <span class="mc-art" style="width:100%"><span class="mc-initial">${info.icon}</span><span class="mc-art-note">FR UNIVERSE 2027</span></span>
         <span class="mc-info">
@@ -384,8 +408,8 @@ function renderPage(page,d){
     return `<section class="section"><div class="sectionhead"><div><h2>CIRCUITO DE BATALHAS</h2><p>Clique em uma batalha para abrir suas edições e acontecimentos</p></div></div><div class="grid">${cardsHtml}</div></section>`;
   }
 
-  if(page==='competicoes.html'){
-    const cardsHtml=Object.entries(COMPETICOES_EDICOES).map(([nome,info])=>`
+  if (page === 'competicoes.html') {
+    const cardsHtml = Object.entries(COMPETICOES_EDICOES).map(([nome, info]) => `
       <button class="mc-card" type="button" data-open-comp="${nome}" style="display:flex;flex-direction:column;width:100%">
         <span class="mc-art" style="width:100%"><span class="mc-initial">${info.icon}</span><span class="mc-art-note">FR UNIVERSE 2027</span></span>
         <span class="mc-info">
@@ -399,17 +423,19 @@ function renderPage(page,d){
     return `<section class="section"><div class="sectionhead"><div><h2>COMPETIÇÕES OFICIAIS</h2><p>Clique em uma competição para abrir suas edições e acontecimentos</p></div></div><div class="grid">${cardsHtml}</div></section>`;
   }
 
-  if(page==='mcs.html')return `<section class="section"><div class="sectionhead"><div><h2>ELENCO OFICIAL</h2><p>170 MCs válidos • 5 personagens fictícios • estatísticas 2027 zeradas</p></div></div><div class="mc-summary"><span><strong>170</strong> MCs cadastrados</span><span><strong>5</strong> fictícios</span><span><strong>0</strong> resultados de 2027</span></div><div class="filters mc-controls"><input class="search" id="mc-search" placeholder="Buscar MC por nome ou apelido..." aria-label="Buscar MC"><select class="mc-select" id="mc-state" aria-label="Filtrar por estado"><option value="">Todos os estados</option></select><select class="mc-select" id="mc-nature" aria-label="Filtrar por natureza"><option value="">Reais e fictícios</option><option value="real">Reais</option><option value="fictício">Fictícios</option></select></div><p class="mc-count" id="mc-count" aria-live="polite"></p><div class="mc-grid" id="mc-list"></div><div class="mc-more-wrap"><button class="btn secondary" id="mc-more" type="button" hidden>VER MAIS MCS</button></div><p class="fine">As categorias e descrições representam o cadastro fornecido pelo Presidente, não uma avaliação externa verificada. Informações desconhecidas permanecem pendentes.</p></section><dialog id="mc-dialog" class="mc-dialog" aria-label="Ficha do MC"><button class="mc-close" id="mc-close" aria-label="Fechar ficha">✕</button><div id="mc-detail"></div></dialog>`;
+  if (page === 'mcs.html') {
+    return `<section class="section"><div class="sectionhead"><div><h2>ELENCO OFICIAL</h2><p>Cadastro oficial do FR Universe 2027</p></div></div><div class="filters mc-controls"><input class="search" id="mc-search" placeholder="Buscar MC por nome ou apelido..." aria-label="Buscar MC"><select class="mc-select" id="mc-state" aria-label="Filtrar por estado"><option value="">Todos os estados</option></select><select class="mc-select" id="mc-nature" aria-label="Filtrar por natureza"><option value="">Reais e fictícios</option><option value="real">Reais</option><option value="fictício">Fictícios</option></select></div><p class="mc-count" id="mc-count" aria-live="polite"></p><div class="mc-grid" id="mc-list"></div><div class="mc-more-wrap"><button class="btn secondary" id="mc-more" type="button" hidden>VER MAIS MCS</button></div></section><dialog id="mc-dialog" class="mc-dialog" aria-label="Ficha do MC"><button class="mc-close" id="mc-close" aria-label="Fechar ficha">✕</button><div id="mc-detail"></div></dialog>`;
+  }
 
-  if(page==='rankings.html'){
-    const top3 = WEEK1_RANKING.slice(0,3).map(r=>`
+  if (page === 'rankings.html') {
+    const top3 = WEEK1_RANKING.slice(0, 3).map((r) => `
       <article class="card cardpad" style="border-color:#66562b">
-        <div class="kicker">POS. ${r.pos} ·${r.uf}</div>
+        <div class="kicker">POS. ${r.pos} · ${r.uf}</div>
         <h3 style="font-size:32px;margin:8px 0">${r.mc}</h3>
         <p style="color:#f3c54c;font-weight:800;font-size:15px;margin:0">${r.pts} PONTOS · ${r.titulos} TÍTULO · ${r.vitorias} VITÓRIAS</p>
       </article>
     `).join('');
-    const rows = WEEK1_RANKING.map(r=>`<tr><td><strong>${r.pos}</strong></td><td><strong>${r.mc}</strong></td><td>${r.uf}</td><td>${r.titulos}</td><td>${r.vitorias}</td><td><strong style="color:#f3c54c">${r.pts}</strong></td></tr>`).join('');
+    const rows = WEEK1_RANKING.map((r) => `<tr><td><strong>${r.pos}</strong></td><td><strong>${r.mc}</strong></td><td>${r.uf}</td><td>${r.titulos}</td><td>${r.vitorias}</td><td><strong style="color:#f3c54c">${r.pts}</strong></td></tr>`).join('');
     return `
       <section class="section">
         <div class="sectionhead"><div><h2>RANKING GERAL · SEMANA 1</h2><p>Classificação geral da 1ª semana de janeiro de 2027</p></div></div>
@@ -420,8 +446,8 @@ function renderPage(page,d){
     `;
   }
 
-  if(page==='rimagram.html'){
-    const postsHtml = RIMAGRAM_POSTS.map(p=>`
+  if (page === 'rimagram.html') {
+    const postsHtml = RIMAGRAM_POSTS.map((p) => `
       <article class="card" style="margin-bottom:20px;border-color:#2e3138">
         <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 20px;border-bottom:1px solid #25282e;background:#14161b">
           <div style="display:flex;align-items:center;gap:12px">
@@ -447,8 +473,8 @@ function renderPage(page,d){
     return `<section class="section"><div class="sectionhead"><div><h2>RIMAGRAM · FEED OFICIAL</h2><p>Publicações registradas na rodada</p></div></div><div style="max-width:640px;margin:0 auto">${postsHtml}</div></section>`;
   }
 
-  if(page==='rimatube.html'){
-    const vidsHtml = RIMATUBE_ITEMS.map(v=>`
+  if (page === 'rimatube.html') {
+    const vidsHtml = RIMATUBE_ITEMS.map((v) => `
       <article class="card" style="display:flex;flex-direction:column;border-color:#2e3138">
         <div style="position:relative;aspect-ratio:16/9;background:radial-gradient(circle at 65% 35%,#4a3916,#191a1f 55%,#0c0d10 100%);display:flex;align-items:center;justify-content:center;border-bottom:1px solid #27292f">
           <div style="width:58px;height:42px;border-radius:10px;background:#f3c54c;color:#111;display:grid;place-items:center;font-size:18px;font-weight:900;box-shadow:0 8px 24px rgba(0,0,0,.55)">▶</div>
@@ -464,7 +490,7 @@ function renderPage(page,d){
     return `<section class="section"><div class="sectionhead"><div><h2>RIMATUBE · CENTRAL DE CONFRONTOS</h2><p>Registros textuais dos confrontos e seletivas</p></div></div><div class="grid">${vidsHtml}</div></section>`;
   }
 
-  if(page==='jornal.html'){
+  if (page === 'jornal.html') {
     return `
       <section class="section">
         <div class="card" style="border-color:#66562b;background:#121317;margin-bottom:20px">
@@ -482,4 +508,184 @@ function renderPage(page,d){
               <div class="label">COLUNA DE RESULTADOS</div>
               <div>
                 <strong style="color:#f3c54c;font-size:12px;text-transform:uppercase">Aldeia · 1ª Edição (Edição Lendas — Trios)</strong>
-                <p style="color:#d4d6dc;font-size:12px;line-height:1.6
+                <p style="color:#d4d6dc;font-size:12px;line-height:1.6;margin:4px 0 0">Campeões: Neo, Jotapê e Kant (3×0 na final) · Vice: Big Mike, Ike e Valle.</p>
+              </div>
+              <hr style="border:0;border-top:1px solid #262830;margin:0">
+              <div>
+                <strong style="color:#f3c54c;font-size:12px;text-transform:uppercase">Coliseu, Ana Rosa e Norte</strong>
+                <p style="color:#d4d6dc;font-size:12px;line-height:1.6;margin:4px 0 0">Coliseu: Jotapê campeão (2×1 vs WL) · Ana Rosa: Guri campeão (2×1 vs Mano Ayron) · Norte (45s / 90s / 45s): Youngui campeão (2×0 vs Dehat).</p>
+              </div>
+              <hr style="border:0;border-top:1px solid #262830;margin:0">
+              <div>
+                <strong style="color:#f3c54c;font-size:12px;text-transform:uppercase">Jamália (BDJ) · Inauguração (Curitiba/PR)</strong>
+                <p style="color:#d4d6dc;font-size:12px;line-height:1.6;margin:4px 0 0">Campeã: Poeta Gabriela (4V–0D, 8–4 em rounds; quatro vitórias por 2×1, final 2×1 vs Joãozinho).</p>
+              </div>
+              <hr style="border:0;border-top:1px solid #262830;margin:0">
+              <div>
+                <strong style="color:#f3c54c;font-size:12px;text-transform:uppercase">Seletivas LNF (SP, RJ e DF)</strong>
+                <p style="color:#d4d6dc;font-size:12px;line-height:1.6;margin:4px 0 0">20 classificados e 12 eliminados por estado (16 diretos + 4 repescagem em SP, RJ e DF).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    `;
+  }
+
+  if (page === 'calendario.html') {
+    return `<section class="section"><div class="sectionhead"><div><h2>HISTÓRICO DE 2027</h2><p>Somente eventos concluídos e oficialmente registrados</p></div></div><div class="card cardpad" style="max-width:850px;margin:auto"><div class="calendarbar"><button id="prevmonth" aria-label="Mês anterior">❮</button><h2 id="monthname">JANEIRO 2027</h2><button id="nextmonth" aria-label="Próximo mês">❯</button></div><div class="week" id="calendar"></div><p class="fine" style="margin-top:20px">Os símbolos das casas e competições aparecem nos dias de eventos concluídos. Ao clicar, abrirão a página oficial correspondente.</p></div></section>`;
+  }
+
+  return '';
+}
+
+if (pageData && contentEl) {
+  document.title = pageData.title.replace(/<[^>]+>/g, '') + ' | FR Universe 2027';
+  contentEl.innerHTML = `<section class="pagehero"><div class="container"><div class="eyebrow">${pageData.eyebrow}</div><h1>${pageData.title}</h1><p>${pageData.desc}</p><span class="status">Registros publicados · 2027</span></div></section><main class="container">${renderPage(current)}</main>`;
+}
+
+if (current === 'batalhas.html' && contentEl) {
+  contentEl.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-open-batalha]');
+    if (!btn) return;
+    const chave = btn.dataset.openBatalha;
+    const item = BATALHAS_EDICOES[chave];
+    if (item) openEdicoesModal('BATALHA · EDIÇÕES E ACONTECIMENTOS', chave, item.sub, item.edicoes);
+  });
+  const abrir = new URLSearchParams(location.search).get('abrir');
+  if (abrir && BATALHAS_EDICOES[abrir]) {
+    const item = BATALHAS_EDICOES[abrir];
+    openEdicoesModal('BATALHA · EDIÇÕES E ACONTECIMENTOS', abrir, item.sub, item.edicoes);
+  }
+}
+
+if (current === 'competicoes.html' && contentEl) {
+  contentEl.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-open-comp]');
+    if (!btn) return;
+    const chave = btn.dataset.openComp;
+    const item = COMPETICOES_EDICOES[chave];
+    if (item) openEdicoesModal('COMPETIÇÃO · EDIÇÕES E ACONTECIMENTOS', chave, item.sub, item.edicoes);
+  });
+  const abrir = new URLSearchParams(location.search).get('abrir');
+  if (abrir && COMPETICOES_EDICOES[abrir]) {
+    const item = COMPETICOES_EDICOES[abrir];
+    openEdicoesModal('COMPETIÇÃO · EDIÇÕES E ACONTECIMENTOS', abrir, item.sub, item.edicoes);
+  }
+}
+
+if (current === 'calendario.html') {
+  let m = 0;
+  const months = ['JANEIRO', 'FEVEREIRO', 'MARÇO', 'ABRIL', 'MAIO', 'JUNHO', 'JULHO', 'AGOSTO', 'SETEMBRO', 'OUTUBRO', 'NOVEMBRO', 'DEZEMBRO'];
+  function draw() {
+    document.getElementById('monthname').textContent = months[m] + ' 2027';
+    const first = new Date(2027, m, 1).getDay();
+    const count = new Date(2027, m + 1, 0).getDate();
+    const daysHtml = Array.from({ length: count }, (_, i) => {
+      const dayNum = i + 1;
+      const ev = WEEK1_CALENDAR_EVENTS[`2027-${m + 1}-${dayNum}`];
+      if (ev) {
+        return `<a class="day" href="${ev.href}" title="${ev.title}" style="display:flex;flex-direction:column;justify-content:space-between;border-color:#f3c54c;background:#1d1910"><span>${dayNum}</span><small style="color:#f3c54c;font-weight:800;font-size:10px;line-height:1.15">${ev.label}</small></a>`;
+      }
+      return `<div class="day">${dayNum}</div>`;
+    }).join('');
+    document.getElementById('calendar').innerHTML = ['DOM', 'SEG', 'TER', 'QUA', 'QUI', 'SEX', 'SÁB'].map((d) => `<div class="weekday">${d}</div>`).join('') + Array.from({ length: first }, () => '<div class="day outside"></div>').join('') + daysHtml;
+    document.getElementById('prevmonth').disabled = m === 0;
+    document.getElementById('nextmonth').disabled = m === 11;
+  }
+  document.getElementById('prevmonth').onclick = () => { m--; draw(); };
+  document.getElementById('nextmonth').onclick = () => { m++; draw(); };
+  draw();
+}
+
+if (current === 'mcs.html') {
+  const el = document.getElementById('mc-list');
+  const search = document.getElementById('mc-search');
+  const state = document.getElementById('mc-state');
+  const nature = document.getElementById('mc-nature');
+  const more = document.getElementById('mc-more');
+  const count = document.getElementById('mc-count');
+  const dialog = document.getElementById('mc-dialog');
+  const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const normalize = (s) => String(s ?? '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+  let roster = [], shown = 24, filtered = [];
+  const portrait = (m) => m.natureza === 'fictício'
+    ? `avatars/avatar-${String((m.posicao * 7 + 3) % 16 + 1).padStart(2, '0')}.webp`
+    : `fotos/mc-${String(m.posicao).padStart(3, '0')}.webp`;
+
+  function draw() {
+    const q = normalize(search.value.trim());
+    filtered = roster.filter((m) =>
+      (!state.value || (state.value === 'pendente' ? !m.uf : m.uf === state.value)) &&
+      (!nature.value || m.natureza === nature.value) &&
+      (!q || normalize([m.nome, ...(m.aliases || [])].join(' ')).includes(q))
+    );
+    count.textContent = `${filtered.length} MC${filtered.length === 1 ? '' : 's'} encontrado${filtered.length === 1 ? '' : 's'}`;
+    el.innerHTML = filtered.slice(0, shown).map((m) => `
+      <button class="mc-card" data-id="${m.posicao}" type="button" aria-label="Ver ficha de ${esc(m.nome)}">
+        <span class="mc-art">
+          <img class="mc-portrait" src="${portrait(m)}" alt="Foto de ${esc(m.nome)}" loading="lazy" onerror="this.style.display='none'">
+          <span class="mc-art-note">FR UNIVERSE • 2027</span>
+        </span>
+        <span class="mc-info">
+          <span class="mc-location">${esc(m.uf || 'UF pendente')} ${m.natureza === 'fictício' ? '<span class="mc-fiction">FICTÍCIO</span>' : ''}</span>
+          <strong>${esc(m.nome)}</strong>
+          <span class="mc-category">${esc(m.categoria)}</span>
+          <span class="mc-view">VER FICHA ↗</span>
+        </span>
+      </button>
+    `).join('');
+    more.hidden = shown >= filtered.length;
+  }
+
+  function openProfile(id) {
+    const m = roster.find((x) => x.posicao === id);
+    if (!m) return;
+    document.getElementById('mc-detail').innerHTML = `
+      <div class="mc-profile-top">
+        <span class="mc-profile-avatar"><img src="${portrait(m)}" alt="Foto de ${esc(m.nome)}" onerror="this.style.display='none'"></span>
+        <div>
+          <div class="label">FICHA OFICIAL • FR UNIVERSE 2027</div>
+          <h2>${esc(m.nome)}</h2>
+          <p>${esc(m.uf || 'Estado pendente')} • ${esc(m.natureza === 'fictício' ? 'Personagem fictício' : 'MC real')}</p>
+        </div>
+      </div>
+      <div class="mc-profile-meta">
+        <div><small>CATEGORIA</small><strong>${esc(m.categoria)}</strong></div>
+        <div><small>APELIDOS</small><strong>${esc((m.aliases && m.aliases.length) ? m.aliases.join(', ') : 'Não informados')}</strong></div>
+      </div>
+      <h3>ESTILO E CARACTERÍSTICAS</h3>
+      <p class="mc-description">${esc(m.descricao)}</p>
+      <h3>ESTATÍSTICAS • 2027</h3>
+      <div class="mc-profile-stats">
+        <div><b>0</b><small>Batalhas</small></div>
+        <div><b>0</b><small>Vitórias</small></div>
+        <div><b>0</b><small>Títulos</small></div>
+      </div>
+    `;
+    dialog.showModal();
+  }
+
+  el.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-id]');
+    if (b) openProfile(Number(b.dataset.id));
+  });
+  document.getElementById('mc-close').onclick = () => dialog.close();
+  dialog.addEventListener('click', (e) => { if (e.target === dialog) dialog.close(); });
+  for (const control of [search, state, nature]) {
+    control.addEventListener(control === search ? 'input' : 'change', () => { shown = 24; draw(); });
+  }
+  more.onclick = () => { shown += 24; draw(); };
+
+  fetch('mcs-data.json')
+    .then((r) => { if (!r.ok) throw Error('Dados indisponíveis'); return r.json(); })
+    .then((d) => {
+      roster = (d.participantes || []).filter((m) => m.status_cadastro === 'válido');
+      const states = [...new Set(roster.map((m) => m.uf).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'pt-BR'));
+      state.innerHTML += '<option value="pendente">UF pendente</option>' + states.map((uf) => `<option value="${esc(uf)}">${esc(uf)}</option>`).join('');
+      draw();
+    })
+    .catch(() => {
+      el.innerHTML = '<div class="empty"><h3>Não foi possível carregar o elenco</h3><p>Verifique se o arquivo mcs-data.json foi enviado junto ao site.</p></div>';
+    });
+}
