@@ -328,6 +328,12 @@ const RIMATUBE_ITEMS = [
     detalhe: 'Caminho de Guri: 1ª Fase 2×0 vs Lion; Quartas 2×0 vs Dehat; Semifinal 2×1 vs Salvador; Final 2×1 vs Mano Ayron. Vice: Mano Ayron; Semis: Salvador e Kroy.'
   },
   {
+    selo: '45S/90S/45S · FINAL 0×2',
+    canal: 'FR UNIVERSE TV · NORTE',
+    titulo: 'Norte · 1ª Edição (45s / 90s / 45s): Dehat 0 × 2 Youngui',
+    detalhe: 'Caminho de Youngui: 1ª Fase 2×1 vs Tonhão; Quartas 2×0 vs Levinsk; Semifinal 2×1 vs Prado; Final 2×0 vs Dehat. Vice: Dehat; Semis: Glaubin e Prado; Quartas: MCharles, Martin, Tavin e Levinsk.'
+  },
+  {
     selo: 'BDJ 16 MCS · FINAL 2×1',
     canal: 'FR UNIVERSE TV · CURITIBA/PR',
     titulo: 'Jamália (BDJ) · Inauguração: Poeta Gabriela 2 × 1 Joãozinho',
