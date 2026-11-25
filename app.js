@@ -139,59 +139,44 @@
   };
 
   const COMPETICOES_EDICOES = {
-    'LNF SÉRIE A': {
-      sub: 'Liga nacional · Seletivas SP, RJ e DF',
+    'LNF': {
+      sub: 'Liga nacional · 60 classificados (SP · RJ · DF)',
       icon: '🏆',
-      resumo: '20 classificados por estado (60 no total) · Clique para ver acontecimentos',
+      resumo: '20 classificados por estado · Organização por UF (SP, RJ e DF)',
       edicoes: [
         {
-          nome: 'Seletivas Estaduais — São Paulo (SP)',
-          campeao: '20 Classificados (16 diretos + 4 repescagem)',
+          nome: 'São Paulo (SP) — 20 Classificados',
+          campeao: '16 Diretos + 4 Repescagem',
           vice: '12 Eliminados',
           acontecimentos: [
-            'Diretos (16): Mano Ayron, Kroy, Guri, Brennuz, Kairós, Prado, KLJR, Levinsk, Bask, Ajota, Dehat, Luh do Click, Arielzinha, Bonfim, Glaubin e Tubarão.',
-            'Repescagem (4): WM, EZ, Apollo e Killua.',
-            'Eliminados 1ª Fase Repescagem (8): Blackoutt, Sol na Voz, Baueb, Black Panther, Coral, Fortes, H7 e Lecroy.',
-            'Eliminados Finais Repescagem (4): Derik, Lili, Lil Vi e Grafitteh (eliminado no detalhe por 1×2 para Killua).'
+            'Classificados Diretos (16): Mano Ayron, Kroy, Guri, Brennuz, Kairós, Prado, KLJR, Levinsk, Bask, Ajota, Dehat, Luh do Click, Arielzinha, Bonfim, Glaubin e Tubarão.',
+            'Classificados via Repescagem (4): WM, EZ, Apollo e Killua.',
+            'Eliminados na Repescagem — 1ª Fase (8): Blackoutt, Sol na Voz, Baueb, Black Panther, Coral, Fortes, H7 e Lecroy.',
+            'Eliminados na Repescagem — Finais (4): Derik, Lili, Lil Vi e Grafitteh (1×2 vs Killua).'
           ]
         },
         {
-          nome: 'Seletivas Estaduais — Rio de Janeiro (RJ)',
-          campeao: '20 Classificados (16 diretos + 4 repescagem)',
+          nome: 'Rio de Janeiro (RJ) — 20 Classificados',
+          campeao: '16 Diretos + 4 Repescagem',
           vice: '12 Eliminados',
           acontecimentos: [
-            'Diretos (16): Davi da 7, Nick Mory, MT, Filart, Kisol, Celia, WL, Chefona, João Vega, Pyetrin, Rico Mesquita, Mano na Area, Malagueta, Torvi, Thorment e Lujia.',
-            'Repescagem (4): Nene, Bigode, Nicolas e Pivete.',
-            'Eliminados 1ª Fase Repescagem (8): Schuler, Nart, Devilzinha, Julia, Peke, MC RJ #32, Bom na Rima e Karin.',
-            'Eliminados Finais Repescagem (4): Ge, Rough, Saloic e Scooby.',
-            'Destaques: Rico Mesquita avançou direto (2×1 sobre Ge); Pivete se recuperou após perder na 1ª rodada para Nick Mory (0×2) e venceu Scooby (2×1) na repescagem; Devilzinha e Peke caíram na 1ª fase da repescagem.'
+            'Classificados Diretos (16): Davi da 7, Nick Mory, MT, Filart, Kisol, Celia, WL, Chefona, João Vega, Pyetrin, Rico Mesquita, Mano na Area, Malagueta, Torvi, Thorment e Lujia.',
+            'Classificados via Repescagem (4): Nene, Bigode, Nicolas e Pivete.',
+            'Eliminados na Repescagem — 1ª Fase (8): Schuler, Nart, Devilzinha, Julia, Peke, MC RJ #32, Bom na Rima e Karin.',
+            'Eliminados na Repescagem — Finais (4): Ge, Rough, Saloic e Scooby.',
+            'Destaques: Rico Mesquita avançou direto (2×1 vs Ge); Pivete virou na repescagem (2×1 vs Scooby) após estrear com 0×2 para Nick Mory.'
           ]
         },
         {
-          nome: 'Seletivas Estaduais — Distrito Federal (DF)',
-          campeao: '20 Classificados (16 diretos + 4 repescagem)',
+          nome: 'Distrito Federal (DF) — 20 Classificados',
+          campeao: '16 Diretos + 4 Repescagem',
           vice: '12 Eliminados',
           acontecimentos: [
-            'Diretos 1.ª Ronda (16): Foca Paranoá, Tito, Luna Guará, Cali Riacho, Kira Cruzeiro Velho, Zeca Gama, Mel Lago Sul, Mirela Recanto, Ianzin, Teca Estrutural, Roni São Sebastião, Léo Núcleo Bandeirante, Tinho Octogonal, Brisa Planaltina, Guga Águas Claras e Rato da Asa.',
-            'Repescagem Finais de Vaga (4): Pietra Candangolândia, Nanda Samambaia, Soraia Brazlândia e Breno Sobradinho.',
-            'Eliminados 1.ª Fase Repescagem (8): MDG, Vini Lago Norte, Kael DF, Duda Ceilândia, Juju Santa Maria, Gomes, Digo Varjão e Vektor Taguatinga.',
-            'Eliminados Finais Repescagem (4): Tavo Cruzeiro, Nati Jardim Botânico, Beto Vicente Pires e Bia Park Way.',
-            'Destaques: Tito (2×1 vs Juju Santa Maria) e Ianzin (2×0 vs Duda Ceilândia) avançaram direto; Gomes e MDG caíram na repescagem para Nati Jardim Botânico e Nanda Samambaia; Nanda Samambaia e Soraia Brazlândia venceram suas finais de repescagem por 2×0.'
-          ]
-        }
-      ]
-    },
-    'ESTADUAIS': {
-      sub: 'Disputas por estado',
-      icon: '◈',
-      resumo: 'Seletivas SP, RJ e DF registradas · Clique para ver acontecimentos',
-      edicoes: [
-        {
-          nome: 'Seletivas Estaduais LNF — SP, RJ e DF',
-          campeao: '60 Classificados no total (20 por estado)',
-          vice: '36 Eliminados no total (12 por estado)',
-          acontecimentos: [
-            'Estados registrados: São Paulo (SP), Rio de Janeiro (RJ) e Distrito Federal (DF).'
+            'Classificados Diretos (16): Foca Paranoá, Tito, Luna Guará, Cali Riacho, Kira Cruzeiro Velho, Zeca Gama, Mel Lago Sul, Mirela Recanto, Ianzin, Teca Estrutural, Roni São Sebastião, Léo Núcleo Bandeirante, Tinho Octogonal, Brisa Planaltina, Guga Águas Claras e Rato da Asa.',
+            'Classificados via Repescagem (4): Pietra Candangolândia, Nanda Samambaia, Soraia Brazlândia e Breno Sobradinho.',
+            'Eliminados na Repescagem — 1ª Fase (8): MDG, Vini Lago Norte, Kael DF, Duda Ceilândia, Juju Santa Maria, Gomes, Digo Varjão e Vektor Taguatinga.',
+            'Eliminados na Repescagem — Finais (4): Tavo Cruzeiro, Nati Jardim Botânico, Beto Vicente Pires e Bia Park Way.',
+            'Destaques: Tito (2×1 vs Juju Santa Maria) e Ianzin (2×0 vs Duda Ceilândia) garantiram vaga direta; Nanda Samambaia e Soraia Brazlândia venceram suas finais de repescagem por 2×0.'
           ]
         }
       ]
@@ -266,7 +251,7 @@
     '2027-1-6': { label: 'Coliseu #1', href: 'batalhas.html?abrir=COLISEU', title: '06/01/2027 — Batalha do Coliseu · 1ª Edição' },
     '2027-1-7': { label: 'Ana Rosa #1', href: 'batalhas.html?abrir=ANA%20ROSA', title: '07/01/2027 — Batalha do Ana Rosa · 1ª Edição' },
     '2027-1-8': { label: 'Norte #1', href: 'batalhas.html?abrir=NORTE', title: '08/01/2027 — Batalha da Norte · 1ª Edição' },
-    '2027-1-9': { label: 'LNF Seletivas', href: 'competicoes.html?abrir=LNF%20S%C3%89RIE%20A', title: '09/01/2027 — LNF · Seletivas Estaduais (SP, RJ e DF)' },
+    '2027-1-9': { label: 'LNF Seletivas', href: 'competicoes.html?abrir=LNF', title: '09/01/2027 — LNF · Seletivas (SP, RJ e DF)' },
     '2027-1-10': { label: 'Jamália #1', href: 'batalhas.html?abrir=JAMALIA', title: '10/01/2027 — Batalha da Jamália · Inauguração' }
   };
 
@@ -276,39 +261,42 @@
       perfil: '@aldeia.sp',
       sigla: 'AL',
       nome: 'Batalha da Aldeia · 1ª Edição (Edição Lendas)',
-      meta: 'São Paulo · Segunda-feira · Trios',
+      meta: 'São Paulo · Segunda-feira · Batalha de Trios',
       local: 'São Paulo, SP',
       destaque: 'TRIOS · FINAL 0×3',
       curtidas: 148,
-      badge: 'CAMPEÕES 3×0',
+      badge: 'INVICTOS 3×0',
       texto: 'Neo, Jotapê e Kant levam o título invicto por 3×0 na Grande Final contra Big Mike, Ike e Valle. Semifinais: Tubarão, Kroy e Bask | Apollo, Salvador da RIMA e Noventa.',
-      comentarioDestaque: 'fr_oficial: Título invicto marcando a abertura da temporada em SP.'
+      tags: '#BatalhaDaAldeia #EdicaoLendas #FreestyleSP #Trios',
+      comentarioDestaque: 'fr_oficial: Trio entrosado do início ao fim na abertura da temporada.'
     },
     {
       id: 'coliseu-1',
       perfil: '@coliseu.oficial',
       sigla: 'CL',
       nome: 'Batalha do Coliseu · 1ª Edição',
-      meta: 'Quarta-feira · Individual',
+      meta: 'Quarta-feira · Chave Individual',
       local: 'Arena Coliseu',
       destaque: 'INDIVIDUAL · FINAL 1×2',
       curtidas: 112,
       badge: 'CAMPEÃO 2×1',
       texto: 'Jotapê é campeão vencendo WL por 2×1 na final! Semifinalistas: Neo e Magrão. Quartas: Noventa, Perigx, Devilzinha e Torvi.',
-      comentarioDestaque: 'jornaldorap: Chave dura até a decisão por 2×1.'
+      tags: '#BatalhaDoColiseu #Freestyle #RimaLivre',
+      comentarioDestaque: 'jornaldorap: Chave pesada até a decisão equilibrada por 2×1.'
     },
     {
       id: 'anarosa-1',
       perfil: '@anarosa.batalha',
       sigla: 'AR',
       nome: 'Batalha do Ana Rosa · 1ª Edição',
-      meta: 'Quinta-feira · Individual',
+      meta: 'Quinta-feira · Chave Individual',
       local: 'Ana Rosa, SP',
       destaque: 'INDIVIDUAL · FINAL 2×1',
       curtidas: 97,
       badge: 'CAMPEÃO 2×1',
       texto: 'Guri conquista o título superando Mano Ayron por 2×1 na final! Semifinalistas: Salvador e Kroy. Quartas: Fortes, Dehat, Ike e Magrão.',
-      comentarioDestaque: 'fr_oficial: Construção afiada do início ao fim da noite.'
+      tags: '#AnaRosa #BatalhaDeRima #Flow #Punchline',
+      comentarioDestaque: 'fr_oficial: Guri firme nos rounds decisivos contra Mano Ayron.'
     },
     {
       id: 'norte-1',
@@ -321,20 +309,22 @@
       curtidas: 104,
       badge: 'CAMPEÃO 2×0',
       texto: 'Youngui leva o título no formato 45s / 90s / 45s vencendo Dehat por 2×0 na final! Semifinalistas: Glaubin e Prado. Quartas: MCharles, Martin, Tavin e Levinsk.',
-      comentarioDestaque: 'fr_oficial: Ritmo forte no formato 45s / 90s / 45s.'
+      tags: '#BatalhaDaNorte #45s90s45s #Freestyle',
+      comentarioDestaque: 'fr_oficial: Domínio no tempo longo de 90s e fechamento limpo.'
     },
     {
       id: 'lnf-seletivas',
       perfil: '@lnf.oficial',
       sigla: 'LN',
-      nome: 'Seletivas Estaduais — LNF',
-      meta: 'SP · RJ · DF · 20 Classificados por Estado',
+      nome: 'Seletivas da LNF · SP, RJ e DF',
+      meta: '20 Classificados por Estado · 60 no Total',
       local: 'SP · RJ · DF',
-      destaque: '60 CLASSIFICADOS NA LNF',
+      destaque: 'LNF · 60 CLASSIFICADOS',
       curtidas: 186,
-      badge: '60 CLASSIFICADOS',
+      badge: '3 ESTADOS',
       texto: 'SP: 16 diretos + WM, EZ, Apollo e Killua (2×1 vs Grafitteh). RJ: 16 diretos + Nene, Bigode, Nicolas e Pivete (2×1 vs Scooby). DF: 16 diretos + Pietra Candangolândia, Nanda Samambaia (2×0), Soraia Brazlândia (2×0) e Breno Sobradinho.',
-      comentarioDestaque: 'lnf.oficial: Lista oficial fechada com 20 classificados por estado.'
+      tags: '#LNF #SeletivasLNF #SP #RJ #DF',
+      comentarioDestaque: 'lnf.oficial: Repescagem pegou fogo com viradas e duelos diretos por vaga.'
     },
     {
       id: 'jamalia-1',
@@ -347,7 +337,8 @@
       curtidas: 131,
       badge: '4V–0D · 2×1',
       texto: 'Poeta Gabriela é campeã inaugural com campanha 4V–0D (8–4 em rounds), vencendo quatro confrontos seguidos por 2×1 (Lilica, Levitico, Olhinho e Joãozinho na final).',
-      comentarioDestaque: 'fr_oficial: Estreia histórica em Curitiba com quatro vitórias por 2×1.'
+      tags: '#Jamalia #BDJ #Curitiba #FreestylePR',
+      comentarioDestaque: 'fr_oficial: Estreia histórica em Curitiba com quatro vitórias seguidas por 2×1.'
     }
   ];
 
@@ -385,7 +376,7 @@
     {
       selo: 'LNF · SELETIVAS SP/RJ/DF',
       canal: 'FR UNIVERSE TV · LNF',
-      titulo: 'Seletivas Estaduais da LNF: 20 Classificados e 12 Eliminados por UF',
+      titulo: 'Seletivas da LNF: 20 Classificados e 12 Eliminados por UF',
       detalhe: 'SP: 16 diretos + WM, EZ, Apollo e Killua (2×1 vs Grafitteh). RJ: 16 diretos + Nene, Bigode, Nicolas e Pivete (2×1 vs Scooby). DF: 16 diretos + Pietra Candangolândia, Nanda Samambaia (2×0), Soraia Brazlândia (2×0) e Breno Sobradinho.'
     }
   ];
@@ -438,15 +429,15 @@
         `;
       } else {
         const blocks = listaEdicoes.map((ed) => `
-          <div style="background:#191b20;border:1px solid #2e3138;border-radius:6px;padding:16px;margin-top:14px">
-            <div class="label">EDIÇÃO REGISTRADA</div>
-            <h3 style="font-size:24px;margin:6px 0 10px">${ed.nome}</h3>
+          <div style="background:#17191f;border:1px solid #2d313b;border-radius:8px;padding:18px;margin-top:14px">
+            <div class="label">BLOCO REGISTRADO</div>
+            <h3 style="font-size:23px;margin:6px 0 12px;color:#fff">${ed.nome}</h3>
             <div class="mc-profile-meta" style="margin-bottom:14px">
-              <div><small>CAMPEÃO / DESTAQUE</small><strong>${ed.campeao}</strong></div>
-              <div><small>VICE / STATUS</small><strong>${ed.vice}</strong></div>
+              <div><small>DESTAQUE / VAGAS</small><strong>${ed.campeao}</strong></div>
+              <div><small>STATUS / ELIMINADOS</small><strong>${ed.vice}</strong></div>
             </div>
-            <div class="label" style="margin-bottom:6px">ACONTECIMENTOS DA EDIÇÃO</div>
-            <ul style="margin:0;padding-left:18px;color:#d6d8de;font-size:12px;line-height:1.65">
+            <div class="label" style="margin-bottom:8px">DETALHAMENTO</div>
+            <ul style="margin:0;padding-left:18px;color:#d6d8de;font-size:12.5px;line-height:1.7">
               ${ed.acontecimentos.map((a) => `<li style="margin-bottom:6px">${a}</li>`).join('')}
             </ul>
           </div>
@@ -492,11 +483,11 @@
             <span class="mc-location">${info.icon} ${info.sub}</span>
             <strong>${nome}</strong>
             <span class="mc-category">${info.resumo}</span>
-            <span class="mc-view">VER EDIÇÕES ↗</span>
+            <span class="mc-view">VER DETALHES ↗</span>
           </span>
         </button>
       `).join('');
-      return `<section class="section"><div class="sectionhead"><div><h2>COMPETIÇÕES OFICIAIS</h2><p>Clique em uma competição para abrir suas edições e acontecimentos</p></div></div><div class="grid">${cardsHtml}</div></section>`;
+      return `<section class="section"><div class="sectionhead"><div><h2>COMPETIÇÕES OFICIAIS</h2><p>Clique em uma competição para abrir os registros organizados</p></div></div><div class="grid">${cardsHtml}</div></section>`;
     }
 
     if (page === 'mcs.html') {
@@ -525,15 +516,15 @@
     if (page === 'rimagram.html') {
       const storiesHtml = RIMAGRAM_POSTS.map((p) => `
         <a href="#post-${p.id}" style="display:flex;flex-direction:column;align-items:center;gap:6px;text-decoration:none;min-width:68px">
-          <span style="width:54px;height:54px;border-radius:50%;padding:2px;background:linear-gradient(135deg,#f3c54c,#e07a1b,#a855f7);display:grid;place-items:center">
-            <span style="width:100%;height:100%;border-radius:50%;background:#13151a;color:#f3c54c;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:16px;display:grid;place-items:center;border:2px solid #0b0c0e">${p.sigla}</span>
+          <span style="width:52px;height:52px;border-radius:50%;padding:2px;background:linear-gradient(135deg,#f3c54c,#e07a1b,#a855f7);display:grid;place-items:center">
+            <span style="width:100%;height:100%;border-radius:50%;background:#13151a;color:#f3c54c;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:15px;display:grid;place-items:center;border:2px solid #0b0c0e">${p.sigla}</span>
           </span>
           <span style="font-size:10px;color:#cfd2da;max-width:74px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${p.perfil}</span>
         </a>
       `).join('');
 
       const postsHtml = RIMAGRAM_POSTS.map((p) => `
-        <article id="post-${p.id}" class="card" style="margin-bottom:24px;border-color:#262930;background:#0e1014;overflow:hidden">
+        <article id="post-${p.id}" class="card" style="margin-bottom:20px;border-color:#262930;background:#0e1014;overflow:hidden">
           <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;background:#12141a;border-bottom:1px solid #1e2128">
             <div style="display:flex;align-items:center;gap:10px">
               <div style="width:36px;height:36px;border-radius:50%;padding:2px;background:linear-gradient(135deg,#f3c54c,#d97706);display:grid;place-items:center;flex-shrink:0">
@@ -541,29 +532,24 @@
               </div>
               <div>
                 <div style="font-size:13px;font-weight:800;color:#f8f9fa;line-height:1.2">${p.perfil}</div>
-                <div style="font-size:11px;color:#9ea3ae;line-height:1.25">${p.local}</div>
+                <div style="font-size:11px;color:#9ea3ae;line-height:1.25">${p.local} · ${p.meta}</div>
               </div>
             </div>
             <button type="button" data-follow-btn style="background:transparent;border:1px solid #383c47;color:#f3c54c;padding:5px 11px;border-radius:6px;font-size:11px;font-weight:800;cursor:pointer">Seguir</button>
           </div>
 
-          <div style="aspect-ratio:4/3;padding:24px;display:flex;flex-direction:column;justify-content:space-between;background:radial-gradient(circle at 20% 20%,rgba(243,197,76,.14),transparent 50%),radial-gradient(circle at 85% 80%,rgba(217,119,6,.12),transparent 50%),#14171f;border-bottom:1px solid #1e2128">
-            <div style="display:flex;justify-content:space-between;align-items:center;gap:8px">
+          <div style="padding:18px 20px;background:radial-gradient(circle at 15% 20%,rgba(243,197,76,.14),transparent 50%),radial-gradient(circle at 90% 80%,rgba(217,119,6,.10),transparent 50%),#14171f;border-bottom:1px solid #1e2128">
+            <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px;margin-bottom:10px">
               <span style="font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#f3c54c;background:rgba(243,197,76,.12);border:1px solid rgba(243,197,76,.35);padding:4px 8px;border-radius:4px">${p.destaque}</span>
-              <span style="font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#d6d9e0">${p.badge}</span>
+              <span style="font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#111;background:#f3c54c;padding:4px 8px;border-radius:4px">${p.badge}</span>
             </div>
-            <div>
-              <div style="font-size:11px;color:#a3a8b4;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px">${p.meta}</div>
-              <h3 style="font-size:26px;line-height:1.08;margin:0;color:#ffffff">${p.nome}</h3>
-            </div>
-            <div style="font-size:11px;color:#8e94a2;display:flex;justify-content:space-between">
-              <span>FR UNIVERSE · 2027</span>
-              <span>● OFICIAL</span>
-            </div>
+            <h3 style="font-size:24px;line-height:1.12;margin:0 0 8px;color:#ffffff">${p.nome}</h3>
+            <p style="font-size:13.5px;line-height:1.6;color:#e4e7ee;margin:0 0 10px">${p.texto}</p>
+            <div style="font-size:11.5px;color:#f3c54c;font-weight:700">${p.tags}</div>
           </div>
 
-          <div style="padding:12px 16px 16px">
-            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
+          <div style="padding:11px 16px 14px">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
               <div style="display:flex;align-items:center;gap:14px">
                 <button type="button" data-like-btn data-likes="${p.curtidas}" style="background:none;border:none;color:#f8f9fa;font-size:12px;font-weight:700;cursor:pointer;padding:0;display:flex;align-items:center;gap:5px">
                   <span class="like-icon">♡</span> <span class="like-count">${p.curtidas}</span>
@@ -572,8 +558,7 @@
               </div>
               <button type="button" data-save-btn style="background:none;border:none;color:#cfd3dc;font-size:12px;font-weight:700;cursor:pointer;padding:0">🔖 Salvar</button>
             </div>
-            <p style="font-size:13px;line-height:1.55;color:#e4e7ee;margin:0 0 8px"><strong style="color:#fff">${p.perfil}</strong> ${p.texto}</p>
-            <div style="font-size:12px;color:#9ea3ae;margin-bottom:6px">${p.comentarioDestaque}</div>
+            <div style="font-size:12px;color:#9ea3ae;margin-bottom:4px">${p.comentarioDestaque}</div>
             <div data-comment-box hidden style="margin-top:10px;padding-top:10px;border-top:1px solid #1e2128;display:flex;gap:8px">
               <input type="text" placeholder="Escreva um comentário..." style="flex:1;background:#181b22;border:1px solid #2e3340;color:#fff;border-radius:6px;padding:7px 10px;font-size:12px">
               <button type="button" data-comment-send style="background:#f3c54c;color:#111;border:none;border-radius:6px;padding:7px 12px;font-size:11px;font-weight:800;cursor:pointer">Publicar</button>
@@ -583,17 +568,52 @@
         </article>
       `).join('');
 
+      const topRankHtml = WEEK1_RANKING.slice(0, 5).map((r, i) => `
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:1px solid #1e2128;font-size:12.5px">
+          <div><strong style="color:#f3c54c;margin-right:6px">#${i + 1}</strong> <strong>${r.mc}</strong> <span style="color:#8e94a2;font-size:11px">${r.uf}</span></div>
+          <strong style="color:#fff">${r.pts} pts</strong>
+        </div>
+      `).join('');
+
       return `
         <section class="section">
-          <div style="max-width:540px;margin:0 auto">
-            <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:#12141a;border:1px solid #262930;border-radius:8px;margin-bottom:14px">
-              <strong style="font-family:'Barlow Condensed',sans-serif;font-size:22px;letter-spacing:.06em;color:#f3c54c">RIMAGRAM</strong>
-              <span style="font-size:11px;color:#9ea3ae;font-weight:700">${RIMAGRAM_POSTS.length} PUBLICAÇÕES · SEMANA 1</span>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;align-items:start">
+            <div style="grid-column:span 2;min-width:0">
+              <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:#12141a;border:1px solid #262930;border-radius:8px;margin-bottom:12px">
+                <strong style="font-family:'Barlow Condensed',sans-serif;font-size:22px;letter-spacing:.06em;color:#f3c54c">RIMAGRAM</strong>
+                <span style="font-size:11px;color:#9ea3ae;font-weight:700">${RIMAGRAM_POSTS.length} PUBLICAÇÕES · SEMANA 1</span>
+              </div>
+              <div style="display:flex;gap:12px;overflow-x:auto;padding:12px 14px;background:#0e1014;border:1px solid #262930;border-radius:8px;margin-bottom:18px">
+                ${storiesHtml}
+              </div>
+              ${postsHtml}
             </div>
-            <div style="display:flex;gap:12px;overflow-x:auto;padding:12px 14px;background:#0e1014;border:1px solid #262930;border-radius:8px;margin-bottom:20px">
-              ${storiesHtml}
-            </div>
-            ${postsHtml}
+
+            <aside style="display:flex;flex-direction:column;gap:16px">
+              <div class="card cardpad" style="border-color:#262930;background:#0e1014">
+                <div class="label">TOP PONTUADORES · SEMANA 1</div>
+                <h3 style="font-size:22px;margin:4px 0 10px">LÍDERES DA RODADA</h3>
+                ${topRankHtml}
+                <a href="rankings.html" style="display:inline-block;margin-top:12px;font-size:12px;font-weight:800;color:#f3c54c">Ver ranking completo ↗</a>
+              </div>
+
+              <div class="card cardpad" style="border-color:#262930;background:#0e1014">
+                <div class="label">LIGA NACIONAL</div>
+                <h3 style="font-size:22px;margin:4px 0 8px">LNF · 60 CLASSIFICADOS</h3>
+                <p style="font-size:12.5px;color:#c5c7ce;line-height:1.55;margin:0 0 12px">20 classificados em SP, 20 no RJ e 20 no DF após diretos e repescagem.</p>
+                <a href="competicoes.html?abrir=LNF" style="display:inline-block;font-size:12px;font-weight:800;color:#f3c54c">Abrir detalhes da LNF ↗</a>
+              </div>
+
+              <div class="card cardpad" style="border-color:#262930;background:#0e1014">
+                <div class="label">CENTRAL DE CONFRONTOS</div>
+                <h3 style="font-size:22px;margin:4px 0 8px">RIMATUBE & JORNAL</h3>
+                <p style="font-size:12.5px;color:#c5c7ce;line-height:1.55;margin:0 0 12px">Confira o chaveamento completo das finais e a cobertura semanal.</p>
+                <div style="display:flex;gap:14px;font-size:12px;font-weight:800">
+                  <a href="rimatube.html" style="color:#f3c54c">RimaTube ↗</a>
+                  <a href="jornal.html" style="color:#f3c54c">Jornal do Rap ↗</a>
+                </div>
+              </div>
+            </aside>
           </div>
         </section>
       `;
@@ -628,7 +648,7 @@
               <div style="padding:26px;border-right:1px solid #25272e">
                 <div class="label">MANCHETE PRINCIPAL</div>
                 <h2 style="font-size:36px;line-height:1.02;margin:12px 0 14px">NEO, JOTAPÊ E KANT LEVAM A ALDEIA; JOTAPÊ VENCE O COLISEU; GURI LEVA O ANA ROSA; YOUNGUI VENCE A NORTE; POETA GABRIELA ESTREIA COM TÍTULO NA JAMÁLIA E LNF DEFINE 60 CLASSIFICADOS</h2>
-                <p style="color:#c5c7ce;font-size:13px;line-height:1.7;margin:0">Cobertura completa das casas de batalha e das seletivas estaduais da LNF (SP, RJ e DF) registradas na rodada.</p>
+                <p style="color:#c5c7ce;font-size:13px;line-height:1.7;margin:0">Cobertura completa das casas de batalha e das seletivas da LNF (SP, RJ e DF) registradas na rodada.</p>
               </div>
               <div style="padding:26px;display:flex;flex-direction:column;gap:14px">
                 <div class="label">COLUNA DE RESULTADOS</div>
@@ -648,7 +668,7 @@
                 </div>
                 <hr style="border:0;border-top:1px solid #262830;margin:0">
                 <div>
-                  <strong style="color:#f3c54c;font-size:12px;text-transform:uppercase">Seletivas LNF (SP, RJ e DF)</strong>
+                  <strong style="color:#f3c54c;font-size:12px;text-transform:uppercase">LNF · Seletivas (SP, RJ e DF)</strong>
                   <p style="color:#d4d6dc;font-size:12px;line-height:1.6;margin:4px 0 0">20 classificados e 12 eliminados por estado (16 diretos + 4 repescagem em SP, RJ e DF).</p>
                 </div>
               </div>
@@ -753,12 +773,12 @@
       if (!btn) return;
       const chave = btn.dataset.openComp;
       const item = COMPETICOES_EDICOES[chave];
-      if (item) openEdicoesModal('COMPETIÇÃO · EDIÇÕES E ACONTECIMENTOS', chave, item.sub, item.edicoes);
+      if (item) openEdicoesModal('COMPETIÇÃO · REGISTROS OFICIAIS', chave, item.sub, item.edicoes);
     });
     const abrir = new URLSearchParams(location.search).get('abrir');
     if (abrir && COMPETICOES_EDICOES[abrir]) {
       const item = COMPETICOES_EDICOES[abrir];
-      openEdicoesModal('COMPETIÇÃO · EDIÇÕES E ACONTECIMENTOS', abrir, item.sub, item.edicoes);
+      openEdicoesModal('COMPETIÇÃO · REGISTROS OFICIAIS', abrir, item.sub, item.edicoes);
     }
   }
 
