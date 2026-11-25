@@ -13,18 +13,31 @@
 
   const current = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
 
-  try {
+  function cleanStrayObjectText() {
     try {
-    const header = `<header class="topbar"><div class="navwrap"><a class="brand" href="index.html">FR <em>UNIVERSE</em><span style="color:#777;font-size:10px;vertical-align:top;margin-left:5px">2027</span></a><span class="live">● TEMPORADA 2027</span></div></header>`;
+      const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+      const toRemove = [];
+      let n;
+      while ((n = walker.nextNode())) {
+        if ((n.nodeValue || '').includes('[object HTMLDivElement]')) {
+          n.nodeValue = n.nodeValue.replace(/\[object HTMLDivElement\]/g, '').trim();
+          if (!n.nodeValue) toRemove.push(n);
+        }
+      }
+      toRemove.forEach((node) => {
+        if (node.parentNode) node.parentNode.removeChild(node);
+      });
+    } catch (e) {
+      console.error('Erro ao limpar texto solto:', e);
+    }
+  }
+
+  window.addEventListener('DOMContentLoaded', cleanStrayObjectText);
+
+  try {
+    const header = `<header class="topbar"><div class="navwrap"><a class="brand" href="index.html">FR <em>UNIVERSE</em><span style="color:#777;font-size:10px;vertical-align:top;margin-left:5px">2027</span></a><nav class="nav" aria-label="Navegação principal">${pages.map(([url, name]) => `<a href="${url}" class="${current === url.toLowerCase() ? 'active' : ''}">${name}</a>`).join('')}</nav><span class="live">● TEMPORADA 2027</span></div></header>`;
     const footer = `<footer class="footer"><div class="container"><span><strong>FR UNIVERSE</strong> © 2027 · Portal de universo fictício de batalhas de rima</span><span>Resultados e estatísticas somente após registro oficial</span></div></footer>`;
 
-    const headerEl = document.getElementById('header');
-    const footerEl = document.getElementById('footer');
-    if (headerEl) headerEl.innerHTML = header;
-    if (footerEl) footerEl.innerHTML = footer;
-  } catch (e) {
-    console.error('Erro ao montar header/footer:', e);
-  }
     const headerEl = document.getElementById('header');
     const footerEl = document.getElementById('footer');
     if (headerEl) headerEl.innerHTML = header;
@@ -46,6 +59,7 @@
             if (parentTxt.includes('CAMPEÕES')) node.textContent = '05';
           }
         }
+        cleanStrayObjectText();
       } catch (e) {
         console.error('Erro ao atualizar contadores:', e);
       }
@@ -407,6 +421,10 @@
     return `<div class="empty"><div class="big">${emoji}</div><h3>${title}</h3><p>${description}</p></div>`;
   }
 
+  function backToHomeButton() {
+    return `<div style="margin-bottom:18px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap"><a href="index.html" class="btn secondary" style="display:inline-flex;align-items:center;gap:8px;border-color:#66562b;color:#f3c54c">← VOLTAR</a></div>`;
+  }
+
   function ensureDetailDialog() {
     let dlg = document.getElementById('fu-detail-dialog');
     if (!dlg) {
@@ -470,6 +488,8 @@
   }
 
   function renderPage(page) {
+    const backBtn = backToHomeButton();
+
     if (page === 'batalhas.html') {
       const cardsHtml = Object.entries(BATALHAS_EDICOES).map(([nome, info]) => `
         <button class="mc-card" type="button" data-open-batalha="${nome}" style="display:flex;flex-direction:column;width:100%">
@@ -481,7 +501,7 @@
           </span>
         </button>
       `).join('');
-      return `<section class="section"><div class="sectionhead"><div><h2>CIRCUITO DE BATALHAS</h2><p>Clique em uma batalha para abrir suas edições e acontecimentos</p></div></div><div class="grid">${cardsHtml}</div></section>`;
+      return `<section class="section">${backBtn}<div class="sectionhead"><div><h2>CIRCUITO DE BATALHAS</h2><p>Clique em uma batalha para abrir suas edições e acontecimentos</p></div></div><div class="grid">${cardsHtml}</div></section>`;
     }
 
     if (page === 'competicoes.html') {
@@ -495,11 +515,11 @@
           </span>
         </button>
       `).join('');
-      return `<section class="section"><div class="sectionhead"><div><h2>COMPETIÇÕES OFICIAIS</h2><p>Clique em uma competição para abrir os registros organizados</p></div></div><div class="grid">${cardsHtml}</div></section>`;
+      return `<section class="section">${backBtn}<div class="sectionhead"><div><h2>COMPETIÇÕES OFICIAIS</h2><p>Clique em uma competição para abrir os registros organizados</p></div></div><div class="grid">${cardsHtml}</div></section>`;
     }
 
     if (page === 'mcs.html') {
-      return `<section class="section"><div class="sectionhead"><div><h2>ELENCO OFICIAL</h2><p>Cadastro atualizado do FR Universe 2027 · Clique em qualquer MC para abrir a ficha</p></div></div><div class="filters mc-controls"><input class="search" id="mc-search" placeholder="Buscar MC por nome ou apelido..." aria-label="Buscar MC"><select class="mc-select" id="mc-state" aria-label="Filtrar por estado"><option value="">Todos os estados</option></select><select class="mc-select" id="mc-nature" aria-label="Filtrar por natureza"><option value="">Reais e fictícios</option><option value="real">Reais</option><option value="fictício">Fictícios</option></select></div><p class="mc-count" id="mc-count" aria-live="polite"></p><div class="mc-grid" id="mc-list"></div><div class="mc-more-wrap"><button class="btn secondary" id="mc-more" type="button" hidden>VER MAIS MCS</button></div></section><dialog id="mc-dialog" class="mc-dialog" aria-label="Ficha do MC"><button class="mc-close" id="mc-close" type="button" aria-label="Fechar ficha">✕</button><div id="mc-detail"></div></dialog>`;
+      return `<section class="section">${backBtn}<div class="sectionhead"><div><h2>ELENCO OFICIAL</h2><p>Cadastro atualizado do FR Universe 2027 · Clique em qualquer MC para abrir a ficha</p></div></div><div class="filters mc-controls"><input class="search" id="mc-search" placeholder="Buscar MC por nome ou apelido..." aria-label="Buscar MC"><select class="mc-select" id="mc-state" aria-label="Filtrar por estado"><option value="">Todos os estados</option></select><select class="mc-select" id="mc-nature" aria-label="Filtrar por natureza"><option value="">Reais e fictícios</option><option value="real">Reais</option><option value="fictício">Fictícios</option></select></div><p class="mc-count" id="mc-count" aria-live="polite"></p><div class="mc-grid" id="mc-list"></div><div class="mc-more-wrap"><button class="btn secondary" id="mc-more" type="button" hidden>VER MAIS MCS</button></div></section><dialog id="mc-dialog" class="mc-dialog" aria-label="Ficha do MC"><button class="mc-close" id="mc-close" type="button" aria-label="Fechar ficha">✕</button><div id="mc-detail"></div></dialog>`;
     }
 
     if (page === 'rankings.html') {
@@ -513,6 +533,7 @@
       const rows = WEEK1_RANKING.map((r) => `<tr><td><strong>${r.pos}</strong></td><td><strong>${r.mc}</strong></td><td>${r.uf}</td><td>${r.titulos}</td><td>${r.vitorias}</td><td><strong style="color:#f3c54c">${r.pts}</strong></td></tr>`).join('');
       return `
         <section class="section">
+          ${backBtn}
           <div class="sectionhead"><div><h2>RANKING GERAL · SEMANA 1</h2><p>Classificação geral da 1ª semana de janeiro de 2027</p></div></div>
           <div class="grid" style="margin-bottom:26px">${top3}</div>
           <div class="tablewrap"><table><thead><tr><th>Posição</th><th>MC</th><th>UF</th><th>Títulos</th><th>Vitórias</th><th>Pontos</th></tr></thead><tbody>${rows}</tbody></table></div>
@@ -585,6 +606,7 @@
 
       return `
         <section class="section">
+          ${backBtn}
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;align-items:start">
             <div style="grid-column:span 2;min-width:0">
               <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:#12141a;border:1px solid #262930;border-radius:8px;margin-bottom:12px">
@@ -641,12 +663,13 @@
           </div>
         </article>
       `).join('');
-      return `<section class="section"><div class="sectionhead"><div><h2>RIMATUBE · CENTRAL DE CONFRONTOS</h2><p>Registros textuais dos confrontos e seletivas</p></div></div><div class="grid">${vidsHtml}</div></section>`;
+      return `<section class="section">${backBtn}<div class="sectionhead"><div><h2>RIMATUBE · CENTRAL DE CONFRONTOS</h2><p>Registros textuais dos confrontos e seletivas</p></div></div><div class="grid">${vidsHtml}</div></section>`;
     }
 
     if (page === 'jornal.html') {
       return `
         <section class="section">
+          ${backBtn}
           <div class="card" style="border-color:#66562b;background:#121317;margin-bottom:20px">
             <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;padding:14px 24px;border-bottom:1px solid #2b2d34;background:#18191e">
               <span style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:20px;letter-spacing:.08em;color:#f3c54c;text-transform:uppercase">JORNAL DO RAP · EDIÇÃO SEMANAL</span>
@@ -687,7 +710,7 @@
     }
 
     if (page === 'calendario.html') {
-      return `<section class="section"><div class="sectionhead"><div><h2>HISTÓRICO DE 2027</h2><p>Somente eventos concluídos e oficialmente registrados</p></div></div><div class="card cardpad" style="max-width:850px;margin:auto"><div class="calendarbar"><button id="prevmonth" aria-label="Mês anterior">❮</button><h2 id="monthname">JANEIRO 2027</h2><button id="nextmonth" aria-label="Próximo mês">❯</button></div><div class="week" id="calendar"></div><p class="fine" style="margin-top:20px">Os símbolos das casas e competições aparecem nos dias de eventos concluídos. Ao clicar, abrirão a página oficial correspondente.</p></div></section>`;
+      return `<section class="section">${backBtn}<div class="sectionhead"><div><h2>HISTÓRICO DE 2027</h2><p>Somente eventos concluídos e oficialmente registrados</p></div></div><div class="card cardpad" style="max-width:850px;margin:auto"><div class="calendarbar"><button id="prevmonth" aria-label="Mês anterior">❮</button><h2 id="monthname">JANEIRO 2027</h2><button id="nextmonth" aria-label="Próximo mês">❯</button></div><div class="week" id="calendar"></div><p class="fine" style="margin-top:20px">Os símbolos das casas e competições aparecem nos dias de eventos concluídos. Ao clicar, abrirão a página oficial correspondente.</p></div></section>`;
     }
 
     return '';
