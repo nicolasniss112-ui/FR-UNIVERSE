@@ -265,46 +265,82 @@ const WEEK1_CALENDAR_EVENTS = {
 
 const RIMAGRAM_POSTS = [
   {
+    id: 'aldeia-1',
     perfil: '@aldeia.sp',
+    sigla: 'AL',
     nome: 'Batalha da Aldeia · 1ª Edição (Edição Lendas)',
-    meta: 'São Paulo — Segunda-feira · Batalha de Trios',
+    meta: 'São Paulo · Segunda-feira · Trios',
+    local: 'São Paulo, SP',
+    destaque: 'TRIOS · FINAL 0×3',
+    curtidas: 148,
     badge: 'CAMPEÕES 3×0',
-    texto: 'Neo, Jotapê e Kant levam o título invicto por 3×0 na Grande Final contra Big Mike, Ike e Valle. Semifinais: Tubarão, Kroy e Bask | Apollo, Salvador da RIMA e Noventa.'
+    texto: 'Neo, Jotapê e Kant levam o título invicto por 3×0 na Grande Final contra Big Mike, Ike e Valle. Semifinais: Tubarão, Kroy e Bask | Apollo, Salvador da RIMA e Noventa.',
+    comentarioDestaque: 'fr_oficial: Título invicto marcando a abertura da temporada em SP.'
   },
   {
+    id: 'coliseu-1',
     perfil: '@coliseu.oficial',
+    sigla: 'CL',
     nome: 'Batalha do Coliseu · 1ª Edição',
     meta: 'Quarta-feira · Individual',
+    local: 'Arena Coliseu',
+    destaque: 'INDIVIDUAL · FINAL 1×2',
+    curtidas: 112,
     badge: 'CAMPEÃO 2×1',
-    texto: 'Jotapê é campeão vencendo WL por 2×1 na final! Semifinalistas: Neo e Magrão. Quartas: Noventa, Perigx, Devilzinha e Torvi.'
+    texto: 'Jotapê é campeão vencendo WL por 2×1 na final! Semifinalistas: Neo e Magrão. Quartas: Noventa, Perigx, Devilzinha e Torvi.',
+    comentarioDestaque: 'jornaldorap: Chave dura até a decisão por 2×1.'
   },
   {
+    id: 'anarosa-1',
     perfil: '@anarosa.batalha',
+    sigla: 'AR',
     nome: 'Batalha do Ana Rosa · 1ª Edição',
     meta: 'Quinta-feira · Individual',
+    local: 'Ana Rosa, SP',
+    destaque: 'INDIVIDUAL · FINAL 2×1',
+    curtidas: 97,
     badge: 'CAMPEÃO 2×1',
-    texto: 'Guri conquista o título superando Mano Ayron por 2×1 na final! Semifinalistas: Salvador e Kroy. Quartas: Fortes, Dehat, Ike e Magrão.'
+    texto: 'Guri conquista o título superando Mano Ayron por 2×1 na final! Semifinalistas: Salvador e Kroy. Quartas: Fortes, Dehat, Ike e Magrão.',
+    comentarioDestaque: 'fr_oficial: Construção afiada do início ao fim da noite.'
   },
   {
+    id: 'norte-1',
     perfil: '@norte.batalha',
+    sigla: 'NT',
     nome: 'Batalha da Norte · 1ª Edição',
     meta: 'Sexta-feira · Formato 45s / 90s / 45s',
+    local: 'Zona Norte',
+    destaque: '45S/90S/45S · FINAL 0×2',
+    curtidas: 104,
     badge: 'CAMPEÃO 2×0',
-    texto: 'Youngui leva o título no formato 45s / 90s / 45s vencendo Dehat por 2×0 na final! Semifinalistas: Glaubin e Prado. Quartas: MCharles, Martin, Tavin e Levinsk.'
+    texto: 'Youngui leva o título no formato 45s / 90s / 45s vencendo Dehat por 2×0 na final! Semifinalistas: Glaubin e Prado. Quartas: MCharles, Martin, Tavin e Levinsk.',
+    comentarioDestaque: 'fr_oficial: Ritmo forte no formato 45s / 90s / 45s.'
   },
   {
+    id: 'lnf-seletivas',
     perfil: '@lnf.oficial',
+    sigla: 'LN',
     nome: 'Seletivas Estaduais — LNF',
     meta: 'SP · RJ · DF · 20 Classificados por Estado',
+    local: 'SP · RJ · DF',
+    destaque: '60 CLASSIFICADOS NA LNF',
+    curtidas: 186,
     badge: '60 CLASSIFICADOS',
-    texto: 'SP: 16 diretos + WM, EZ, Apollo e Killua (2×1 vs Grafitteh). RJ: 16 diretos + Nene, Bigode, Nicolas e Pivete (2×1 vs Scooby). DF: 16 diretos + Pietra Candangolândia, Nanda Samambaia (2×0), Soraia Brazlândia (2×0) e Breno Sobradinho.'
+    texto: 'SP: 16 diretos + WM, EZ, Apollo e Killua (2×1 vs Grafitteh). RJ: 16 diretos + Nene, Bigode, Nicolas e Pivete (2×1 vs Scooby). DF: 16 diretos + Pietra Candangolândia, Nanda Samambaia (2×0), Soraia Brazlândia (2×0) e Breno Sobradinho.',
+    comentarioDestaque: 'lnf.oficial: Lista oficial fechada com 20 classificados por estado.'
   },
   {
+    id: 'jamalia-1',
     perfil: '@jamalia.cwb',
+    sigla: 'JM',
     nome: 'Batalha da Jamália (BDJ) · Inauguração',
-    meta: 'Curitiba · PR — Domingo · Individual (16 MCs)',
+    meta: 'Curitiba · PR · Domingo · 16 MCs',
+    local: 'Curitiba, PR',
+    destaque: 'BDJ 16 MCS · FINAL 2×1',
+    curtidas: 131,
     badge: '4V–0D · 2×1',
-    texto: 'Poeta Gabriela é campeã inaugural com campanha 4V–0D (8–4 em rounds), vencendo quatro confrontos seguidos por 2×1 (Lilica, Levitico, Olhinho e Joãozinho na final).'
+    texto: 'Poeta Gabriela é campeã inaugural com campanha 4V–0D (8–4 em rounds), vencendo quatro confrontos seguidos por 2×1 (Lilica, Levitico, Olhinho e Joãozinho na final).',
+    comentarioDestaque: 'fr_oficial: Estreia histórica em Curitiba com quatro vitórias por 2×1.'
   }
 ];
 
@@ -352,7 +388,7 @@ const data = {
   'competicoes.html': { title: 'GRANDES <span>COMPETIÇÕES.</span>', eyebrow: 'A disputa pelo topo', desc: 'Clique em uma competição para ver as edições e acontecimentos registrados.' },
   'mcs.html': { title: 'OS DONOS DO <span>MICROFONE.</span>', eyebrow: 'Elenco oficial', desc: 'Perfis, estilos, conquistas e históricos dos participantes.' },
   'rankings.html': { title: 'A CORRIDA PELO <span>TOPO.</span>', eyebrow: 'Ranking geral · Semana 1', desc: 'Classificação geral oficial da 1ª semana de janeiro de 2027 (04/01 a 10/01/2027).' },
-  'rimagram.html': { title: 'O UNIVERSO <span>REPERCUTE.</span>', eyebrow: 'Rimagram', desc: 'Feed social do FR Universe com os acontecimentos registrados.' },
+  'rimagram.html': { title: 'RIMAGRAM <span>· FEED.</span>', eyebrow: 'Rede oficial', desc: 'Acompanhe as postagens, resultados e destaques da temporada.' },
   'rimatube.html': { title: 'BATALHAS QUE <span>MARCAM.</span>', eyebrow: 'RimaTube', desc: 'Central de destaques e registros dos confrontos e seletivas.' },
   'jornal.html': { title: 'JORNAL DO <span>RAP.</span>', eyebrow: 'Cobertura semanal', desc: 'Edição impressa do FR Universe com campeões, resultados e seletivas da LNF.' },
   'calendario.html': { title: 'CADA DATA, UMA <span>HISTÓRIA.</span>', eyebrow: 'Calendário histórico', desc: 'Navegue pelos meses de 2027 e clique nos dias destacados para abrir a página correspondente.' }
@@ -385,8 +421,7 @@ function openEdicoesModal(tituloTopo, nomeItem, subItem, listaEdicoes) {
     document.getElementById('fu-detail-content').innerHTML = `
       <div class="label">${tituloTopo}</div>
       <h2 style="font-size:40px;margin:10px 0 6px">${nomeItem}</h2>
-      <p style="color:#f3c54c;font-size:12px;font-weight:800;text-transform:uppercase;margin:0 0 18px">${subItem}</p>
-      ${empty('NENHUMA EDIÇÃO REGISTRADA', 'Ainda não há edições ou resultados oficiais registrados neste tópico.', '★')}
+      <p style="color:#f3c54c;font-size:12px;font-weight:800;text-transform:uppercase;margin:0 0 18px">${subItem}</p>${empty('NENHUMA EDIÇÃO REGISTRADA', 'Ainda não há edições ou resultados oficiais registrados neste tópico.', '★')}
     `;
     dlg.showModal();
     return;
@@ -408,8 +443,7 @@ function openEdicoesModal(tituloTopo, nomeItem, subItem, listaEdicoes) {
   document.getElementById('fu-detail-content').innerHTML = `
     <div class="label">${tituloTopo}</div>
     <h2 style="font-size:40px;margin:10px 0 6px">${nomeItem}</h2>
-    <p style="color:#f3c54c;font-size:12px;font-weight:800;text-transform:uppercase;margin:0">${subItem}</p>
-    ${blocks}
+    <p style="color:#f3c54c;font-size:12px;font-weight:800;text-transform:uppercase;margin:0">${subItem}</p>${blocks}
   `;
   dlg.showModal();
 }
@@ -446,13 +480,13 @@ function renderPage(page) {
   }
 
   if (page === 'mcs.html') {
-    return `<section class="section"><div class="sectionhead"><div><h2>ELENCO OFICIAL</h2><p>Cadastro oficial do FR Universe 2027</p></div></div><div class="filters mc-controls"><input class="search" id="mc-search" placeholder="Buscar MC por nome ou apelido..." aria-label="Buscar MC"><select class="mc-select" id="mc-state" aria-label="Filtrar por estado"><option value="">Todos os estados</option></select><select class="mc-select" id="mc-nature" aria-label="Filtrar por natureza"><option value="">Reais e fictícios</option><option value="real">Reais</option><option value="fictício">Fictícios</option></select></div><p class="mc-count" id="mc-count" aria-live="polite"></p><div class="mc-grid" id="mc-list"></div><div class="mc-more-wrap"><button class="btn secondary" id="mc-more" type="button" hidden>VER MAIS MCS</button></div></section><dialog id="mc-dialog" class="mc-dialog" aria-label="Ficha do MC"><button class="mc-close" id="mc-close" aria-label="Fechar ficha">✕</button><div id="mc-detail"></div></dialog>`;
+    return `<section class="section"><div class="sectionhead"><div><h2>ELENCO OFICIAL</h2><p>Cadastro atualizado do FR Universe 2027 · Clique em qualquer MC para abrir a ficha</p></div></div><div class="filters mc-controls"><input class="search" id="mc-search" placeholder="Buscar MC por nome ou apelido..." aria-label="Buscar MC"><select class="mc-select" id="mc-state" aria-label="Filtrar por estado"><option value="">Todos os estados</option></select><select class="mc-select" id="mc-nature" aria-label="Filtrar por natureza"><option value="">Reais e fictícios</option><option value="real">Reais</option><option value="fictício">Fictícios</option></select></div><p class="mc-count" id="mc-count" aria-live="polite"></p><div class="mc-grid" id="mc-list"></div><div class="mc-more-wrap"><button class="btn secondary" id="mc-more" type="button" hidden>VER MAIS MCS</button></div></section><dialog id="mc-dialog" class="mc-dialog" aria-label="Ficha do MC"><button class="mc-close" id="mc-close" aria-label="Fechar ficha">✕</button><div id="mc-detail"></div></dialog>`;
   }
 
   if (page === 'rankings.html') {
     const top3 = WEEK1_RANKING.slice(0, 3).map((r) => `
       <article class="card cardpad" style="border-color:#66562b">
-        <div class="kicker">POS. ${r.pos} · ${r.uf}</div>
+        <div class="kicker">POS. ${r.pos} ·${r.uf}</div>
         <h3 style="font-size:32px;margin:8px 0">${r.mc}</h3>
         <p style="color:#f3c54c;font-weight:800;font-size:15px;margin:0">${r.pts} PONTOS · ${r.titulos} TÍTULO · ${r.vitorias} VITÓRIAS</p>
       </article>
@@ -469,306 +503,45 @@ function renderPage(page) {
   }
 
   if (page === 'rimagram.html') {
+    const storiesHtml = RIMAGRAM_POSTS.map((p) => `
+      <a href="#post-${p.id}" style="display:flex;flex-direction:column;align-items:center;gap:6px;text-decoration:none;min-width:68px">
+        <span style="width:54px;height:54px;border-radius:50%;padding:2px;background:linear-gradient(135deg,#f3c54c,#e07a1b,#a855f7);display:grid;place-items:center">
+          <span style="width:100%;height:100%;border-radius:50%;background:#13151a;color:#f3c54c;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:16px;display:grid;place-items:center;border:2px solid #0b0c0e">${p.sigla}</span>
+        </span>
+        <span style="font-size:10px;color:#cfd2da;max-width:74px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${p.perfil}</span>
+      </a>
+    `).join('');
+
     const postsHtml = RIMAGRAM_POSTS.map((p) => `
-      <article class="card" style="margin-bottom:20px;border-color:#2e3138">
-        <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 20px;border-bottom:1px solid #25282e;background:#14161b">
-          <div style="display:flex;align-items:center;gap:12px">
-            <div style="width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#f3c54c,#7c5e14);color:#111;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:18px;display:grid;place-items:center;flex-shrink:0">FR</div>
+      <article id="post-${p.id}" class="card" style="margin-bottom:24px;border-color:#262930;background:#0e1014;overflow:hidden">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;background:#12141a;border-bottom:1px solid #1e2128">
+          <div style="display:flex;align-items:center;gap:10px">
+            <div style="width:36px;height:36px;border-radius:50%;padding:2px;background:linear-gradient(135deg,#f3c54c,#d97706);display:grid;place-items:center;flex-shrink:0">
+              <div style="width:100%;height:100%;border-radius:50%;background:#181b22;color:#f3c54c;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:14px;display:grid;place-items:center">${p.sigla}</div>
+            </div>
             <div>
-              <div style="font-size:13px;font-weight:800;color:#f8f8f8">${p.perfil}</div>
-              <div style="font-size:11px;color:#999da6">${p.meta}</div>
+              <div style="font-size:13px;font-weight:800;color:#f8f9fa;line-height:1.2">${p.perfil}</div>
+              <div style="font-size:11px;color:#9ea3ae;line-height:1.25">${p.local}</div>
             </div>
           </div>
-          <span style="border:1px solid #66562b;color:#f3c54c;background:#251f12;padding:5px 9px;border-radius:4px;font-size:10px;font-weight:800;letter-spacing:.08em;white-space:nowrap">${p.badge}</span>
+          <button type="button" data-follow-btn style="background:transparent;border:1px solid #383c47;color:#f3c54c;padding:5px 11px;border-radius:6px;font-size:11px;font-weight:800;cursor:pointer">Seguir</button>
         </div>
-        <div style="padding:20px;background:radial-gradient(circle at 85% 15%,rgba(243,197,76,.08),transparent 55%)">
-          <h3 style="font-size:24px;margin:0 0 10px">${p.nome}</h3>
-          <p style="color:#e6e7eb;font-size:14px;line-height:1.65;margin:0">${p.texto}</p>
-        </div>
-        <div style="display:flex;gap:18px;padding:12px 20px;border-top:1px solid #25282e;background:#101216;color:#aeb0b6;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em">
-          <span>♡ Curtir</span>
-          <span>💬 Comentários</span>
-          <span>↗ Compartilhar</span>
-        </div>
-      </article>
-    `).join('');
-    return `<section class="section"><div class="sectionhead"><div><h2>RIMAGRAM · FEED OFICIAL</h2><p>Publicações registradas na rodada</p></div></div><div style="max-width:640px;margin:0 auto">${postsHtml}</div></section>`;
-  }
 
-  if (page === 'rimatube.html') {
-    const vidsHtml = RIMATUBE_ITEMS.map((v) => `
-      <article class="card" style="display:flex;flex-direction:column;border-color:#2e3138">
-        <div style="position:relative;aspect-ratio:16/9;background:radial-gradient(circle at 65% 35%,#4a3916,#191a1f 55%,#0c0d10 100%);display:flex;align-items:center;justify-content:center;border-bottom:1px solid #27292f">
-          <div style="width:58px;height:42px;border-radius:10px;background:#f3c54c;color:#111;display:grid;place-items:center;font-size:18px;font-weight:900;box-shadow:0 8px 24px rgba(0,0,0,.55)">▶</div>
-          <span style="position:absolute;top:12px;left:12px;background:rgba(8,9,11,.85);border:1px solid #66562b;color:#f3c54c;padding:4px 8px;border-radius:3px;font-size:10px;font-weight:800;letter-spacing:.08em">${v.canal}</span>
-          <span style="position:absolute;bottom:12px;right:12px;background:rgba(8,9,11,.9);color:#f8f8f8;padding:4px 8px;border-radius:3px;font-size:10px;font-weight:800;letter-spacing:.06em">${v.selo}</span>
-        </div>
-        <div class="cardpad" style="flex:1">
-          <h3 style="font-size:23px;margin:0 0 10px;line-height:1.05">${v.titulo}</h3>
-          <p style="color:#b8bac2;font-size:12px;line-height:1.65;margin:0">${v.detalhe}</p>
-        </div>
-      </article>
-    `).join('');
-    return `<section class="section"><div class="sectionhead"><div><h2>RIMATUBE · CENTRAL DE CONFRONTOS</h2><p>Registros textuais dos confrontos e seletivas</p></div></div><div class="grid">${vidsHtml}</div></section>`;
-  }
-
-  if (page === 'jornal.html') {
-    return `
-      <section class="section">
-        <div class="card" style="border-color:#66562b;background:#121317;margin-bottom:20px">
-          <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;padding:14px 24px;border-bottom:1px solid #2b2d34;background:#18191e">
-            <span style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:20px;letter-spacing:.08em;color:#f3c54c;text-transform:uppercase">JORNAL DO RAP · EDIÇÃO SEMANAL</span>
-            <span style="font-size:11px;font-weight:800;color:#aeb0b6;letter-spacing:.1em;text-transform:uppercase">FR UNIVERSE 2027 · COBERTURA OFICIAL</span>
+        <div style="aspect-ratio:4/3;padding:24px;display:flex;flex-direction:column;justify-content:space-between;background:radial-gradient(circle at 20% 20%,rgba(243,197,76,.14),transparent 50%),radial-gradient(circle at 85% 80%,rgba(217,119,6,.12),transparent 50%),#14171f;border-bottom:1px solid #1e2128">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:8px">
+            <span style="font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#f3c54c;background:rgba(243,197,76,.12);border:1px solid rgba(243,197,76,.35);padding:4px 8px;border-radius:4px">${p.destaque}</span>
+            <span style="font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#d6d9e0">${p.badge}</span>
           </div>
-          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
-            <div style="padding:26px;border-right:1px solid #25272e">
-              <div class="label">MANCHETE PRINCIPAL</div>
-              <h2 style="font-size:36px;line-height:1.02;margin:12px 0 14px">NEO, JOTAPÊ E KANT LEVAM A ALDEIA; JOTAPÊ VENCE O COLISEU; GURI LEVA O ANA ROSA; YOUNGUI VENCE A NORTE; POETA GABRIELA ESTREIA COM TÍTULO NA JAMÁLIA E LNF DEFINE 60 CLASSIFICADOS</h2>
-              <p style="color:#c5c7ce;font-size:13px;line-height:1.7;margin:0">Cobertura completa das casas de batalha e das seletivas estaduais da LNF (SP, RJ e DF) registradas na rodada.</p>
-            </div>
-            <div style="padding:26px;display:flex;flex-direction:column;gap:14px">
-              <div class="label">COLUNA DE RESULTADOS</div>
-              <div>
-                <strong style="color:#f3c54c;font-size:12px;text-transform:uppercase">Aldeia · 1ª Edição (Edição Lendas — Trios)</strong>
-                <p style="color:#d4d6dc;font-size:12px;line-height:1.6;margin:4px 0 0">Campeões: Neo, Jotapê e Kant (3×0 na final) · Vice: Big Mike, Ike e Valle.</p>
-              </div>
-              <hr style="border:0;border-top:1px solid #262830;margin:0">
-              <div>
-                <strong style="color:#f3c54c;font-size:12px;text-transform:uppercase">Coliseu, Ana Rosa e Norte</strong>
-                <p style="color:#d4d6dc;font-size:12px;line-height:1.6;margin:4px 0 0">Coliseu: Jotapê campeão (2×1 vs WL) · Ana Rosa: Guri campeão (2×1 vs Mano Ayron) · Norte (45s / 90s / 45s): Youngui campeão (2×0 vs Dehat).</p>
-              </div>
-              <hr style="border:0;border-top:1px solid #262830;margin:0">
-              <div>
-                <strong style="color:#f3c54c;font-size:12px;text-transform:uppercase">Jamália (BDJ) · Inauguração (Curitiba/PR)</strong>
-                <p style="color:#d4d6dc;font-size:12px;line-height:1.6;margin:4px 0 0">Campeã: Poeta Gabriela (4V–0D, 8–4 em rounds; quatro vitórias por 2×1, final 2×1 vs Joãozinho).</p>
-              </div>
-              <hr style="border:0;border-top:1px solid #262830;margin:0">
-              <div>
-                <strong style="color:#f3c54c;font-size:12px;text-transform:uppercase">Seletivas LNF (SP, RJ e DF)</strong>
-                <p style="color:#d4d6dc;font-size:12px;line-height:1.6;margin:4px 0 0">20 classificados e 12 eliminados por estado (16 diretos + 4 repescagem em SP, RJ e DF).</p>
-              </div>
-            </div>
+          <div>
+            <div style="font-size:11px;color:#a3a8b4;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px">${p.meta}</div>
+            <h3 style="font-size:26px;line-height:1.08;margin:0;color:#ffffff">${p.nome}</h3>
+          </div>
+          <div style="font-size:11px;color:#8e94a2;display:flex;justify-content:space-between">
+            <span>FR UNIVERSE · 2027</span>
+            <span>● OFICIAL</span>
           </div>
         </div>
-      </section>
-    `;
-  }
 
-  if (page === 'calendario.html') {
-    return `<section class="section"><div class="sectionhead"><div><h2>HISTÓRICO DE 2027</h2><p>Somente eventos concluídos e oficialmente registrados</p></div></div><div class="card cardpad" style="max-width:850px;margin:auto"><div class="calendarbar"><button id="prevmonth" aria-label="Mês anterior">❮</button><h2 id="monthname">JANEIRO 2027</h2><button id="nextmonth" aria-label="Próximo mês">❯</button></div><div class="week" id="calendar"></div><p class="fine" style="margin-top:20px">Os símbolos das casas e competições aparecem nos dias de eventos concluídos. Ao clicar, abrirão a página oficial correspondente.</p></div></section>`;
-  }
-
-  return '';
-}
-
-if (pageData && contentEl) {
-  document.title = pageData.title.replace(/<[^>]+>/g, '') + ' | FR Universe 2027';
-  contentEl.innerHTML = `<section class="pagehero"><div class="container"><div class="eyebrow">${pageData.eyebrow}</div><h1>${pageData.title}</h1><p>${pageData.desc}</p><span class="status">Registros publicados · 2027</span></div></section><main class="container">${renderPage(current)}</main>`;
-}
-
-if (current === 'batalhas.html' && contentEl) {
-  contentEl.addEventListener('click', (e) => {
-    const btn = e.target.closest('[data-open-batalha]');
-    if (!btn) return;
-    const chave = btn.dataset.openBatalha;
-    const item = BATALHAS_EDICOES[chave];
-    if (item) openEdicoesModal('BATALHA · EDIÇÕES E ACONTECIMENTOS', chave, item.sub, item.edicoes);
-  });
-  const abrir = new URLSearchParams(location.search).get('abrir');
-  if (abrir && BATALHAS_EDICOES[abrir]) {
-    const item = BATALHAS_EDICOES[abrir];
-    openEdicoesModal('BATALHA · EDIÇÕES E ACONTECIMENTOS', abrir, item.sub, item.edicoes);
-  }
-}
-
-if (current === 'competicoes.html' && contentEl) {
-  contentEl.addEventListener('click', (e) => {
-    const btn = e.target.closest('[data-open-comp]');
-    if (!btn) return;
-    const chave = btn.dataset.openComp;
-    const item = COMPETICOES_EDICOES[chave];
-    if (item) openEdicoesModal('COMPETIÇÃO · EDIÇÕES E ACONTECIMENTOS', chave, item.sub, item.edicoes);
-  });
-  const abrir = new URLSearchParams(location.search).get('abrir');
-  if (abrir && COMPETICOES_EDICOES[abrir]) {
-    const item = COMPETICOES_EDICOES[abrir];
-    openEdicoesModal('COMPETIÇÃO · EDIÇÕES E ACONTECIMENTOS', abrir, item.sub, item.edicoes);
-  }
-}
-
-if (current === 'calendario.html') {
-  let m = 0;
-  const months = ['JANEIRO', 'FEVEREIRO', 'MARÇO', 'ABRIL', 'MAIO', 'JUNHO', 'JULHO', 'AGOSTO', 'SETEMBRO', 'OUTUBRO', 'NOVEMBRO', 'DEZEMBRO'];
-  function draw() {
-    document.getElementById('monthname').textContent = months[m] + ' 2027';
-    const first = new Date(2027, m, 1).getDay();
-    const count = new Date(2027, m + 1, 0).getDate();
-    const daysHtml = Array.from({ length: count }, (_, i) => {
-      const dayNum = i + 1;
-      const ev = WEEK1_CALENDAR_EVENTS[`2027-${m + 1}-${dayNum}`];
-      if (ev) {
-        return `<a class="day" href="${ev.href}" title="${ev.title}" style="display:flex;flex-direction:column;justify-content:space-between;border-color:#f3c54c;background:#1d1910"><span>${dayNum}</span><small style="color:#f3c54c;font-weight:800;font-size:10px;line-height:1.15">${ev.label}</small></a>`;
-      }
-      return `<div class="day">${dayNum}</div>`;
-    }).join('');
-    document.getElementById('calendar').innerHTML = ['DOM', 'SEG', 'TER', 'QUA', 'QUI', 'SEX', 'SÁB'].map((d) => `<div class="weekday">${d}</div>`).join('') + Array.from({ length: first }, () => '<div class="day outside"></div>').join('') + daysHtml;
-    document.getElementById('prevmonth').disabled = m === 0;
-    document.getElementById('nextmonth').disabled = m === 11;
-  }
-  document.getElementById('prevmonth').onclick = () => { m--; draw(); };
-  document.getElementById('nextmonth').onclick = () => { m++; draw(); };
-  draw();
-}
-
-if (current === 'mcs.html') {
-  const el = document.getElementById('mc-list');
-  const search = document.getElementById('mc-search');
-  const state = document.getElementById('mc-state');
-  const nature = document.getElementById('mc-nature');
-  const more = document.getElementById('mc-more');
-  const count = document.getElementById('mc-count');
-  const dialog = document.getElementById('mc-dialog');
-  const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-  const noAccent = (s) => String(s ?? '').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-  const normalize = (s) => noAccent(s).toLowerCase();
-  const slugName = (s) => normalize(s).replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-  let roster = [], shown = 24, filtered = [];
-
-  function getCandidates(m) {
-    const exts = ['jpg', 'webp', 'jpeg', 'png'];
-    if (m.natureza === 'fictício') {
-      const n2 = String((m.posicao * 7 + 3) % 16 + 1).padStart(2, '0');
-      const n1 = String((m.posicao * 7 + 3) % 16 + 1);
-      const list = [];
-      for (const ext of exts) {
-        list.push(`avatars/avatar-${n2}.${ext}`, `avatars/avatar-${n1}.${ext}`);
-      }
-      return list;
-    }
-
-    const rawNome = String(m.nome || '').trim();
-    const lowNome = rawNome.toLowerCase();
-    const plainNome = noAccent(rawNome);
-    const plainLow = plainNome.toLowerCase();
-    const slug = slugName(rawNome);
-    const p3 = String(m.posicao).padStart(3, '0');
-    const p1 = String(m.posicao);
-
-    const nameVariants = [...new Set([
-      rawNome,
-      lowNome,
-      plainNome,
-      plainLow,
-      slug
-    ].filter(Boolean))];
-
-    const list = [];
-    for (let l = 1; l <= 5; l++) {
-      const pasta = `lote%20${l}`;
-      for (const ext of exts) {
-        for (const nv of nameVariants) {
-          list.push(`${pasta}/${encodeURIComponent(nv)}.${ext}`);
-        }
-        list.push(`${pasta}/mc-${p3}.${ext}`, `${pasta}/mc-${p1}.${ext}`);
-      }
-    }
-    return list;
-  }
-
-  function nextImgFallback(img) {
-    const raw = img.dataset.fallbacks || '';
-    const list = raw ? raw.split('|') : [];
-    let idx = Number(img.dataset.fbIdx || '0') + 1;
-    while (idx < list.length && !list[idx]) idx++;
-    if (idx < list.length) {
-      img.dataset.fbIdx = String(idx);
-      img.src = list[idx];
-    } else {
-      img.style.display = 'none';
-    }
-  }
-
-  window.__mcImgErr = nextImgFallback;
-
-  function imgAttrs(m) {
-    const cands = getCandidates(m);
-    const enc = esc(cands.join('|'));
-    return `src="${esc(cands[0] || '')}" data-fallbacks="${enc}" data-fb-idx="0" onerror="window.__mcImgErr(this)"`;
-  }
-
-  function draw() {
-    const q = normalize(search.value.trim());
-    filtered = roster.filter((m) =>
-      (!state.value || (state.value === 'pendente' ? !m.uf : m.uf === state.value)) &&
-      (!nature.value || m.natureza === nature.value) &&
-      (!q || normalize([m.nome, ...(m.aliases || [])].join(' ')).includes(q))
-    );
-    count.textContent = `${filtered.length} MC${filtered.length === 1 ? '' : 's'} encontrado${filtered.length === 1 ? '' : 's'}`;
-    el.innerHTML = filtered.slice(0, shown).map((m) => `
-      <button class="mc-card" data-id="${m.posicao}" type="button" aria-label="Ver ficha de ${esc(m.nome)}">
-        <span class="mc-art">
-          <img class="mc-portrait" ${imgAttrs(m)} alt="Foto de ${esc(m.nome)}" loading="lazy">
-          <span class="mc-art-note">FR UNIVERSE • 2027</span>
-        </span>
-        <span class="mc-info">
-          <span class="mc-location">${esc(m.uf || 'UF pendente')} ${m.natureza === 'fictício' ? '<span class="mc-fiction">FICTÍCIO</span>' : ''}</span>
-          <strong>${esc(m.nome)}</strong>
-          <span class="mc-category">${esc(m.categoria)}</span>
-          <span class="mc-view">VER FICHA ↗</span>
-        </span>
-      </button>
-    `).join('');
-    more.hidden = shown >= filtered.length;
-  }
-
-  function openProfile(id) {
-    const m = roster.find((x) => x.posicao === id);
-    if (!m) return;
-    document.getElementById('mc-detail').innerHTML = `
-      <div class="mc-profile-top">
-        <span class="mc-profile-avatar"><img ${imgAttrs(m)} alt="Foto de ${esc(m.nome)}"></span>
-        <div>
-          <div class="label">FICHA OFICIAL • FR UNIVERSE 2027</div>
-          <h2>${esc(m.nome)}</h2>
-          <p>${esc(m.uf || 'Estado pendente')} • ${esc(m.natureza === 'fictício' ? 'Personagem fictício' : 'MC real')}</p>
-        </div>
-      </div>
-      <div class="mc-profile-meta">
-        <div><small>CATEGORIA</small><strong>${esc(m.categoria)}</strong></div>
-        <div><small>APELIDOS</small><strong>${esc((m.aliases && m.aliases.length) ? m.aliases.join(', ') : 'Não informados')}</strong></div>
-      </div>
-      <h3>ESTILO E CARACTERÍSTICAS</h3>
-      <p class="mc-description">${esc(m.descricao)}</p>
-      <h3>ESTATÍSTICAS • 2027</h3>
-      <div class="mc-profile-stats">
-        <div><b>0</b><small>Batalhas</small></div>
-        <div><b>0</b><small>Vitórias</small></div>
-        <div><b>0</b><small>Títulos</small></div>
-      </div>
-    `;
-    dialog.showModal();
-  }
-
-  el.addEventListener('click', (e) => {
-    const b = e.target.closest('[data-id]');
-    if (b) openProfile(Number(b.dataset.id));
-  });
-  document.getElementById('mc-close').onclick = () => dialog.close();
-  dialog.addEventListener('click', (e) => { if (e.target === dialog) dialog.close(); });
-  for (const control of [search, state, nature]) {
-    control.addEventListener(control === search ? 'input' : 'change', () => { shown = 24; draw(); });
-  }
-  more.onclick = () => { shown += 24; draw(); };
-
-  fetch('mcs-data.json')
-    .then((r) => { if (!r.ok) throw Error('Dados indisponíveis'); return r.json(); })
-    .then((d) => {
-      roster = (d.participantes || []).filter((m) => m.status_cadastro === 'válido');
-      const states = [...new Set(roster.map((m) => m.uf).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'pt-BR'));
-      state.innerHTML += '<option value="pendente">UF pendente</option>' + states.map((uf) => `<option value="${esc(uf)}">${esc(uf)}</option>`).join('');
-      draw();
-    })
-    .catch(() => {
-      el.innerHTML = '<div class="empty"><h3>Não foi possível carregar o elenco</h3><p>Verifique se o arquivo mcs-data.json foi enviado junto ao site.</p></div>';
-    });
-}
+        <div style="padding:12px 16px 16px">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
+            <div style="display:flex;align-items:center;gap:14px">
