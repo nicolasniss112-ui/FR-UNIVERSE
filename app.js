@@ -21,6 +21,22 @@ const footerEl = document.getElementById('footer');
 if (headerEl) headerEl.innerHTML = header;
 if (footerEl) footerEl.innerHTML = footer;
 
+// Atualiza contadores na página inicial caso estejam zerados/fixos no HTML
+if (current === 'index.html') {
+  window.addEventListener('DOMContentLoaded', () => {
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_ELEMENT);
+    let node;
+    while ((node = walker.nextNode())) {
+      const txt = (node.textContent || '').trim();
+      const parentTxt = (node.parentElement ? node.parentElement.textContent : '').toUpperCase();
+      if (txt === '00' && node.children.length === 0) {
+        if (parentTxt.includes('EDIÇÕES')) node.textContent = '05';
+        if (parentTxt.includes('CAMPEÕES')) node.textContent = '05';
+      }
+    }
+  });
+}
+
 const BATALHAS_EDICOES = {
   'ALDEIA': {
     sub: 'Segunda-feira · São Paulo',
@@ -607,11 +623,72 @@ if (current === 'mcs.html') {
   const count = document.getElementById('mc-count');
   const dialog = document.getElementById('mc-dialog');
   const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-  const normalize = (s) => String(s ?? '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+  const noAccent = (s) => String(s ?? '').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  const normalize = (s) => noAccent(s).toLowerCase();
+  const slugName = (s) => normalize(s).replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
   let roster = [], shown = 24, filtered = [];
-  const portrait = (m) => m.natureza === 'fictício'
-    ? `avatars/avatar-${String((m.posicao * 7 + 3) % 16 + 1).padStart(2, '0')}.webp`
-    : `fotos/mc-${String(m.posicao).padStart(3, '0')}.webp`;
+
+  function getCandidates(m) {
+    const exts = ['jpg', 'webp', 'jpeg', 'png'];
+    if (m.natureza === 'fictício') {
+      const n2 = String((m.posicao * 7 + 3) % 16 + 1).padStart(2, '0');
+      const n1 = String((m.posicao * 7 + 3) % 16 + 1);
+      const list = [];
+      for (const ext of exts) {
+        list.push(`avatars/avatar-${n2}.${ext}`, `avatars/avatar-${n1}.${ext}`);
+      }
+      return list;
+    }
+
+    const rawNome = String(m.nome || '').trim();
+    const lowNome = rawNome.toLowerCase();
+    const plainNome = noAccent(rawNome);
+    const plainLow = plainNome.toLowerCase();
+    const slug = slugName(rawNome);
+    const p3 = String(m.posicao).padStart(3, '0');
+    const p1 = String(m.posicao);
+
+    const nameVariants = [...new Set([
+      rawNome,
+      lowNome,
+      plainNome,
+      plainLow,
+      slug
+    ].filter(Boolean))];
+
+    const list = [];
+    for (let l = 1; l <= 5; l++) {
+      const pasta = `lote%20${l}`;
+      for (const ext of exts) {
+        for (const nv of nameVariants) {
+          list.push(`${pasta}/${encodeURIComponent(nv)}.${ext}`);
+        }
+        list.push(`${pasta}/mc-${p3}.${ext}`, `${pasta}/mc-${p1}.${ext}`);
+      }
+    }
+    return list;
+  }
+
+  function nextImgFallback(img) {
+    const raw = img.dataset.fallbacks || '';
+    const list = raw ? raw.split('|') : [];
+    let idx = Number(img.dataset.fbIdx || '0') + 1;
+    while (idx < list.length && !list[idx]) idx++;
+    if (idx < list.length) {
+      img.dataset.fbIdx = String(idx);
+      img.src = list[idx];
+    } else {
+      img.style.display = 'none';
+    }
+  }
+
+  window.__mcImgErr = nextImgFallback;
+
+  function imgAttrs(m) {
+    const cands = getCandidates(m);
+    const enc = esc(cands.join('|'));
+    return `src="${esc(cands[0] || '')}" data-fallbacks="${enc}" data-fb-idx="0" onerror="window.__mcImgErr(this)"`;
+  }
 
   function draw() {
     const q = normalize(search.value.trim());
@@ -624,7 +701,7 @@ if (current === 'mcs.html') {
     el.innerHTML = filtered.slice(0, shown).map((m) => `
       <button class="mc-card" data-id="${m.posicao}" type="button" aria-label="Ver ficha de ${esc(m.nome)}">
         <span class="mc-art">
-          <img class="mc-portrait" src="${portrait(m)}" alt="Foto de ${esc(m.nome)}" loading="lazy" onerror="this.style.display='none'">
+          <img class="mc-portrait" ${imgAttrs(m)} alt="Foto de ${esc(m.nome)}" loading="lazy">
           <span class="mc-art-note">FR UNIVERSE • 2027</span>
         </span>
         <span class="mc-info">
@@ -643,7 +720,7 @@ if (current === 'mcs.html') {
     if (!m) return;
     document.getElementById('mc-detail').innerHTML = `
       <div class="mc-profile-top">
-        <span class="mc-profile-avatar"><img src="${portrait(m)}" alt="Foto de ${esc(m.nome)}" onerror="this.style.display='none'"></span>
+        <span class="mc-profile-avatar"><img ${imgAttrs(m)} alt="Foto de ${esc(m.nome)}"></span>
         <div>
           <div class="label">FICHA OFICIAL • FR UNIVERSE 2027</div>
           <h2>${esc(m.nome)}</h2>
