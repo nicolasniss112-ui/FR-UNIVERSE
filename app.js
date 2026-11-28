@@ -1,3 +1,10 @@
+if (!document.querySelector('link[rel="icon"]')) {
+  const iconLink = document.createElement('link');
+  iconLink.rel = 'icon';
+  iconLink.href = 'data:,';
+  document.head.appendChild(iconLink);
+}
+
 const pages = [
   ['index.html', 'Início'],
   ['batalhas.html', 'Batalhas'],
