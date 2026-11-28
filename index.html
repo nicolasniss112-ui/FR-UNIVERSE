@@ -1,83 +1,336 @@
-<!doctype html>
-<html lang="pt-BR">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#08090b">
-  <meta name="description" content="FR Universe 2027 — portal fictício de batalhas de rima.">
-  <title>FR Universe 2027 — O Universo da Rima</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div id="header"></div>
+:root {
+  --bg: #08090c;
+  --surface: #111318;
+  --surface-2: #171a21;
+  --border: #252934;
+  --gold: #f3c54c;
+  --gold-soft: rgba(243, 197, 76, 0.14);
+  --text: #f5f6f8;
+  --muted: #9fa6b4;
+}
 
-  <section class="hero">
-    <div class="heroart" aria-hidden="true">FR</div>
-    <div class="container">
-      <div class="eyebrow">Temporada 2027 · Universo do Freestyle</div>
-      <h1>O UNIVERSO<br>É DA <span>RIMA.</span></h1>
-      <p>Um palco. Centenas de vozes. Uma história construída rodada a rodada, do underground às grandes disputas do FR Universe.</p>
-      <div class="actions">
-        <a class="btn" href="batalhas.html">Batalhas <span>↗</span></a>
-        <a class="btn secondary" href="mcs.html">Os MCs <span>→</span></a>
-        <a class="btn secondary" href="calendario.html">Calendário <span>→</span></a>
-      </div>
-    </div>
-  </section>
+* {
+  box-sizing: border-box;
+}
 
-  <main class="container">
-    <section class="section">
-      <div class="sectionhead">
-        <div>
-          <div class="eyebrow">Acesso rápido</div>
-          <h2>EXPLORE O <span class="accent">FR UNIVERSE.</span></h2>
-          <p>Entre direto na área que você quer acompanhar nesta temporada.</p>
-        </div>
-      </div>
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.5;
+}
 
-      <div class="grid" style="margin-bottom:28px">
-        <a href="batalhas.html" class="card cardpad">
-          <div class="kicker">Circuito semanal</div>
-          <h3 style="margin:6px 0 8px">BATALHAS</h3>
-          <p style="color:#b8bac2;font-size:13px;margin:0">Aldeia, Coliseu, Ana Rosa, Norte e Jamália — chaves, placares e campeões.</p>
-        </a>
-        <a href="mcs.html" class="card cardpad">
-          <div class="kicker">Elenco oficial</div>
-          <h3 style="margin:6px 0 8px">OS MCS</h3>
-          <p style="color:#b8bac2;font-size:13px;margin:0">Fichas, apelidos, estados e estilos de quem pega o microfone.</p>
-        </a>
-        <a href="calendario.html" class="card cardpad">
-          <div class="kicker">Linha do tempo</div>
-          <h3 style="margin:6px 0 8px">CALENDÁRIO</h3>
-          <p style="color:#b8bac2;font-size:13px;margin:0">Datas oficiais do ano, eventos concluídos e acesso direto por dia.</p>
-        </a>
-        <a href="competicoes.html" class="card cardpad">
-          <div class="kicker">Liga & especiais</div>
-          <h3 style="margin:6px 0 8px">COMPETIÇÕES</h3>
-          <p style="color:#b8bac2;font-size:13px;margin:0">LNF, seletivas estaduais e torneios especiais do universo.</p>
-        </a>
-        <a href="rankings.html" class="card cardpad">
-          <div class="kicker">Pontuação geral</div>
-          <h3 style="margin:6px 0 8px">RANKINGS</h3>
-          <p style="color:#b8bac2;font-size:13px;margin:0">Classificação, títulos e vitórias acumulados na temporada.</p>
-        </a>
-        <a href="rimagram.html" class="card cardpad">
-          <div class="kicker">Feed & bastidores</div>
-          <h3 style="margin:6px 0 8px">RIMAGRAM & RIMATUBE</h3>
-          <p style="color:#b8bac2;font-size:13px;margin:0">Repercussão no feed e registro detalhado dos confrontos.</p>
-        </a>
-      </div>
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-      <div class="stats">
-        <div class="stat"><b>2027</b><small>Temporada oficial</small></div>
-        <div class="stat"><b>05</b><small>Batalhas na Semana 1</small></div>
-        <div class="stat"><b>60</b><small>Classificados LNF</small></div>
-        <div class="stat"><b>09</b><small>Áreas do portal</small></div>
-      </div>
-    </section>
-  </main>
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
-  <div id="footer"></div>
-  <script src="app.js"></script>
-</body>
-</html>
+.topbar {
+  background: rgba(8, 9, 12, 0.92);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.navwrap {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 0.03em;
+  color: #fff;
+}
+
+.brand em {
+  font-style: normal;
+  color: var(--gold);
+}
+
+.nav {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.nav a.active,
+.nav a:hover {
+  color: var(--gold);
+}
+
+.live {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--gold);
+  background: var(--gold-soft);
+  border: 1px solid rgba(243, 197, 76, 0.4);
+  padding: 5px 10px;
+  border-radius: 999px;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 64px 0 44px;
+  border-bottom: 1px solid var(--border);
+  background: radial-gradient(circle at 20% 10%, rgba(243, 197, 76, 0.14), transparent 55%);
+}
+
+.heroart {
+  position: absolute;
+  right: 4%;
+  top: 12px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 180px;
+  font-weight: 900;
+  line-height: 0.85;
+  color: rgba(243, 197, 76, 0.05);
+  pointer-events: none;
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+h1, h2, h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: clamp(44px, 7vw, 76px);
+  line-height: 0.95;
+  margin: 0 0 14px;
+}
+
+.hero h1 span,
+.accent {
+  color: var(--gold);
+}
+
+.hero p {
+  max-width: 640px;
+  color: var(--muted);
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: var(--gold);
+  color: #090a0d;
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.btn.secondary {
+  background: var(--surface-2);
+  color: #fff;
+  border: 1px solid var(--border);
+}
+
+.section {
+  padding: 40px 0;
+}
+
+.sectionhead h2 {
+  font-size: 34px;
+  margin: 4px 0 6px;
+}
+
+.sectionhead p {
+  color: var(--muted);
+  margin: 0 0 22px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover {
+  border-color: rgba(243, 197, 76, 0.45);
+  transform: translateY(-2px);
+}
+
+.cardpad {
+  padding: 18px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.stat {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px;
+}
+
+.stat b {
+  display: block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 34px;
+  color: var(--gold);
+}
+
+.stat small {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 24px 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.fr-week-dock {
+  margin: 22px 0 26px;
+  padding: 16px 18px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(243, 197, 76, 0.12), rgba(16, 18, 23, 0.96) 55%);
+  border: 1px solid rgba(243, 197, 76, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.fr-week-copy strong {
+  display: block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.fr-week-copy span {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.fr-week-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.fr-week-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 15px;
+  border-radius: 9px;
+  border: 1px solid #2a2e39;
+  background: #151820;
+  color: #d6dbe6;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.fr-week-btn.is-active {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #090a0d;
+}
+
+.fr-week-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: rgba(243, 197, 76, 0.14);
+  color: var(--gold);
+}
+
+.fr-week-btn.is-active .fr-week-tag {
+  background: #090a0d;
+  color: var(--gold);
+}
+
+.fr-week-banner {
+  margin-bottom: 22px;
+  padding: 16px 20px;
+  border-radius: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--gold);
+}
+
+.fr-week-banner h3 {
+  font-size: 26px;
+  margin: 2px 0 4px;
+}
+
+.fr-week-banner p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+}
