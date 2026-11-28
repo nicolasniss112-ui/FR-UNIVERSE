@@ -374,4 +374,126 @@ function renderPage(page, d) {
 
 function mountCurrentPage() {
   const d = data[current];
-  const contentEl = document.
+  const contentEl = document.getElementById('content');
+  if (!d || !contentEl) return;
+
+  document.title = d.title.replace(/<[^>]+>/g, '') + ' | FR Universe 2027';
+  contentEl.innerHTML = `
+    <section class="pagehero">
+      <div class="container">
+        <div class="eyebrow">${d.eyebrow}</div>
+        <h1>${d.title}</h1>
+        <p>${d.desc}</p>
+        <span class="status">Semana 2 em destaque · 2027</span>
+      </div>
+    </section>
+    <main class="container">${renderPage(current, d)}</main>
+  `;
+
+  bindSeletorSemanas(mountCurrentPage);
+}
+
+mountCurrentPage();
+
+if (current === 'calendario.html') {
+  let m = 0;
+  const months = ['JANEIRO', 'FEVEREIRO', 'MARÇO', 'ABRIL', 'MAIO', 'JUNHO', 'JULHO', 'AGOSTO', 'SETEMBRO', 'OUTUBRO', 'NOVEMBRO', 'DEZEMBRO'];
+  function drawCal() {
+    document.getElementById('monthname').textContent = months[m] + ' 2027';
+    const first = new Date(2027, m, 1).getDay();
+    const count = new Date(2027, m + 1, 0).getDate();
+    document.getElementById('calendar').innerHTML =
+      ['DOM', 'SEG', 'TER', 'QUA', 'QUI', 'SEX', 'SÁB'].map((day) => `<div class="weekday">${day}</div>`).join('') +
+      Array.from({ length: first }, () => '<div class="day outside"></div>').join('') +
+      Array.from({ length: count }, (_, i) => `<div class="day">${i + 1}</div>`).join('');
+    document.getElementById('prevmonth').disabled = m === 0;
+    document.getElementById('nextmonth').disabled = m === 11;
+  }
+  document.getElementById('prevmonth').onclick = () => { m--; drawCal(); };
+  document.getElementById('nextmonth').onclick = () => { m++; drawCal(); };
+  drawCal();
+}
+
+if (current === 'mcs.html') {
+  const el = document.getElementById('mc-list');
+  const search = document.getElementById('mc-search');
+  const state = document.getElementById('mc-state');
+  const nature = document.getElementById('mc-nature');
+  const more = document.getElementById('mc-more');
+  const count = document.getElementById('mc-count');
+  const dialog = document.getElementById('mc-dialog');
+
+  const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const normalize = (s) => String(s ?? '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+  let roster = [], shown = 24, filtered = [];
+  const portrait = (m) => m.natureza === 'fictício'
+    ? `avatars/avatar-${String((m.posicao * 7 + 3) % 16 + 1).padStart(2, '0')}.webp`
+    : `fotos/mc-${String(m.posicao).padStart(3, '0')}.webp`;
+
+  function draw() {
+    const q = normalize(search.value.trim());
+    filtered = roster.filter((m) =>
+      (!state.value || (state.value === 'pendente' ? !m.uf : m.uf === state.value)) &&
+      (!nature.value || m.natureza === nature.value) &&
+      (!q || normalize([m.nome, ...(m.aliases || [])].join(' ')).includes(q))
+    );
+    count.textContent = `${filtered.length} MC${filtered.length === 1 ? '' : 's'} encontrado${filtered.length === 1 ? '' : 's'}`;
+    el.innerHTML = filtered.slice(0, shown).map((m) => `
+      <button class="mc-card" data-id="${m.posicao}" type="button" aria-label="Ver ficha de ${esc(m.nome)}">
+        <span class="mc-art"><img class="mc-portrait" src="${portrait(m)}" alt="Foto de ${esc(m.nome)}" loading="lazy"><span class="mc-art-note">FR UNIVERSE • 2027</span></span>
+        <span class="mc-info">
+          <span class="mc-location">${esc(m.uf || 'UF pendente')} ${m.natureza === 'fictício' ? '<span class="mc-fiction">FICTÍCIO</span>' : ''}</span>
+          <strong>${esc(m.nome)}</strong>
+          <span class="mc-category">${esc(m.categoria)}</span>
+          <span class="mc-view">VER FICHA ↗</span>
+        </span>
+      </button>
+    `).join('');
+    more.hidden = shown >= filtered.length;
+  }
+
+  function openProfile(id) {
+    const m = roster.find((item) => item.posicao === id);
+    if (!m) return;
+    document.getElementById('mc-detail').innerHTML = `
+      <div class="mc-profile-top">
+        <span class="mc-profile-avatar"><img src="${portrait(m)}" alt="Foto de ${esc(m.nome)}"></span>
+        <div>
+          <div class="label">FICHA OFICIAL • FR UNIVERSE 2027</div>
+          <h2>${esc(m.nome)}</h2>
+          <p>${esc(m.uf || 'Estado pendente')} • ${esc(m.natureza === 'fictício' ? 'Personagem fictício' : 'MC real')}</p>
+        </div>
+      </div>
+      <div class="mc-profile-meta">
+        <div><small>CATEGORIA</small><strong>${esc(m.categoria)}</strong></div>
+        <div><small>APELIDOS</small><strong>${esc((m.aliases && m.aliases.length) ? m.aliases.join(', ') : 'Não informados')}</strong></div>
+      </div>
+      <h3>ESTILO E CARACTERÍSTICAS</h3>
+      <p class="mc-description">${esc(m.descricao)}</p>
+    `;
+    dialog.showModal();
+  }
+
+  el.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-id]');
+    if (b) openProfile(Number(b.dataset.id));
+  });
+  document.getElementById('mc-close').onclick = () => dialog.close();
+  dialog.addEventListener('click', (e) => { if (e.target === dialog) dialog.close(); });
+  for (const control of [search, state, nature]) {
+    control.addEventListener(control === search ? 'input' : 'change', () => { shown = 24; draw(); });
+  }
+  more.onclick = () => { shown += 24; draw(); };
+
+  fetch('mcs-data.json')
+    .then((r) => { if (!r.ok) throw Error('Dados indisponíveis'); return r.json(); })
+    .then((jsonData) => {
+      roster = jsonData.participantes.filter((m) => m.status_cadastro === 'válido');
+      const states = [...new Set(roster.map((m) => m.uf).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'pt-BR'));
+      state.innerHTML += '<option value="pendente">UF pendente</option>' + states.map((uf) => `<option value="${esc(uf)}">${esc(uf)}</option>`).join('');
+      draw();
+    })
+    .catch(() => {
+      el.innerHTML = '<div class="empty"><h3>Não foi possível carregar o elenco</h3><p>Verifique se o arquivo mcs-data.json foi enviado junto ao site.</p></div>';
+    });
+}
